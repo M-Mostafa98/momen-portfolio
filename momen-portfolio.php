@@ -54,6 +54,7 @@ add_action('template_redirect', function() {
 <script src="' . esc_url($url) . 'react.min.js"></script>
 <script src="' . esc_url($url) . 'react-dom.min.js"></script>
 <script src="' . esc_url($url) . 'images.js"></script>
+<script src="' . esc_url($url) . 'extras.js"></script>
 <script src="' . esc_url($url) . 'profile.js"></script>
 <script src="' . esc_url($url) . 'app.js"></script>
 </body>
