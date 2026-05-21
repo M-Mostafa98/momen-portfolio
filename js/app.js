@@ -1464,7 +1464,71 @@ function About() {
       paddingTop: "90px",
       minHeight: "100vh"
     }
-  }, /*#__PURE__*/React.createElement("section", {
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: "48vh",
+      position: "relative",
+      overflow: "hidden"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      inset: 0,
+      background: "linear-gradient(to bottom,rgba(12,12,12,0.5),rgba(12,12,12,0.75))",
+      zIndex: 1
+    }
+  }), /*#__PURE__*/React.createElement("img", {
+    src: "https://picsum.photos/seed/mmabout77/1400/800",
+    alt: "",
+    style: {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      filter: "grayscale(25%)"
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      bottom: "46px",
+      left: "5%",
+      zIndex: 2
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "10px",
+      letterSpacing: "5px",
+      textTransform: "uppercase",
+      color: "#c9a96e",
+      marginBottom: "14px"
+    }
+  }, "\xDCber mich"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Raleway',sans-serif",
+      fontWeight: 100,
+      fontSize: "clamp(12px,2vw,18px)",
+      letterSpacing: "10px",
+      textTransform: "uppercase",
+      color: "#888",
+      display: "block"
+    }
+  }, "Momen"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "30px",
+      height: "1px",
+      background: "#c9a96e",
+      margin: "8px 0"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Raleway',sans-serif",
+      fontWeight: 600,
+      fontSize: "clamp(12px,2vw,18px)",
+      letterSpacing: "10px",
+      textTransform: "uppercase",
+      color: "#f0ece6",
+      display: "block"
+    }
+  }, "Mostafa")))), /*#__PURE__*/React.createElement("section", {
     style: {
       padding: "90px 5%"
     }
@@ -1486,7 +1550,7 @@ function About() {
       position: "relative"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: window.IMGS && window.IMGS.profilePhoto ? window.IMGS.profilePhoto : "",
+    src: "https://picsum.photos/seed/mmport55/500/650",
     alt: "Momen Mostafa",
     style: {
       width: "100%",
@@ -1589,7 +1653,67 @@ function About() {
         fontWeight: 300
       }
     }, ev));
-  })))))));
+  })))))), /*#__PURE__*/React.createElement("section", {
+    style: {
+      padding: "70px 5% 100px",
+      background: "#222222",
+      borderTop: "1px solid #181818"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: "1100px",
+      margin: "0 auto"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "10px",
+      letterSpacing: "5px",
+      textTransform: "uppercase",
+      color: "#c9a96e",
+      marginBottom: "12px"
+    }
+  }, "Schwerpunkte"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontWeight: 300,
+      fontSize: "clamp(28px,3.5vw,44px)",
+      color: "#f0ece6",
+      marginBottom: "50px"
+    }
+  }, "Aktuelle Arbeit"), /*#__PURE__*/React.createElement("div", {
+    className: "g3",
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(3,1fr)",
+      gap: "1px",
+      background: "#181818"
+    }
+  }, [["Nasamat", "Religion im Leben europäischer Muslim:innen — eine langfristige Porträt- und Dokumentararbeit."], ["Unternehmensporträts", "Porträts für Unternehmen und Einrichtungen in der Region Hannover."], ["Tagesjournalismus", "Aktuelle Bildberichterstattung für Presse und Medien."]].map(function (_ref0) {
+    var _ref1 = _slicedToArray(_ref0, 2),
+      t = _ref1[0],
+      tx = _ref1[1];
+    return /*#__PURE__*/React.createElement("div", {
+      key: t,
+      style: {
+        background: "#2a2a2a",
+        padding: "38px 30px"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: "'Cormorant Garamond',serif",
+        fontSize: "24px",
+        color: "#f0ece6",
+        marginBottom: "14px"
+      }
+    }, t), /*#__PURE__*/React.createElement("p", {
+      style: {
+        fontSize: "14px",
+        lineHeight: 1.8,
+        color: "#555",
+        fontWeight: 300
+      }
+    }, tx));
+  })))));
 }
 
 /* CONTACT */
