@@ -222,22 +222,22 @@ var ITEMS = {
     img: window.IMGS.IMG_0045
   }],
   journalismus: [{
-    id: 48,
+    id: 45,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0046
   }, {
-    id: 49,
+    id: 47,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0047
   }, {
-    id: 50,
+    id: 39,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0048
   }, {
-    id: 39,
+    id: 48,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0049
@@ -247,40 +247,30 @@ var ITEMS = {
     desc: "",
     img: window.IMGS.IMG_0050
   }, {
-    id: 41,
+    id: 43,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0051
   }, {
-    id: 42,
+    id: 44,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0052
   }, {
-    id: 43,
+    id: 46,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0053
   }, {
-    id: 44,
+    id: 41,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0054
   }, {
-    id: 45,
+    id: 42,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0055
-  }, {
-    id: 46,
-    title: "",
-    desc: "",
-    img: window.IMGS.IMG_0056
-  }, {
-    id: 47,
-    title: "",
-    desc: "",
-    img: window.IMGS.IMG_0057
   }]
 };
 function Lightbox(_ref) {
@@ -486,16 +476,16 @@ var WORKS = {
     label: "Fotoreportage",
     intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Fotoreportage.",
     images: [{
+      src: window.IMGS.IMG_0056,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
+      src: window.IMGS.IMG_0057,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
       src: window.IMGS.IMG_0058,
       caption: "Bildunterschrift für dieses Foto"
     }, {
       src: window.IMGS.IMG_0059,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0060,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0061,
       caption: "Bildunterschrift für dieses Foto"
     }]
   },
@@ -504,16 +494,16 @@ var WORKS = {
     label: "Fotostrecke",
     intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Fotostrecke.",
     images: [{
+      src: window.IMGS.IMG_0060,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
+      src: window.IMGS.IMG_0061,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
       src: window.IMGS.IMG_0062,
       caption: "Bildunterschrift für dieses Foto"
     }, {
       src: window.IMGS.IMG_0063,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0064,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0065,
       caption: "Bildunterschrift für dieses Foto"
     }]
   },
@@ -522,16 +512,16 @@ var WORKS = {
     label: "Porträtserie",
     intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Porträtserie.",
     images: [{
+      src: window.IMGS.IMG_0064,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
+      src: window.IMGS.IMG_0065,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
       src: window.IMGS.IMG_0066,
       caption: "Bildunterschrift für dieses Foto"
     }, {
       src: window.IMGS.IMG_0067,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0068,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0069,
       caption: "Bildunterschrift für dieses Foto"
     }]
   },
@@ -540,16 +530,16 @@ var WORKS = {
     label: "Dokumentarserie",
     intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Dokumentarserie.",
     images: [{
+      src: window.IMGS.IMG_0068,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
+      src: window.IMGS.IMG_0069,
+      caption: "Bildunterschrift für dieses Foto"
+    }, {
       src: window.IMGS.IMG_0070,
       caption: "Bildunterschrift für dieses Foto"
     }, {
       src: window.IMGS.IMG_0071,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0072,
-      caption: "Bildunterschrift für dieses Foto"
-    }, {
-      src: window.IMGS.IMG_0073,
       caption: "Bildunterschrift für dieses Foto"
     }]
   }
@@ -819,29 +809,29 @@ function JournalismusLayout(_ref5) {
       gap: "12px",
       minWidth: "900px"
     }
-  }, p[9] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[9],
+  }, p[0] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[0],
     col: 1,
     row: 1,
     colSpan: 3,
     rowSpan: 1,
     onOpen: onOpen
-  }), p[11] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[11],
+  }), p[1] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[1],
     col: 4,
     row: 1,
     colSpan: 3,
     rowSpan: 1,
     onOpen: onOpen
-  }), p[3] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[3],
+  }), p[2] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[2],
     col: 1,
     row: 2,
     colSpan: 2,
     rowSpan: 2,
     onOpen: onOpen
-  }), p[0] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[0],
+  }), p[3] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[3],
     col: 3,
     row: 2,
     colSpan: 4,
@@ -858,33 +848,33 @@ function JournalismusLayout(_ref5) {
     photo: p[5],
     col: 1,
     row: 6,
-    colSpan: 3,
+    colSpan: 6,
     rowSpan: 1,
     onOpen: onOpen
   }), p[6] && /*#__PURE__*/React.createElement(JournalismusItem, {
     photo: p[6],
-    col: 4,
-    row: 6,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[7] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[7],
     col: 1,
     row: 7,
     colSpan: 6,
     rowSpan: 1,
     onOpen: onOpen
+  }), p[7] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[7],
+    col: 1,
+    row: 8,
+    colSpan: 3,
+    rowSpan: 1,
+    onOpen: onOpen
   }), p[8] && /*#__PURE__*/React.createElement(JournalismusItem, {
     photo: p[8],
     col: 1,
-    row: 8,
-    colSpan: 6,
+    row: 9,
+    colSpan: 3,
     rowSpan: 1,
     onOpen: onOpen
-  }), p[10] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[10],
-    col: 1,
+  }), p[9] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[9],
+    col: 4,
     row: 9,
     colSpan: 3,
     rowSpan: 1,
@@ -1005,7 +995,7 @@ function Home(_ref7) {
       zIndex: 1
     }
   }), /*#__PURE__*/React.createElement("img", {
-    src: window.IMGS.IMG_0074,
+    src: window.IMGS.IMG_0072,
     alt: "",
     style: {
       position: "absolute",
