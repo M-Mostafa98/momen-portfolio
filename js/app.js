@@ -1612,10 +1612,6 @@ function About() {
 
 /* CONTACT */
 function Contact() {
-  var _useState15 = useState(false),
-    _useState16 = _slicedToArray(_useState15, 2),
-    sent = _useState16[0],
-    setSent = _useState16[1];
   return /*#__PURE__*/React.createElement("div", {
     style: {
       paddingTop: "90px",
@@ -1627,7 +1623,7 @@ function Contact() {
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: "1050px",
+      maxWidth: "640px",
       margin: "0 auto"
     }
   }, /*#__PURE__*/React.createElement("p", {
@@ -1639,44 +1635,28 @@ function Contact() {
       marginBottom: "68px"
     }
   }, "Kontakt"), /*#__PURE__*/React.createElement("div", {
-    className: "g2",
-    style: {
-      display: "grid",
-      gridTemplateColumns: "1fr 1.3fr",
-      gap: "90px",
-      alignItems: "start"
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "15px",
-      lineHeight: 1.85,
-      color: "#666",
-      fontWeight: 300,
-      marginBottom: "50px"
-    }
-  }, "F\xFCr Anfragen sag bitte Hallo."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
       gap: "26px"
     }
   }, [{
-    icon: "✉",
+    icon: "\u2709",
     label: "E-Mail",
     val: "me@momen-most.com",
     href: "mailto:me@momen-most.com"
   }, {
-    icon: "☎",
+    icon: "\u260E",
     label: "Telefon",
     val: "+49 1520 5197646",
     href: "tel:+4915205197646"
   }, {
-    icon: "◈",
+    icon: "\u25C8",
     label: "Instagram",
     val: "@momen_most",
     href: "https://www.instagram.com/momen_most/"
   }, {
-    icon: "◉",
+    icon: "\u25C9",
     label: "LinkedIn",
     val: "momen-most",
     href: "https://www.linkedin.com/in/momen-most"
@@ -1715,52 +1695,7 @@ function Contact() {
         fontWeight: 300
       }
     }, c.val)));
-  }))), /*#__PURE__*/React.createElement("div", null, sent ? /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "52px",
-      border: "1px solid #1e1e1e",
-      textAlign: "center"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "'Cormorant Garamond',serif",
-      fontSize: "34px",
-      color: "#c9a96e",
-      marginBottom: "14px"
-    }
-  }, "Danke!"), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "14px",
-      color: "#555",
-      fontWeight: 300
-    }
-  }, "Ich melde mich so bald wie m\xF6glich.")) : /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "28px"
-    }
-  }, /*#__PURE__*/React.createElement("input", {
-    type: "text",
-    placeholder: "Dein Name"
-  }), /*#__PURE__*/React.createElement("input", {
-    type: "email",
-    placeholder: "E-Mail-Adresse"
-  }), /*#__PURE__*/React.createElement("input", {
-    type: "text",
-    placeholder: "Betreff"
-  }), /*#__PURE__*/React.createElement("textarea", {
-    placeholder: "Deine Nachricht",
-    rows: 6,
-    style: {
-      resize: "none"
-    }
-  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", {
-    className: "btn-gold",
-    onClick: function onClick() {
-      return setSent(true);
-    }
-  }, "Nachricht senden"))))))), /*#__PURE__*/React.createElement("div", {
+  })))), /*#__PURE__*/React.createElement("div", {
     style: {
       height: "260px",
       position: "relative",
@@ -1964,33 +1899,33 @@ function Footer(_ref13) {
     }
   }, "Impressum")));
 }
-/* HASH ROUTING */
-var PAGE_TO_HASH = {
-  home: "",
-  about: "ueber-mich",
-  videos: "videos",
-  contact: "kontakt",
-  impressum: "impressum",
-  "work-delivery": "arbeit/delivery",
-  "work-healing": "arbeit/healing",
-  "work-islamic": "arbeit/islamic"
+/* PATH ROUTING */
+var PAGE_TO_PATH = {
+  home: "/",
+  about: "/ueber-mich",
+  videos: "/videos",
+  contact: "/kontakt",
+  impressum: "/impressum",
+  "work-delivery": "/arbeit/delivery",
+  "work-healing": "/arbeit/healing",
+  "work-islamic": "/arbeit/islamic"
 };
-var HASH_TO_PAGE = {
-  "": "home",
-  "ueber-mich": "about",
-  "videos": "videos",
-  "kontakt": "contact",
-  "impressum": "impressum",
-  "arbeit/delivery": "work-delivery",
-  "arbeit/healing": "work-healing",
-  "arbeit/islamic": "work-islamic"
+var PATH_TO_PAGE = {
+  "/": "home",
+  "/ueber-mich": "about",
+  "/videos": "videos",
+  "/kontakt": "contact",
+  "/impressum": "impressum",
+  "/arbeit/delivery": "work-delivery",
+  "/arbeit/healing": "work-healing",
+  "/arbeit/islamic": "work-islamic"
 };
-function pageFromHash() {
-  var h = (window.location.hash || "").replace(/^#\/?/, "");
-  return HASH_TO_PAGE[h] || "home";
+function pageFromPath() {
+  var p = (window.location.pathname || "/").replace(/\/+$/, "") || "/";
+  return PATH_TO_PAGE[p] || "home";
 }
 function App() {
-  var _useState17 = useState(pageFromHash),
+  var _useState17 = useState(pageFromPath),
     _useState18 = _slicedToArray(_useState17, 2),
     page = _useState18[0],
     setPage = _useState18[1];
@@ -2083,26 +2018,21 @@ function App() {
     };
   }, [page]);
   useEffect(function () {
-    var slug = PAGE_TO_HASH[page];
-    var target = slug ? "#/" + slug : "";
-    if (window.location.hash !== target) {
-      if (target) {
-        window.history.replaceState(null, "", target);
-      } else {
-        window.history.replaceState(null, "", window.location.pathname + window.location.search);
-      }
+    var target = PAGE_TO_PATH[page] || "/";
+    if (window.location.pathname !== target) {
+      window.history.pushState(null, "", target);
     }
   }, [page]);
   useEffect(function () {
-    var onHash = function () {
-      var next = pageFromHash();
+    var onPop = function () {
+      var next = pageFromPath();
       setPage(function (cur) {
         return cur === next ? cur : next;
       });
     };
-    window.addEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onPop);
     return function () {
-      return window.removeEventListener("hashchange", onHash);
+      return window.removeEventListener("popstate", onPop);
     };
   }, []);
   return /*#__PURE__*/React.createElement("div", {
