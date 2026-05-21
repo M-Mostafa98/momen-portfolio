@@ -2,18 +2,45 @@
 /*
 Plugin Name: Momen Mostafa Portfolio
 Description: Portfolio Website von Momen Mostafa
-Version: 1.5
+Version: 1.6
 Author: Momen Mostafa
 */
 
 if (!defined('ABSPATH')) exit;
 
-// Intercept front page and output portfolio
+// Pfade, die unsere SPA-Shell ausliefern sollen (zusätzlich zur Startseite).
+function mm_portfolio_paths() {
+    return [
+        '/',
+        '/ueber-mich',
+        '/videos',
+        '/kontakt',
+        '/impressum',
+        '/arbeit/delivery',
+        '/arbeit/healing',
+        '/arbeit/islamic',
+    ];
+}
+
+// Wenn eine unserer SPA-URLs angefragt wird, übernimm und liefere die Shell aus
+// — auch wenn WordPress sonst 404 setzen würde.
 add_action('template_redirect', function() {
-    if (!is_front_page() && !is_home()) return;
-    
+    $req = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($req === null) $req = '/';
+    // Normalisiere: trailing slash weg (außer für Root)
+    $req = '/' . trim($req, '/');
+    if ($req === '/') {
+        $is_spa = is_front_page() || is_home();
+    } else {
+        $is_spa = in_array($req, mm_portfolio_paths(), true);
+    }
+    if (!$is_spa) return;
+
+    status_header(200);
+    nocache_headers();
+
     $url = plugin_dir_url(__FILE__) . 'js/';
-    
+
     echo '<!DOCTYPE html>
 <html lang="de">
 <head>
