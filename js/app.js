@@ -17,140 +17,189 @@ var _React = React,
   useEffect = _React.useEffect,
   useRef = _React.useRef;
 var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n";
+var SIZE_SPAN = {
+  "full":       6,  // groß (Querformat, ganze Breite)
+  "two-thirds": 4,  // mittel-querformat (2/3)
+  "half":       3,  // mittel-hochformat ODER Querformat-Ausnahme halb (1/2)
+  "third":      2   // klein (1/3, beide Orientierungen)
+};
+function spanOf(size) {
+  return SIZE_SPAN[size] || 2;
+}
+// Hochformat darf nie groß oder mittel-querformat sein → clampen auf half.
+function effectiveSize(size, isPortrait) {
+  if (isPortrait && (size === "full" || size === "two-thirds")) return "half";
+  return size;
+}
 var ASSIGNMENTS = [{
   client: "Katholische Akademie",
   images: [{
     id: 2,
-    img: window.IMGS.IMG_0000
+    img: window.IMGS.IMG_0000,
+    size: "third"
   }, {
     id: 1,
-    img: window.IMGS.IMG_0001
+    img: window.IMGS.IMG_0001,
+    size: "third"
   }, {
     id: 3,
-    fullWidth: true,
-    img: window.IMGS.IMG_0002
+    size: "full",
+    img: window.IMGS.IMG_0002,
+    size: "third"
   }, {
     id: 4,
-    img: window.IMGS.IMG_0003
+    img: window.IMGS.IMG_0003,
+    size: "third"
   }, {
     id: 5,
-    img: window.IMGS.IMG_0004
+    img: window.IMGS.IMG_0004,
+    size: "third"
   }, {
     id: 6,
-    img: window.IMGS.IMG_0005
+    img: window.IMGS.IMG_0005,
+    size: "third"
   }, {
     id: 7,
-    img: window.IMGS.IMG_0006
+    img: window.IMGS.IMG_0006,
+    size: "third"
   }, {
     id: 8,
-    img: window.IMGS.IMG_0007
+    img: window.IMGS.IMG_0007,
+    size: "third"
   }, {
     id: 9,
-    img: window.IMGS.IMG_0008
+    img: window.IMGS.IMG_0008,
+    size: "third"
   }, {
     id: 10,
-    fullWidth: true,
-    img: window.IMGS.IMG_0009
+    size: "full",
+    img: window.IMGS.IMG_0009,
+    size: "third"
   }, {
     id: 11,
-    img: window.IMGS.IMG_0010
+    img: window.IMGS.IMG_0010,
+    size: "third"
   }, {
     id: 17,
-    img: window.IMGS.IMG_0011
+    img: window.IMGS.IMG_0011,
+    size: "third"
   }, {
     id: 12,
-    img: window.IMGS.IMG_0012
+    img: window.IMGS.IMG_0012,
+    size: "third"
   }, {
     id: 16,
-    img: window.IMGS.IMG_0013
+    img: window.IMGS.IMG_0013,
+    size: "third"
   }, {
     id: 15,
-    img: window.IMGS.IMG_0014
+    img: window.IMGS.IMG_0014,
+    size: "third"
   }, {
     id: 20,
-    img: window.IMGS.IMG_0015
+    img: window.IMGS.IMG_0015,
+    size: "third"
   }, {
     id: 19,
-    fullWidth: true,
-    img: window.IMGS.IMG_0016
+    size: "full",
+    img: window.IMGS.IMG_0016,
+    size: "third"
   }]
 },, {
   client: "Niedersächsisches Landesmuseum & Modedesign-Studiengang der Hochschule Hannover",
   images: [{
     id: 21,
-    fullWidth: true,
-    img: window.IMGS.IMG_0017
+    size: "full",
+    img: window.IMGS.IMG_0017,
+    size: "third"
   }, {
     id: 22,
-    spanTwo: true,
-    img: window.IMGS.IMG_0018
+    size: "two-thirds",
+    img: window.IMGS.IMG_0018,
+    size: "third"
   }, {
     id: 23,
-    noSpan: true,
-    img: window.IMGS.IMG_0019
+    size: "third",
+    img: window.IMGS.IMG_0019,
+    size: "third"
   }, {
     id: 24,
-    noSpan: true,
-    img: window.IMGS.IMG_0020
+    size: "third",
+    img: window.IMGS.IMG_0020,
+    size: "third"
   }, {
     id: 25,
-    noSpan: true,
-    img: window.IMGS.IMG_0021
+    size: "third",
+    img: window.IMGS.IMG_0021,
+    size: "third"
   }, {
     id: 26,
-    noSpan: true,
-    img: window.IMGS.IMG_0022
+    size: "third",
+    img: window.IMGS.IMG_0022,
+    size: "third"
   }, {
     id: 27,
-    noSpan: true,
-    img: window.IMGS.IMG_0023
+    size: "third",
+    img: window.IMGS.IMG_0023,
+    size: "third"
   }, {
     id: 28,
-    noSpan: true,
-    img: window.IMGS.IMG_0024
+    size: "third",
+    img: window.IMGS.IMG_0024,
+    size: "third"
   }, {
     id: 29,
-    noSpan: true,
-    img: window.IMGS.IMG_0025
+    size: "third",
+    img: window.IMGS.IMG_0025,
+    size: "third"
   }, {
     id: 30,
-    noSpan: true,
-    img: window.IMGS.IMG_0026
+    size: "third",
+    img: window.IMGS.IMG_0026,
+    size: "third"
   }, {
     id: 31,
-    noSpan: true,
-    img: window.IMGS.IMG_0027
+    size: "third",
+    img: window.IMGS.IMG_0027,
+    size: "third"
   }, {
     id: 32,
-    fullWidth: true,
-    img: window.IMGS.IMG_0028
+    size: "full",
+    img: window.IMGS.IMG_0028,
+    size: "third"
   }]
 }, {
   client: "Kunstverein Hannover",
   images: [{
     id: 38,
-    fullWidth: true,
-    img: window.IMGS.IMG_0029
+    size: "full",
+    img: window.IMGS.IMG_0029,
+    size: "third"
   }, {
     id: 33,
-    fullWidth: true,
-    img: window.IMGS.IMG_0030
+    size: "full",
+    img: window.IMGS.IMG_0030,
+    size: "third"
   }, {
     id: 34,
-    fullWidth: true,
-    img: window.IMGS.IMG_0031
+    size: "full",
+    img: window.IMGS.IMG_0031,
+    size: "third"
   }, {
     id: 35,
-    fullWidth: true,
-    img: window.IMGS.IMG_0032
+    size: "full",
+    img: window.IMGS.IMG_0032,
+    size: "third"
   }, {
     id: 36,
-    fullWidth: true,
-    img: window.IMGS.IMG_0033
+    size: "full",
+    img: window.IMGS.IMG_0033,
+    size: "third"
   }, {
     id: 37,
-    fullWidth: true,
-    img: window.IMGS.IMG_0034
+    size: "full",
+    img: window.IMGS.IMG_0034,
+    size: "third"
   }]
 }];
 var CATS = [{
@@ -168,114 +217,136 @@ var ITEMS = {
     id: 1,
     title: "Dilevery Service",
     desc: "Fotoreportage",
-    img: window.IMGS.IMG_0035
+    img: window.IMGS.IMG_0035,
+    size: "half"
   }, {
     id: 2,
     title: "Healing Diary",
     desc: "Fotostrecke",
-    img: window.IMGS.IMG_0036
+    img: window.IMGS.IMG_0036,
+    size: "half"
   }, {
     id: 3,
     title: "Islamic Feminism",
     desc: "Porträtserie",
-    img: window.IMGS.IMG_0037
+    img: window.IMGS.IMG_0037,
+    size: "half"
   }, {
     id: 4,
     title: "Shaped to Resist",
     desc: "Dokumentarserie",
-    img: window.IMGS.IMG_0038
+    img: window.IMGS.IMG_0038,
+    size: "half"
   }],
   portraets: [{
     id: 7,
     title: "Assignment 1",
     desc: "",
-    img: window.IMGS.IMG_0039
+    img: window.IMGS.IMG_0039,
+    size: "third"
   }, {
     id: 8,
     title: "Assignment 2",
     desc: "",
-    img: window.IMGS.IMG_0040
+    img: window.IMGS.IMG_0040,
+    size: "third"
   }, {
     id: 9,
     title: "Assignment 3",
     desc: "",
-    img: window.IMGS.IMG_0041
+    img: window.IMGS.IMG_0041,
+    size: "third"
   }, {
     id: 10,
     title: "Assignment 4",
     desc: "",
-    img: window.IMGS.IMG_0042
+    img: window.IMGS.IMG_0042,
+    size: "third"
   }, {
     id: 11,
     title: "Assignment 5",
     desc: "",
-    img: window.IMGS.IMG_0043
+    img: window.IMGS.IMG_0043,
+    size: "third"
   }, {
     id: 12,
     title: "Assignment 6",
     desc: "",
-    img: window.IMGS.IMG_0044
+    img: window.IMGS.IMG_0044,
+    size: "third"
   }, {
     id: 13,
     title: "Assignment 7",
     desc: "",
-    img: window.IMGS.IMG_0045
+    img: window.IMGS.IMG_0045,
+    size: "third"
   }],
   journalismus: [{
     id: 45,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0046
+    img: window.IMGS.IMG_0046,
+    size: "half"
   }, {
     id: 47,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0047
+    img: window.IMGS.IMG_0047,
+    size: "half"
   }, {
     id: 39,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0048
+    img: window.IMGS.IMG_0048,
+    size: "third"
   }, {
     id: 48,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0049
+    img: window.IMGS.IMG_0049,
+    size: "two-thirds"
   }, {
     id: 40,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0050
+    img: window.IMGS.IMG_0050,
+    size: "two-thirds"
   }, {
     id: 43,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0051
+    img: window.IMGS.IMG_0051,
+    size: "full"
   }, {
     id: 44,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0052
+    img: window.IMGS.IMG_0052,
+    size: "full"
   }, {
     id: 46,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0053
+    img: window.IMGS.IMG_0053,
+    size: "half"
   }, {
     id: 41,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0054
+    img: window.IMGS.IMG_0054,
+    size: "half"
   }, {
     id: 42,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0055
+    img: window.IMGS.IMG_0055,
+    size: "half"
   }, {
     id: 99,
     title: "",
     desc: "",
-    img: window.IMGS.shipBridge
+    img: window.IMGS.shipBridge,
+    size: "full"
   }]
 };
 function Lightbox(_ref) {
@@ -757,19 +828,18 @@ var WORK_KEYS = {
 };
 function JournalismusItem(_ref4) {
   var photo = _ref4.photo,
-    col = _ref4.col,
-    row = _ref4.row,
-    colSpan = _ref4.colSpan,
-    rowSpan = _ref4.rowSpan,
     onOpen = _ref4.onOpen;
   var _useState3 = useState(false),
     _useState4 = _slicedToArray(_useState3, 2),
     hov = _useState4[0],
     setHov = _useState4[1];
+  var _useStateP = useState(false),
+    _useStatePArr = _slicedToArray(_useStateP, 2),
+    isPortrait = _useStatePArr[0],
+    setIsPortrait = _useStatePArr[1];
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      gridColumn: "".concat(col, "/").concat(col + colSpan),
-      gridRow: "".concat(row, "/").concat(row + rowSpan),
+      gridColumn: "span " + spanOf(effectiveSize(photo.size, isPortrait)),
       overflow: "hidden",
       cursor: "pointer",
       position: "relative",
@@ -787,6 +857,9 @@ function JournalismusItem(_ref4) {
   }, /*#__PURE__*/React.createElement("img", {
     src: photo.img,
     alt: "",
+    onLoad: function onLoad(e) {
+      setIsPortrait(e.target.naturalHeight > e.target.naturalWidth);
+    },
     style: {
       width: "100%",
       height: "auto",
@@ -801,7 +874,6 @@ function JournalismusItem(_ref4) {
 function JournalismusLayout(_ref5) {
   var items = _ref5.items,
     onOpen = _ref5.onOpen;
-  var p = items;
   return /*#__PURE__*/React.createElement("div", {
     style: {
       overflowX: "auto"
@@ -811,86 +883,16 @@ function JournalismusLayout(_ref5) {
       display: "grid",
       gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
       gridAutoRows: "auto",
+      gridAutoFlow: "row dense",
       gap: "12px",
       minWidth: "900px"
     }
-  }, p[0] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[0],
-    col: 1,
-    row: 1,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[1] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[1],
-    col: 4,
-    row: 1,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[2] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[2],
-    col: 1,
-    row: 2,
-    colSpan: 2,
-    rowSpan: 2,
-    onOpen: onOpen
-  }), p[3] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[3],
-    col: 3,
-    row: 2,
-    colSpan: 4,
-    rowSpan: 2,
-    onOpen: onOpen
-  }), p[4] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[4],
-    col: 3,
-    row: 4,
-    colSpan: 4,
-    rowSpan: 2,
-    onOpen: onOpen
-  }), p[5] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[5],
-    col: 1,
-    row: 6,
-    colSpan: 6,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[6] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[6],
-    col: 1,
-    row: 7,
-    colSpan: 6,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[7] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[7],
-    col: 1,
-    row: 8,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[8] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[8],
-    col: 1,
-    row: 9,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[9] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[9],
-    col: 4,
-    row: 9,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[10] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[10],
-    col: 1,
-    row: 10,
-    colSpan: 6,
-    rowSpan: 1,
-    onOpen: onOpen
+  }, items.map(function (photo, i) {
+    return /*#__PURE__*/React.createElement(JournalismusItem, {
+      key: i,
+      photo: photo,
+      onOpen: onOpen
+    });
   })));
 }
 function PortfolioItem(_ref6) {
@@ -905,11 +907,11 @@ function PortfolioItem(_ref6) {
     setHovered = _useState6[1];
   var _useState7 = useState(false),
     _useState8 = _slicedToArray(_useState7, 2),
-    isLandscape = _useState8[0],
-    setIsLandscape = _useState8[1];
+    isPortrait = _useState8[0],
+    setIsPortrait = _useState8[1];
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      gridColumn: item.fullWidth ? "span 3" : item.spanTwo ? "span 2" : item.noSpan ? "span 1" : naturalRatio && isLandscape ? "span 2" : "span 1"
+      gridColumn: "span " + spanOf(effectiveSize(item.size, isPortrait))
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: naturalRatio ? "" : "img-wrap",
@@ -932,7 +934,7 @@ function PortfolioItem(_ref6) {
     src: item.img,
     alt: item.title,
     onLoad: function onLoad(e) {
-      if (naturalRatio) setIsLandscape(e.target.naturalWidth > e.target.naturalHeight);
+      setIsPortrait(e.target.naturalHeight > e.target.naturalWidth);
     },
     style: {
       width: "100%",
@@ -1163,10 +1165,11 @@ function Home(_ref7) {
     }, /*#__PURE__*/React.createElement("div", {
       style: {
         display: "grid",
-        gridTemplateColumns: "repeat(3,minmax(320px,1fr))",
+        gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
+        gridAutoFlow: "row dense",
         gap: "28px",
         alignItems: "start",
-        minWidth: "980px"
+        minWidth: "900px"
       }
     }, group.images.map(function (item) {
       return /*#__PURE__*/React.createElement(PortfolioItem, {
@@ -1191,10 +1194,11 @@ function Home(_ref7) {
     className: "g3",
     style: {
       display: "grid",
-      gridTemplateColumns: "repeat(3,minmax(320px,1fr))",
+      gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
+      gridAutoFlow: "row dense",
       gap: "28px",
       alignItems: "start",
-      minWidth: "980px"
+      minWidth: "900px"
     }
   }, ITEMS[cat].map(function (item) {
     return /*#__PURE__*/React.createElement(PortfolioItem, {
