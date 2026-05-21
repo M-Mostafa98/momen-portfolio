@@ -291,7 +291,7 @@ var ITEMS = {
     id: 47,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0047,
+    img: window.IMGS.sprengelMuseum,
     size: "half"
   }, {
     id: 39,
@@ -311,6 +311,13 @@ var ITEMS = {
     desc: "",
     img: window.IMGS.IMG_0050,
     size: "two-thirds"
+  }, {
+    id: 100,
+    title: "",
+    desc: "",
+    img: window.IMGS.biogas,
+    size: "two-thirds",
+    align: "right"
   }, {
     id: 43,
     title: "",
@@ -347,6 +354,12 @@ var ITEMS = {
     desc: "",
     img: window.IMGS.shipBridge,
     size: "full"
+  }, {
+    id: 101,
+    title: "",
+    desc: "",
+    img: window.IMGS.tankstelle,
+    size: "half"
   }]
 };
 function Lightbox(_ref) {
@@ -839,7 +852,9 @@ function JournalismusItem(_ref4) {
     setIsPortrait = _useStatePArr[1];
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      gridColumn: "span " + spanOf(effectiveSize(photo.size, isPortrait)),
+      gridColumn: photo.align === "right"
+        ? "span " + spanOf(effectiveSize(photo.size, isPortrait)) + " / -1"
+        : "span " + spanOf(effectiveSize(photo.size, isPortrait)),
       overflow: "hidden",
       cursor: "pointer",
       position: "relative",
