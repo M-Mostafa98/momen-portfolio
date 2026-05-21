@@ -1636,18 +1636,9 @@ function Contact() {
       letterSpacing: "5px",
       textTransform: "uppercase",
       color: "#c9a96e",
-      marginBottom: "12px"
+      marginBottom: "68px"
     }
-  }, "Kontakt"), /*#__PURE__*/React.createElement("h1", {
-    style: {
-      fontFamily: "'Cormorant Garamond',serif",
-      fontWeight: 300,
-      fontSize: "clamp(38px,5vw,70px)",
-      color: "#f0ece6",
-      marginBottom: "68px",
-      lineHeight: 1.05
-    }
-  }, "Lass uns", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("em", null, "zusammenarbeiten")), /*#__PURE__*/React.createElement("div", {
+  }, "Kontakt"), /*#__PURE__*/React.createElement("div", {
     className: "g2",
     style: {
       display: "grid",
@@ -1663,7 +1654,7 @@ function Contact() {
       fontWeight: 300,
       marginBottom: "50px"
     }
-  }, "F\xFCr Anfragen zu Auftr\xE4gen, Kooperationen, Ausstellungen oder Ver\xF6ffentlichungen \u2014 schreib mir direkt."), /*#__PURE__*/React.createElement("div", {
+  }, "F\xFCr Anfragen sag bitte Hallo."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
