@@ -1626,7 +1626,38 @@ function Contact() {
       maxWidth: "640px",
       margin: "0 auto"
     }
-  }, /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "46px"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Raleway',sans-serif",
+      fontWeight: 100,
+      fontSize: "clamp(14px,2vw,20px)",
+      letterSpacing: "10px",
+      textTransform: "uppercase",
+      color: "#888",
+      display: "block"
+    }
+  }, "Momen"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "30px",
+      height: "1px",
+      background: "#c9a96e",
+      margin: "8px 0"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Raleway',sans-serif",
+      fontWeight: 600,
+      fontSize: "clamp(14px,2vw,20px)",
+      letterSpacing: "10px",
+      textTransform: "uppercase",
+      color: "#f0ece6",
+      display: "block"
+    }
+  }, "Mostafa")), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: "10px",
       letterSpacing: "5px",
@@ -1695,39 +1726,7 @@ function Contact() {
         fontWeight: 300
       }
     }, c.val)));
-  })))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: "260px",
-      position: "relative",
-      overflow: "hidden"
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "https://picsum.photos/seed/mmcontact44/1400/600",
-    alt: "",
-    style: {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      filter: "grayscale(30%) brightness(0.35)"
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: "absolute",
-      inset: 0,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: "'Cormorant Garamond',serif",
-      fontSize: "clamp(18px,4vw,40px)",
-      fontWeight: 300,
-      color: "rgba(240,236,230,0.3)",
-      letterSpacing: "10px",
-      textAlign: "center"
-    }
-  }, "MOMEN MOSTAFA"))));
+  })))));
 }
 function Impressum(_ref10) {
   var setPage = _ref10.setPage;
