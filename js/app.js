@@ -1464,7 +1464,7 @@ function About() {
       paddingTop: "90px",
       minHeight: "100vh"
     }
-  , /*#__PURE__*/React.createElement("section", {
+  }, /*#__PURE__*/React.createElement("section", {
     style: {
       padding: "90px 5%"
     }
@@ -1589,7 +1589,7 @@ function About() {
         fontWeight: 300
       }
     }, ev));
-  }))))))
+  })))))))
 
 /* CONTACT */
 function Contact() {
