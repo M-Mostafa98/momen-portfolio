@@ -962,7 +962,13 @@ function PortfolioItem(_ref6) {
 function Home(_ref7) {
   var setPage = _ref7.setPage,
     navHidden = _ref7.navHidden;
-  var _useState9 = useState("portraets"),
+  var _useState9 = useState(function () {
+      try {
+        var s = localStorage.getItem("mm.cat");
+        if (s === "portraets" || s === "serien" || s === "journalismus") return s;
+      } catch (e) {}
+      return "portraets";
+    }),
     _useState0 = _slicedToArray(_useState9, 2),
     cat = _useState0[0],
     setCat = _useState0[1];
@@ -978,6 +984,9 @@ function Home(_ref7) {
     setLb(item);
     setLbItems(items);
   };
+  useEffect(function () {
+    try { localStorage.setItem("mm.cat", cat); } catch (e) {}
+  }, [cat]);
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("section", {
     style: {
       height: "100vh",
@@ -1477,13 +1486,14 @@ function About() {
     className: "abt",
     style: {
       display: "grid",
-      gridTemplateColumns: "1fr 1.15fr",
-      gap: "90px",
+      gridTemplateColumns: "auto 1fr",
+      gap: "50px",
       alignItems: "start"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      position: "relative"
+      position: "relative",
+      maxWidth: "260px"
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: (window.IMGS && window.IMGS.profilePhoto) || "https://picsum.photos/seed/mmport55/500/650",
@@ -1570,7 +1580,7 @@ function About() {
       color: "#444",
       marginBottom: "26px"
     }
-  }, "Stationen"), [["2011", "Arabischer Frühling · Kairo"], ["2016", "Abitur · Khartum"], ["2016–17", "Sprachvorbereitung · Istanbul & Ankara"], ["2017", "Zug nach Hannover"], ["2020", "Beginn Dokumentarfotografie"], ["2024", "Wohnortwechsel nahe Hannover"]].map(function (_ref8) {
+  }, "Stationen"), [["1998", "Geboren in Kairo"], ["2018–24", "Fotojournalismus & Dokumentarfotografie · Hannover"], ["2022", "Internationales Programm · Pathshala School · Dhaka"], ["2024–heute", "Freier Fotograf"]].map(function (_ref8) {
     var _ref9 = _slicedToArray(_ref8, 2),
       y = _ref9[0],
       ev = _ref9[1];
@@ -1963,8 +1973,33 @@ function Footer(_ref13) {
     }
   }, "Impressum")));
 }
+/* HASH ROUTING */
+var PAGE_TO_HASH = {
+  home: "",
+  about: "ueber-mich",
+  videos: "videos",
+  contact: "kontakt",
+  impressum: "impressum",
+  "work-delivery": "arbeit/delivery",
+  "work-healing": "arbeit/healing",
+  "work-islamic": "arbeit/islamic"
+};
+var HASH_TO_PAGE = {
+  "": "home",
+  "ueber-mich": "about",
+  "videos": "videos",
+  "kontakt": "contact",
+  "impressum": "impressum",
+  "arbeit/delivery": "work-delivery",
+  "arbeit/healing": "work-healing",
+  "arbeit/islamic": "work-islamic"
+};
+function pageFromHash() {
+  var h = (window.location.hash || "").replace(/^#\/?/, "");
+  return HASH_TO_PAGE[h] || "home";
+}
 function App() {
-  var _useState17 = useState("home"),
+  var _useState17 = useState(pageFromHash),
     _useState18 = _slicedToArray(_useState17, 2),
     page = _useState18[0],
     setPage = _useState18[1];
@@ -1977,6 +2012,12 @@ function App() {
     navHidden = _useState22[0],
     setNavHidden = _useState22[1];
   var lastScrollY = useRef(0);
+  var didMount = useRef(false);
+  useEffect(function () {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
   useEffect(function () {
     var el = document.createElement("style");
     el.textContent = STYLES;
@@ -2006,11 +2047,73 @@ function App() {
     };
   }, []);
   useEffect(function () {
+    if (!didMount.current) {
+      didMount.current = true;
+      try {
+        var saved = sessionStorage.getItem("mm.scroll." + page);
+        if (saved) {
+          var y = parseInt(saved, 10);
+          // Restore after content has had a chance to render (images, etc).
+          var tries = 0;
+          var tryRestore = function () {
+            window.scrollTo(0, y);
+            tries++;
+            if (tries < 10 && Math.abs(window.scrollY - y) > 2) {
+              setTimeout(tryRestore, 80);
+            }
+          };
+          setTimeout(tryRestore, 60);
+          return;
+        }
+      } catch (e) {}
+      return;
+    }
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   }, [page]);
+  useEffect(function () {
+    var save = function () {
+      try { sessionStorage.setItem("mm.scroll." + page, String(window.scrollY)); } catch (e) {}
+    };
+    var t = null;
+    var onScroll = function () {
+      if (t) return;
+      t = setTimeout(function () { save(); t = null; }, 120);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("beforeunload", save);
+    return function () {
+      save();
+      if (t) { clearTimeout(t); }
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("beforeunload", save);
+    };
+  }, [page]);
+  useEffect(function () {
+    var slug = PAGE_TO_HASH[page];
+    var target = slug ? "#/" + slug : "";
+    if (window.location.hash !== target) {
+      if (target) {
+        window.history.replaceState(null, "", target);
+      } else {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+    }
+  }, [page]);
+  useEffect(function () {
+    var onHash = function () {
+      var next = pageFromHash();
+      setPage(function (cur) {
+        return cur === next ? cur : next;
+      });
+    };
+    window.addEventListener("hashchange", onHash);
+    return function () {
+      return window.removeEventListener("hashchange", onHash);
+    };
+  }, []);
   return /*#__PURE__*/React.createElement("div", {
     style: {
       background: "#2a2a2a",
