@@ -2,7 +2,7 @@
 /*
 Plugin Name: Momen Mostafa Portfolio
 Description: Portfolio Website von Momen Mostafa
-Version: 1.2
+Version: 1.3
 Author: Momen Mostafa
 */
 

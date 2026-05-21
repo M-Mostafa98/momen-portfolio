@@ -161,7 +161,7 @@ var CATS = [{
   label: "Fotoarbeiten"
 }, {
   key: "journalismus",
-  label: "Tagesjournalismus"
+  label: "Aktuelles"
 }];
 var ITEMS = {
   serien: [{
@@ -1964,7 +1964,7 @@ function Impressum(_ref10) {
       background: "#c9a96e",
       margin: "8px 0"
     }
-  })), [["Angaben gemäß § 5 TMG", ["Moamen Mostafa", "Himmelsthürerstr. 4", "31147 Hildesheim", "Deutschland"]], ["Kontakt", ["Telefon: +49 1520 5197646", "E-Mail: me@momen-most.com"]], ["Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV", ["Moamen Mostafa", "Himmelsthürerstr. 4, 31147 Hildesheim"]], ["Haftung für Inhalte", ["Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen."]], ["Haftung für Links", ["Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."]], ["Urheberrecht", ["Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Sämtliche Fotos und Texte sind urheberrechtlich geschützt. © Moamen Mostafa"]]].map(function (_ref11) {
+  })), [["Angaben gemäß § 5 TMG", ["Moamen Mostafa", "Himmelsthürerstr. 4", "31147 Hildesheim", "Deutschland"]], ["Kontakt", ["Telefon: +49 1520 5197646", "E-Mail: me@momen-most.com"]], ["Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV", ["Moamen Mostafa", "Himmelsthürerstr. 4, 31147 Hildesheim"]], ["Haftung für Inhalte", ["Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden."]], ["Haftung für Links", ["Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."]], ["Urheberrecht", ["Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Sämtliche Fotos und Texte sind urheberrechtlich geschützt. © Moamen Mostafa"]]].map(function (_ref11) {
     var _ref12 = _slicedToArray(_ref11, 2),
       title = _ref12[0],
       lines = _ref12[1];
