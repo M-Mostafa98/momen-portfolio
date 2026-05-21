@@ -271,6 +271,11 @@ var ITEMS = {
     title: "",
     desc: "",
     img: window.IMGS.IMG_0055
+  }, {
+    id: 99,
+    title: "",
+    desc: "",
+    img: window.IMGS.shipBridge
   }]
 };
 function Lightbox(_ref) {
@@ -877,6 +882,13 @@ function JournalismusLayout(_ref5) {
     col: 4,
     row: 9,
     colSpan: 3,
+    rowSpan: 1,
+    onOpen: onOpen
+  }), p[10] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[10],
+    col: 1,
+    row: 10,
+    colSpan: 6,
     rowSpan: 1,
     onOpen: onOpen
   })));
