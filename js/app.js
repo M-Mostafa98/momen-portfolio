@@ -819,72 +819,72 @@ function JournalismusLayout(_ref5) {
       gap: "12px",
       minWidth: "900px"
     }
-  }, p[3] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[3],
-    col: 1,
-    row: 1,
-    colSpan: 2,
-    rowSpan: 2,
-    onOpen: onOpen
-  }), p[0] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[0],
-    col: 3,
-    row: 1,
-    colSpan: 4,
-    rowSpan: 2,
-    onOpen: onOpen
-  }), p[4] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[4],
-    col: 3,
-    row: 3,
-    colSpan: 4,
-    rowSpan: 2,
-    onOpen: onOpen
-  }), p[5] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[5],
-    col: 1,
-    row: 5,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[6] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[6],
-    col: 4,
-    row: 5,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[7] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[7],
-    col: 1,
-    row: 6,
-    colSpan: 6,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[8] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[8],
-    col: 1,
-    row: 7,
-    colSpan: 6,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[10] && /*#__PURE__*/React.createElement(JournalismusItem, {
-    photo: p[10],
-    col: 1,
-    row: 8,
-    colSpan: 3,
-    rowSpan: 1,
-    onOpen: onOpen
-  }), p[9] && /*#__PURE__*/React.createElement(JournalismusItem, {
+  }, p[9] && /*#__PURE__*/React.createElement(JournalismusItem, {
     photo: p[9],
     col: 1,
-    row: 9,
+    row: 1,
     colSpan: 3,
     rowSpan: 1,
     onOpen: onOpen
   }), p[11] && /*#__PURE__*/React.createElement(JournalismusItem, {
     photo: p[11],
     col: 4,
+    row: 1,
+    colSpan: 3,
+    rowSpan: 1,
+    onOpen: onOpen
+  }), p[3] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[3],
+    col: 1,
+    row: 2,
+    colSpan: 2,
+    rowSpan: 2,
+    onOpen: onOpen
+  }), p[0] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[0],
+    col: 3,
+    row: 2,
+    colSpan: 4,
+    rowSpan: 2,
+    onOpen: onOpen
+  }), p[4] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[4],
+    col: 3,
+    row: 4,
+    colSpan: 4,
+    rowSpan: 2,
+    onOpen: onOpen
+  }), p[5] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[5],
+    col: 1,
+    row: 6,
+    colSpan: 3,
+    rowSpan: 1,
+    onOpen: onOpen
+  }), p[6] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[6],
+    col: 4,
+    row: 6,
+    colSpan: 3,
+    rowSpan: 1,
+    onOpen: onOpen
+  }), p[7] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[7],
+    col: 1,
+    row: 7,
+    colSpan: 6,
+    rowSpan: 1,
+    onOpen: onOpen
+  }), p[8] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[8],
+    col: 1,
+    row: 8,
+    colSpan: 6,
+    rowSpan: 1,
+    onOpen: onOpen
+  }), p[10] && /*#__PURE__*/React.createElement(JournalismusItem, {
+    photo: p[10],
+    col: 1,
     row: 9,
     colSpan: 3,
     rowSpan: 1,
