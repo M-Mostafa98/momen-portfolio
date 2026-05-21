@@ -1589,7 +1589,8 @@ function About() {
         fontWeight: 300
       }
     }, ev));
-  })))))))
+  })))))));
+}
 
 /* CONTACT */
 function Contact() {
