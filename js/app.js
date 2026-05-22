@@ -1342,39 +1342,50 @@ function Videos() {
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      paddingTop: "90px",
+      paddingTop: "16px",
       minHeight: "100vh"
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("section", {
     style: {
-      height: "40vh",
-      position: "relative",
-      overflow: "hidden"
+      padding: "0 5%"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      position: "absolute",
-      inset: 0,
-      background: "linear-gradient(to bottom,rgba(12,12,12,0.5),rgba(12,12,12,0.8))",
-      zIndex: 1
+      maxWidth: "1200px",
+      margin: "0 auto"
     }
-  }), /*#__PURE__*/React.createElement("img", {
-    src: "https://picsum.photos/seed/mmvideo88/1400/800",
-    alt: "",
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      filter: "grayscale(25%)"
+      marginBottom: "24px"
     }
-  }), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", {
     style: {
-      position: "absolute",
-      bottom: "46px",
-      left: "5%",
-      zIndex: 2
+      fontFamily: "'Raleway',sans-serif",
+      fontWeight: 100,
+      fontSize: "clamp(12px,2vw,18px)",
+      letterSpacing: "10px",
+      textTransform: "uppercase",
+      color: "#888",
+      display: "block"
     }
-  }, /*#__PURE__*/React.createElement("p", {
+  }, "Momen"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "30px",
+      height: "1px",
+      background: "#c9a96e",
+      margin: "8px 0"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Raleway',sans-serif",
+      fontWeight: 600,
+      fontSize: "clamp(12px,2vw,18px)",
+      letterSpacing: "10px",
+      textTransform: "uppercase",
+      color: "#f0ece6",
+      display: "block"
+    }
+  }, "Mostafa")), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: "10px",
       letterSpacing: "5px",
@@ -1387,7 +1398,8 @@ function Videos() {
       fontFamily: "'Cormorant Garamond',serif",
       fontWeight: 300,
       fontSize: "clamp(40px,6vw,80px)",
-      color: "#f0ece6"
+      color: "#f0ece6",
+      margin: "0"
     }
   }, "Videos"))), /*#__PURE__*/React.createElement("section", {
     style: {
