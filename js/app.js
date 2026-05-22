@@ -306,17 +306,17 @@ var ITEMS = {
     img: window.IMGS.IMG_0046,
     size: "half"
   }, {
-    id: 47,
-    title: "",
-    desc: "",
-    img: window.IMGS.sprengelMuseum,
-    size: "half"
-  }, {
     id: 39,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0048,
     size: "third"
+  }, {
+    id: 47,
+    title: "",
+    desc: "",
+    img: window.IMGS.sprengelMuseum,
+    size: "half"
   }, {
     id: 48,
     title: "",
@@ -933,7 +933,7 @@ function JournalismusLayout(_ref5) {
       display: "grid",
       gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
       gridAutoRows: "auto",
-      gridAutoFlow: "row dense",
+      gridAutoFlow: "row",
       gap: "12px",
       minWidth: "900px"
     }
@@ -1057,8 +1057,8 @@ function Home(_ref7) {
       position: "relative",
       overflow: "hidden",
       display: "flex",
-      alignItems: "flex-end",
-      padding: "0 5% 90px"
+      alignItems: "flex-start",
+      padding: "16px 5% 0"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1123,8 +1123,7 @@ function Home(_ref7) {
       textTransform: "uppercase",
       color: "#c9a96e",
       marginTop: "22px",
-      marginBottom: "0",
-      paddingLeft: "16px"
+      marginBottom: "0"
     }
   }, "Fotograf"))), /*#__PURE__*/React.createElement("section", {
     id: "gallery",
@@ -1279,40 +1278,34 @@ function Videos() {
     setActive = _useState14[1];
   var videos = [{
     id: 1,
-    title: "Nasamat — Teaser",
-    desc: "Dokumentarfilm · 2023",
-    thumb: "https://picsum.photos/seed/vid1/800/450",
-    embed: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title: "",
+    desc: "",
+    thumb: "https://img.youtube.com/vi/Ql2m_wkRqfg/hqdefault.jpg",
+    embed: "https://www.youtube.com/embed/Ql2m_wkRqfg"
   }, {
     id: 2,
-    title: "Arabischer Frühling",
-    desc: "Archivmaterial · Kairo 2011",
-    thumb: "https://picsum.photos/seed/vid2/800/450",
-    embed: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title: "",
+    desc: "",
+    thumb: "https://img.youtube.com/vi/1hR_GW5D5Rg/hqdefault.jpg",
+    embed: "https://www.youtube.com/embed/1hR_GW5D5Rg"
   }, {
     id: 3,
-    title: "Porträt im Dialog",
-    desc: "Kurzfilm · 2022",
-    thumb: "https://picsum.photos/seed/vid3/800/450",
-    embed: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title: "",
+    desc: "",
+    thumb: "https://vumbnail.com/767418387.jpg",
+    embed: "https://player.vimeo.com/video/767418387"
   }, {
     id: 4,
-    title: "Ramadan in Hannover",
-    desc: "Reportage · 2023",
-    thumb: "https://picsum.photos/seed/vid4/800/450",
-    embed: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title: "",
+    desc: "",
+    thumb: "https://img.youtube.com/vi/OAZLlXaSir0/hqdefault.jpg",
+    embed: "https://www.youtube.com/embed/OAZLlXaSir0"
   }, {
     id: 5,
-    title: "Zwischen den Welten",
-    desc: "Dokumentarfilm · 2024",
-    thumb: "https://picsum.photos/seed/vid5/800/450",
-    embed: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-  }, {
-    id: 6,
-    title: "Stille Orte",
-    desc: "Kurzfilm · 2024",
-    thumb: "https://picsum.photos/seed/vid6/800/450",
-    embed: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title: "",
+    desc: "",
+    thumb: "https://vumbnail.com/767193476.jpg",
+    embed: "https://player.vimeo.com/video/767193476"
   }];
   useEffect(function () {
     var h = function h(e) {
@@ -1385,8 +1378,8 @@ function Videos() {
     className: "g3",
     style: {
       display: "grid",
-      gridTemplateColumns: "repeat(3,1fr)",
-      gap: "14px"
+      gridTemplateColumns: "repeat(2,1fr)",
+      gap: "24px"
     }
   }, videos.map(function (v) {
     return /*#__PURE__*/React.createElement("div", {
