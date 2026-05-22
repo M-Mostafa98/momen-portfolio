@@ -306,12 +306,6 @@ var ITEMS = {
     img: window.IMGS.IMG_0049,
     size: "two-thirds"
   }, {
-    id: 40,
-    title: "",
-    desc: "",
-    img: window.IMGS.IMG_0050,
-    size: "two-thirds"
-  }, {
     id: 100,
     title: "",
     desc: "",
@@ -337,10 +331,10 @@ var ITEMS = {
     img: window.IMGS.IMG_0053,
     size: "half"
   }, {
-    id: 41,
+    id: 40,
     title: "",
     desc: "",
-    img: window.IMGS.IMG_0054,
+    img: window.IMGS.IMG_0050,
     size: "half"
   }, {
     id: 42,
@@ -349,17 +343,17 @@ var ITEMS = {
     img: window.IMGS.IMG_0055,
     size: "half"
   }, {
+    id: 41,
+    title: "",
+    desc: "",
+    img: window.IMGS.IMG_0054,
+    size: "half"
+  }, {
     id: 99,
     title: "",
     desc: "",
     img: window.IMGS.shipBridge,
     size: "full"
-  }, {
-    id: 101,
-    title: "",
-    desc: "",
-    img: window.IMGS.tankstelle,
-    size: "half"
   }]
 };
 function Lightbox(_ref) {
