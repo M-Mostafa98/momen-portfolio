@@ -593,80 +593,295 @@ function Nav(_ref2) {
 }
 var WORKS = {
   "delivery": {
-    title: "Dilevery Service",
+    title: "Delivery Service",
     label: "Fotoreportage",
-    intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Fotoreportage.",
+    intro: "",
     images: [{
-      src: window.IMGS.IMG_0056,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.delivery_01,
+      caption: "",
+      size: "half",
+      position: "center 35%"
     }, {
-      src: window.IMGS.IMG_0057,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.delivery_02,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0058,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.delivery_03,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0059,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.delivery_04,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_05,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_06,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_07,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_08,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_09,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_10,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_11,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_12,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_13,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_14,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_15,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_16,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.delivery_17,
+      caption: "",
+      size: "half"
     }]
   },
   "healing": {
     title: "Healing Diary",
     label: "Fotostrecke",
-    intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Fotostrecke.",
+    intro: "",
     images: [{
-      src: window.IMGS.IMG_0060,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.healing_01,
+      caption: "",
+      size: "half",
+      position: "center 35%"
     }, {
-      src: window.IMGS.IMG_0061,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.healing_02,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0062,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.healing_03,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0063,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.healing_04,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_05,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_06,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_07,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_08,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_09,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_10,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_11,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_12,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.healing_13,
+      caption: "",
+      size: "half"
     }]
   },
   "islamic": {
     title: "Islamic Feminism",
     label: "Porträtserie",
-    intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Porträtserie.",
+    intro: "",
     images: [{
-      src: window.IMGS.IMG_0064,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.islamic_01,
+      caption: "",
+      size: "half",
+      position: "center 25%"
     }, {
-      src: window.IMGS.IMG_0065,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.islamic_02,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0066,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.islamic_03,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0067,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.islamic_04,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_05,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_06,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_07,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_08,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_09,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_10,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_11,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_12,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_13,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_14,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_15,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.islamic_16,
+      caption: "",
+      size: "half"
     }]
   },
   "shaped": {
     title: "Shaped to Resist",
     label: "Dokumentarserie",
-    intro: "Hier kannst du einen Einführungstext zur Arbeit einfügen. Beschreibe den Kontext, die Entstehung und die Intention hinter dieser Dokumentarserie.",
+    intro: "",
     images: [{
-      src: window.IMGS.IMG_0068,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.shaped_01,
+      caption: "",
+      size: "half",
+      position: "center 25%"
     }, {
-      src: window.IMGS.IMG_0069,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.shaped_02,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0070,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.shaped_03,
+      caption: "",
+      size: "half"
     }, {
-      src: window.IMGS.IMG_0071,
-      caption: "Bildunterschrift für dieses Foto"
+      src: window.IMGS.shaped_04,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_05,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_06,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_07,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_08,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_09,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_10,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_11,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_12,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_13,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_14,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_15,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_16,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_17,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_18,
+      caption: "",
+      size: "half"
+    }, {
+      src: window.IMGS.shaped_19,
+      caption: "",
+      size: "half"
     }]
   }
 };
 function WorkDetail(_ref3) {
-  var _work$images$, _work$images$2;
   var workKey = _ref3.workKey,
     setPage = _ref3.setPage;
   var work = WORKS[workKey];
@@ -689,13 +904,14 @@ function WorkDetail(_ref3) {
       background: "linear-gradient(to bottom,rgba(12,12,12,0.4),rgba(12,12,12,0.8))",
       zIndex: 1
     }
-  }), /*#__PURE__*/React.createElement("img", {
+  }), work.images[0] && /*#__PURE__*/React.createElement("img", {
     src: work.images[0].src,
     alt: work.title,
     style: {
       width: "100%",
       height: "100%",
       objectFit: "cover",
+      objectPosition: work.images[0].position || "center center",
       filter: "grayscale(15%)"
     }
   }), /*#__PURE__*/React.createElement("div", {
@@ -706,14 +922,6 @@ function WorkDetail(_ref3) {
       zIndex: 2
     }
   }, /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "10px",
-      letterSpacing: "5px",
-      textTransform: "uppercase",
-      color: "#c9a96e",
-      marginBottom: "14px"
-    }
-  }), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: "10px",
       letterSpacing: "5px",
@@ -750,7 +958,7 @@ function WorkDetail(_ref3) {
       alignItems: "center",
       gap: "8px"
     }
-  }, "\u2190 Zur\xFCck")), /*#__PURE__*/React.createElement("section", {
+  }, "← Zurück")), /*#__PURE__*/React.createElement("section", {
     style: {
       padding: "80px 5%"
     }
@@ -767,14 +975,6 @@ function WorkDetail(_ref3) {
       fontWeight: 300,
       fontFamily: "'Jost',sans-serif"
     }
-  }), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "16px",
-      lineHeight: 2,
-      color: "#888",
-      fontWeight: 300,
-      fontFamily: "'Jost',sans-serif"
-    }
   }, work.intro))), /*#__PURE__*/React.createElement("section", {
     style: {
       padding: "0 5% 120px"
@@ -782,88 +982,40 @@ function WorkDetail(_ref3) {
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       maxWidth: "1300px",
-      margin: "0 auto"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: "6px"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: "relative"
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: work.images[0].src,
-    alt: "",
-    style: {
-      width: "100%",
-      height: "65vh",
-      objectFit: "cover",
-      display: "block"
-    }
-  }), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "11px",
-      color: "#555",
-      letterSpacing: "1px",
-      marginTop: "10px",
-      fontFamily: "'Jost',sans-serif"
-    }
-  }), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "11px",
-      color: "#555",
-      letterSpacing: "1px",
-      marginTop: "10px",
-      fontFamily: "'Jost',sans-serif"
-    }
-  }, work.images[0].caption))), /*#__PURE__*/React.createElement("div", {
-    style: {
+      margin: "0 auto",
       display: "grid",
-      gridTemplateColumns: "1.3fr 1fr",
-      gap: "6px",
-      marginBottom: "6px"
+      gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
+      gridAutoFlow: "row",
+      gap: "32px 18px"
     }
-  }, [1, 2].map(function (i) {
-    var _work$images$i, _work$images$i2;
-    return /*#__PURE__*/React.createElement("div", {
-      key: i
+  }, work.images.slice(1).map(function (im, i) {
+    return /*#__PURE__*/React.createElement("figure", {
+      key: i,
+      style: {
+        gridColumn: "span " + spanOf(im.size || "half"),
+        margin: 0
+      }
     }, /*#__PURE__*/React.createElement("img", {
-      src: ((_work$images$i = work.images[i]) === null || _work$images$i === void 0 ? void 0 : _work$images$i.src) || work.images[0].src,
-      alt: "",
+      src: im.src,
+      alt: im.caption || "",
       style: {
         width: "100%",
-        height: "50vh",
-        objectFit: "cover",
-        display: "block"
+        height: "auto",
+        display: "block",
+        filter: "grayscale(8%)"
       }
-    }), /*#__PURE__*/React.createElement("p", {
+    }), im.caption && /*#__PURE__*/React.createElement("figcaption", {
       style: {
         fontSize: "11px",
-        color: "#555",
-        letterSpacing: "1px",
+        color: "#666",
+        letterSpacing: "0.5px",
         marginTop: "10px",
-        fontFamily: "'Jost',sans-serif"
+        fontFamily: "'Jost',sans-serif",
+        fontWeight: 300,
+        lineHeight: 1.5
       }
-    }, ((_work$images$i2 = work.images[i]) === null || _work$images$i2 === void 0 ? void 0 : _work$images$i2.caption) || "Bildunterschrift"));
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: ((_work$images$ = work.images[3]) === null || _work$images$ === void 0 ? void 0 : _work$images$.src) || work.images[0].src,
-    alt: "",
-    style: {
-      width: "100%",
-      height: "55vh",
-      objectFit: "cover",
-      display: "block"
-    }
-  }), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: "11px",
-      color: "#555",
-      letterSpacing: "1px",
-      marginTop: "10px",
-      fontFamily: "'Jost',sans-serif"
-    }
-  }, ((_work$images$2 = work.images[3]) === null || _work$images$2 === void 0 ? void 0 : _work$images$2.caption) || "Bildunterschrift")))));
+    }, im.caption));
+  }))));
 }
 var WORK_KEYS = {
   "Dilevery Service": "delivery",
@@ -1254,7 +1406,11 @@ function Home(_ref7) {
       key: item.id,
       item: item,
       onOpen: function onOpen(it) {
-        return openLb(it, ITEMS[cat]);
+        if (cat === "serien" && WORK_KEYS[it.title]) {
+          setPage("work-" + WORK_KEYS[it.title]);
+          return;
+        }
+        openLb(it, ITEMS[cat]);
       },
       hideTitle: false,
       naturalRatio: false,
