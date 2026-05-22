@@ -282,6 +282,25 @@ var ITEMS = {
     size: "third"
   }],
   journalismus: [{
+    id: 201,
+    title: "",
+    desc: "",
+    img: window.IMGS.osanYaran,
+    size: "two-thirds",
+    align: "right"
+  }, {
+    id: 202,
+    title: "",
+    desc: "",
+    img: window.IMGS.eliotKunsthaus,
+    size: "half"
+  }, {
+    id: 203,
+    title: "",
+    desc: "",
+    img: window.IMGS.cduParteitag,
+    size: "half"
+  }, {
     id: 45,
     title: "",
     desc: "",
@@ -313,11 +332,30 @@ var ITEMS = {
     size: "two-thirds",
     align: "right"
   }, {
+    id: 204,
+    title: "",
+    desc: "",
+    img: window.IMGS.feuerwehr,
+    size: "two-thirds"
+  }, {
+    id: 205,
+    title: "",
+    desc: "",
+    img: window.IMGS.nachtengel,
+    size: "full"
+  }, {
     id: 43,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0051,
     size: "full"
+  }, {
+    id: 206,
+    title: "",
+    desc: "",
+    img: window.IMGS.kranfuehrer,
+    size: "two-thirds",
+    align: "center"
   }, {
     id: 44,
     title: "",
@@ -329,24 +367,25 @@ var ITEMS = {
     title: "",
     desc: "",
     img: window.IMGS.IMG_0053,
+    size: "full"
+  }, {
+    id: 42,
+    title: "",
+    desc: "",
+    img: window.IMGS.IMG_0055,
+    size: "half",
+    tall: true
+  }, {
+    id: 41,
+    title: "",
+    desc: "",
+    img: window.IMGS.IMG_0054,
     size: "half"
   }, {
     id: 40,
     title: "",
     desc: "",
     img: window.IMGS.IMG_0050,
-    size: "half"
-  }, {
-    id: 42,
-    title: "",
-    desc: "",
-    img: window.IMGS.IMG_0055,
-    size: "half"
-  }, {
-    id: 41,
-    title: "",
-    desc: "",
-    img: window.IMGS.IMG_0054,
     size: "half"
   }, {
     id: 99,
@@ -848,7 +887,10 @@ function JournalismusItem(_ref4) {
     style: {
       gridColumn: photo.align === "right"
         ? "span " + spanOf(effectiveSize(photo.size, isPortrait)) + " / -1"
+        : photo.align === "center"
+        ? ((6 - spanOf(effectiveSize(photo.size, isPortrait))) / 2 + 1) + " / span " + spanOf(effectiveSize(photo.size, isPortrait))
         : "span " + spanOf(effectiveSize(photo.size, isPortrait)),
+      gridRow: photo.tall ? "span 2" : undefined,
       overflow: "hidden",
       cursor: "pointer",
       position: "relative",
