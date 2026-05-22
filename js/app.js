@@ -1276,6 +1276,10 @@ function Videos() {
     _useState14 = _slicedToArray(_useState13, 2),
     active = _useState14[0],
     setActive = _useState14[1];
+  var _useStateT = useState({}),
+    _useStateTArr = _slicedToArray(_useStateT, 2),
+    titles = _useStateTArr[0],
+    setTitles = _useStateTArr[1];
   var videos = [{
     id: 1,
     title: "",
@@ -1315,6 +1319,26 @@ function Videos() {
     return function () {
       return window.removeEventListener("keydown", h);
     };
+  }, []);
+  useEffect(function () {
+    videos.forEach(function (v) {
+      var m = v.embed.match(/youtube\.com\/embed\/([^?\/]+)/);
+      var oembed = null;
+      if (m) {
+        oembed = "https://www.youtube.com/oembed?url=https://youtu.be/" + m[1] + "&format=json";
+      } else {
+        m = v.embed.match(/player\.vimeo\.com\/video\/(\d+)/);
+        if (m) oembed = "https://vimeo.com/api/oembed.json?url=https://vimeo.com/" + m[1];
+      }
+      if (!oembed) return;
+      fetch(oembed).then(function (r) { return r.json(); }).then(function (d) {
+        if (d && d.title) setTitles(function (cur) {
+          var next = Object.assign({}, cur);
+          next[v.id] = d.title;
+          return next;
+        });
+      })["catch"](function () {});
+    });
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1436,7 +1460,7 @@ function Videos() {
         color: "#e8e2d9",
         marginBottom: "5px"
       }
-    }, v.title), /*#__PURE__*/React.createElement("div", {
+    }, titles[v.id] || v.title), /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: "10px",
         color: "#c9a96e",
