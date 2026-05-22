@@ -109,9 +109,8 @@ var ASSIGNMENTS = [{
   client: "Niedersächsisches Landesmuseum & Modedesign-Studiengang der Hochschule Hannover",
   images: [{
     id: 21,
-    size: "full",
-    img: window.IMGS.IMG_0017,
-    size: "third"
+    img: window.IMGS.landesmuseum,
+    size: "full"
   }, {
     id: 22,
     size: "two-thirds",
