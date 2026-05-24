@@ -16,7 +16,7 @@ var _React = React,
   useState = _React.useState,
   useEffect = _React.useEffect,
   useRef = _React.useRef;
-var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: 1fr !important; min-width: 0 !important; gap: 16px !important; }\n  .g3 { grid-template-columns: 1fr !important; min-width: 0 !important; gap: 18px !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: 1fr !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; }\n  .work-figure img { max-height: 70vh !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n}\n";
+var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; height: auto !important; }\n  .hero-section { justify-content: center !important; padding-top: 90px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n}\n";
 var SIZE_SPAN = {
   "full":       6,  // groß (Querformat, ganze Breite)
   "two-thirds": 4,  // mittel-querformat (2/3)
@@ -437,9 +437,22 @@ function Lightbox(_ref) {
       return window.removeEventListener("keydown", h);
     };
   }, []);
+  var touchStartX = useRef(0);
+  var onTouchStart = function (e) {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  var onTouchEnd = function (e) {
+    var dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) setCur(function (c) { return Math.min(c + 1, items.length - 1); });
+      else setCur(function (c) { return Math.max(c - 1, 0); });
+    }
+  };
   var it = items[cur];
   return /*#__PURE__*/React.createElement("div", {
     onClick: onClose,
+    onTouchStart: onTouchStart,
+    onTouchEnd: onTouchEnd,
     style: {
       position: "fixed",
       inset: 0,
@@ -541,74 +554,186 @@ function Lightbox(_ref) {
     }
   }, cur + 1, " / ", items.length))));
 }
+function useIsMobile() {
+  var _s = useState(typeof window !== "undefined" && window.innerWidth < 768);
+  var m = _s[0], setM = _s[1];
+  useEffect(function () {
+    var h = function () { setM(window.innerWidth < 768); };
+    window.addEventListener("resize", h);
+    return function () { window.removeEventListener("resize", h); };
+  }, []);
+  return m;
+}
+function Caption(_refC) {
+  var text = _refC.text, baseStyle = _refC.baseStyle;
+  var mobile = useIsMobile();
+  var _e = useState(false);
+  var exp = _e[0], setExp = _e[1];
+  if (!mobile) {
+    return /*#__PURE__*/React.createElement("div", { style: baseStyle }, text);
+  }
+  var btnStyle = {
+    background: "none", border: "none", color: "#c9a96e",
+    fontSize: "9px", letterSpacing: "1px", textTransform: "uppercase",
+    cursor: "pointer", padding: 0, fontFamily: "inherit",
+    whiteSpace: "nowrap", flexShrink: 0, lineHeight: "inherit"
+  };
+  if (!exp) {
+    var rowStyle = Object.assign({}, baseStyle, {
+      display: "flex", alignItems: "baseline", gap: "8px"
+    });
+    return /*#__PURE__*/React.createElement("div", { style: rowStyle },
+      /*#__PURE__*/React.createElement("span", {
+        style: {
+          flex: 1, minWidth: 0,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap"
+        }
+      }, text),
+      /*#__PURE__*/React.createElement("button", {
+        onClick: function (e) { e.stopPropagation(); setExp(true); },
+        style: btnStyle
+      }, "Mehr")
+    );
+  }
+  return /*#__PURE__*/React.createElement("div", { style: baseStyle },
+    /*#__PURE__*/React.createElement("span", { style: { display: "block" } }, text),
+    /*#__PURE__*/React.createElement("button", {
+      onClick: function (e) { e.stopPropagation(); setExp(false); },
+      style: Object.assign({}, btnStyle, { display: "block", padding: "6px 0 0" })
+    }, "Weniger")
+  );
+}
 function Nav(_ref2) {
   var page = _ref2.page,
     setPage = _ref2.setPage,
     scrollY = _ref2.scrollY,
     hidden = _ref2.hidden;
+  var mobile = useIsMobile();
+  var _o = useState(false);
+  var open = _o[0], setOpen = _o[1];
   var solid = scrollY > 60 || page !== "home";
   var goPortfolio = function goPortfolio() {
-    var _document$getElementB2;
+    setOpen(false);
     if (page !== "home") {
       setPage("home");
       setTimeout(function () {
-        var _document$getElementB;
-        return (_document$getElementB = document.getElementById("gallery")) === null || _document$getElementB === void 0 ? void 0 : _document$getElementB.scrollIntoView({
-          behavior: "smooth"
-        });
+        var el = document.getElementById("gallery");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
       }, 100);
-    } else (_document$getElementB2 = document.getElementById("gallery")) === null || _document$getElementB2 === void 0 || _document$getElementB2.scrollIntoView({
-      behavior: "smooth"
-    });
+    } else {
+      var el2 = document.getElementById("gallery");
+      if (el2) el2.scrollIntoView({ behavior: "smooth" });
+    }
   };
-  return /*#__PURE__*/React.createElement("nav", {
-    style: {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 200,
-      padding: "8px 5%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-end",
-      background: solid ? "rgba(10,10,10,0.92)" : "transparent",
-      backdropFilter: solid ? "blur(14px)" : "none",
-      borderBottom: solid ? "1px solid #1c1c1c" : "none",
-      transition: "all 0.4s, transform 0.4s",
-      transform: hidden ? "translateY(-100%)" : "translateY(0)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "nav-links",
-    style: {
-      display: "flex",
-      gap: "36px",
-      alignItems: "center"
-    }
-  }, /*#__PURE__*/React.createElement("button", {
-    className: "nav-a".concat(page === "home" ? " on" : ""),
-    onClick: function onClick() {
-      return setPage("home");
-    }
-  }, "Home"), /*#__PURE__*/React.createElement("button", {
-    className: "nav-a",
-    onClick: goPortfolio
-  }, "Portfolio"), /*#__PURE__*/React.createElement("button", {
-    className: "nav-a".concat(page === "videos" ? " on" : ""),
-    onClick: function onClick() {
-      return setPage("videos");
-    }
-  }, "Videos"), /*#__PURE__*/React.createElement("button", {
-    className: "nav-a".concat(page === "about" ? " on" : ""),
-    onClick: function onClick() {
-      return setPage("about");
-    }
-  }, "\xDCber mich"), /*#__PURE__*/React.createElement("button", {
-    className: "nav-a".concat(page === "contact" ? " on" : ""),
-    onClick: function onClick() {
-      return setPage("contact");
-    }
-  }, "Kontakt")));
+  var go = function (p) { setOpen(false); setPage(p); };
+  var navBtns = [
+    { key: "home",    label: "Home",     active: page === "home",    fn: function () { go("home"); } },
+    { key: "portfolio", label: "Portfolio", active: false,            fn: goPortfolio },
+    { key: "videos",  label: "Videos",   active: page === "videos",  fn: function () { go("videos"); } },
+    { key: "about",   label: "\xDCber mich", active: page === "about",   fn: function () { go("about"); } },
+    { key: "contact", label: "Kontakt",  active: page === "contact", fn: function () { go("contact"); } }
+  ];
+  return /*#__PURE__*/React.createElement(React.Fragment, null,
+    /*#__PURE__*/React.createElement("nav", {
+      style: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 200,
+        padding: "8px 5%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-end",
+        background: solid ? "rgba(10,10,10,0.92)" : "transparent",
+        backdropFilter: solid ? "blur(14px)" : "none",
+        borderBottom: solid ? "1px solid #1c1c1c" : "none",
+        transition: "all 0.4s, transform 0.4s",
+        transform: hidden ? "translateY(-100%)" : "translateY(0)"
+      }
+    },
+      !mobile && /*#__PURE__*/React.createElement("div", {
+        className: "nav-links",
+        style: { display: "flex", gap: "36px", alignItems: "center" }
+      }, navBtns.map(function (b) {
+        return /*#__PURE__*/React.createElement("button", {
+          key: b.key,
+          className: "nav-a" + (b.active ? " on" : ""),
+          onClick: b.fn
+        }, b.label);
+      })),
+      mobile && /*#__PURE__*/React.createElement("button", {
+        "aria-label": "Menu",
+        onClick: function () { setOpen(true); },
+        style: {
+          background: "none", border: "none", cursor: "pointer",
+          padding: "10px 4px", display: "flex", flexDirection: "column",
+          gap: "5px", alignItems: "flex-end",
+          position: "absolute", top: "78px", right: "5%"
+        }
+      },
+        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } })
+      )
+    ),
+    mobile && /*#__PURE__*/React.createElement("div", {
+      onClick: function () { setOpen(false); },
+      style: {
+        position: "fixed", inset: 0, zIndex: 380,
+        background: "rgba(0,0,0,0.5)",
+        opacity: open ? 1 : 0,
+        pointerEvents: open ? "auto" : "none",
+        transition: "opacity 0.3s ease"
+      }
+    }),
+    mobile && /*#__PURE__*/React.createElement("div", {
+      style: {
+        position: "fixed", top: 0, right: 0, bottom: 0,
+        width: "min(50vw, 260px)",
+        zIndex: 400,
+        background: "rgba(14,14,14,0.98)",
+        backdropFilter: "blur(10px)",
+        borderLeft: "1px solid #1c1c1c",
+        boxShadow: "-10px 0 40px rgba(0,0,0,0.45)",
+        display: "flex", flexDirection: "column",
+        alignItems: "flex-start", justifyContent: "flex-start",
+        padding: "70px 28px 28px",
+        gap: "8px",
+        transform: open ? "translateX(0)" : "translateX(100%)",
+        transition: "transform 0.32s cubic-bezier(.22,.61,.36,1)"
+      }
+    },
+      /*#__PURE__*/React.createElement("button", {
+        onClick: function (e) { e.stopPropagation(); setOpen(false); },
+        style: {
+          position: "absolute", top: "16px", right: "20px",
+          background: "none", border: "none", color: "#e8e2d9",
+          fontSize: "30px", cursor: "pointer", lineHeight: 1, padding: "6px"
+        }
+      }, "\xD7"),
+      navBtns.map(function (b) {
+        return /*#__PURE__*/React.createElement("button", {
+          key: b.key,
+          onClick: function (e) { e.stopPropagation(); b.fn(); },
+          style: {
+            background: "none", border: "none", cursor: "pointer",
+            color: b.active ? "#e8e2d9" : "#888",
+            fontFamily: "'Cormorant Garamond',serif",
+            fontWeight: 300,
+            fontSize: "22px",
+            letterSpacing: "2px",
+            padding: "12px 0",
+            textAlign: "left",
+            width: "100%",
+            borderBottom: "1px solid #1c1c1c"
+          }
+        }, b.label);
+      })
+    )
+  );
 }
 var WORKS = {
   "delivery": {
@@ -1043,8 +1168,9 @@ function WorkDetail(_ref3) {
         filter: "grayscale(8%)",
         cursor: "pointer"
       }
-    }), im.caption && /*#__PURE__*/React.createElement("figcaption", {
-      style: {
+    }), im.caption && /*#__PURE__*/React.createElement(Caption, {
+      text: im.caption,
+      baseStyle: {
         fontSize: side ? "13px" : "11px",
         color: side ? "#888" : "#666",
         letterSpacing: "0.3px",
@@ -1054,7 +1180,7 @@ function WorkDetail(_ref3) {
         lineHeight: side ? 1.75 : 1.5,
         maxWidth: side ? "32ch" : "none"
       }
-    }, im.caption));
+    }));
   })))), lb && /*#__PURE__*/React.createElement(Lightbox, { item: lb, items: lbItems, onClose: function () { setLb(null); } }));
 }
 var WORK_KEYS = {
@@ -1114,8 +1240,9 @@ function JournalismusItem(_ref4) {
       transition: "filter 0.4s, transform 0.6s",
       objectFit: "contain"
     }
-  })), photo.caption && /*#__PURE__*/React.createElement("div", {
-    style: {
+  })), photo.caption && /*#__PURE__*/React.createElement(Caption, {
+    text: photo.caption,
+    baseStyle: {
       fontSize: "11px",
       color: "#666",
       letterSpacing: "0.5px",
@@ -1124,7 +1251,7 @@ function JournalismusItem(_ref4) {
       fontWeight: 300,
       lineHeight: 1.5
     }
-  }, photo.caption));
+  }));
 }
 function JournalismusLayout(_ref5) {
   var items = _ref5.items,
@@ -1259,6 +1386,7 @@ function Home(_ref7) {
     try { localStorage.setItem("mm.cat", cat); } catch (e) {}
   }, [cat]);
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("section", {
+    className: "hero-section",
     style: {
       height: "100vh",
       position: "relative",
@@ -1286,6 +1414,7 @@ function Home(_ref7) {
       filter: "grayscale(20%)"
     }
   }), /*#__PURE__*/React.createElement("div", {
+    className: "hero-text",
     style: {
       position: "relative",
       zIndex: 2
