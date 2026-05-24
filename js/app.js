@@ -16,7 +16,7 @@ var _React = React,
   useState = _React.useState,
   useEffect = _React.useEffect,
   useRef = _React.useRef;
-var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n";
+var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: 1fr !important; min-width: 0 !important; gap: 16px !important; }\n  .g3 { grid-template-columns: 1fr !important; min-width: 0 !important; gap: 18px !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: 1fr !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; }\n  .work-figure img { max-height: 70vh !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n}\";
 var SIZE_SPAN = {
   "full":       6,  // groß (Querformat, ganze Breite)
   "two-thirds": 4,  // mittel-querformat (2/3)
@@ -284,6 +284,7 @@ var ITEMS = {
     id: 201,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.osanYaran,
     size: "two-thirds",
     align: "right"
@@ -291,42 +292,49 @@ var ITEMS = {
     id: 202,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.eliotKunsthaus,
     size: "half"
   }, {
     id: 203,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.cduParteitag,
     size: "half"
   }, {
     id: 45,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0046,
     size: "half"
   }, {
     id: 39,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0048,
     size: "third"
   }, {
     id: 47,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.sprengelMuseum,
     size: "half"
   }, {
     id: 48,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0049,
     size: "two-thirds"
   }, {
     id: 100,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.biogas,
     size: "two-thirds",
     align: "right"
@@ -334,24 +342,28 @@ var ITEMS = {
     id: 204,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.feuerwehr,
     size: "two-thirds"
   }, {
     id: 205,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.nachtengel,
     size: "full"
   }, {
     id: 43,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0051,
     size: "full"
   }, {
     id: 206,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.kranfuehrer,
     size: "two-thirds",
     align: "center"
@@ -359,18 +371,21 @@ var ITEMS = {
     id: 44,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0052,
     size: "full"
   }, {
     id: 46,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0053,
     size: "full"
   }, {
     id: 42,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0055,
     size: "half",
     tall: true
@@ -378,18 +393,21 @@ var ITEMS = {
     id: 41,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0054,
     size: "half"
   }, {
     id: 40,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0050,
     size: "half"
   }, {
     id: 99,
     title: "",
     desc: "",
+    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.shipBridge,
     size: "full"
   }]
@@ -561,6 +579,7 @@ function Nav(_ref2) {
       transform: hidden ? "translateY(-100%)" : "translateY(0)"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    className: "nav-links",
     style: {
       display: "flex",
       gap: "36px",
@@ -595,288 +614,289 @@ var WORKS = {
   "delivery": {
     title: "Delivery Service",
     label: "Fotoreportage",
-    intro: "",
+    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
     images: [{
       src: window.IMGS.delivery_01,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half",
-      position: "center 35%"
+      position: "center 80%"
     }, {
       src: window.IMGS.delivery_02,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_03,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_04,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_05,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_06,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_07,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_08,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_09,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_10,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_11,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_12,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_13,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_14,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_15,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_16,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.delivery_17,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }]
   },
   "healing": {
     title: "Healing Diary",
     label: "Fotostrecke",
-    intro: "",
+    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
     images: [{
       src: window.IMGS.healing_01,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half",
       position: "center 35%"
     }, {
       src: window.IMGS.healing_02,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_03,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_04,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_05,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_06,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_07,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_08,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_09,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_10,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_11,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_12,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.healing_13,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }]
   },
   "islamic": {
     title: "Islamic Feminism",
     label: "Porträtserie",
-    intro: "",
+    captionLayout: "side",
+    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
     images: [{
       src: window.IMGS.islamic_01,
-      caption: "",
-      size: "half",
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full",
       position: "center 25%"
     }, {
       src: window.IMGS.islamic_02,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_03,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_04,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_05,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_06,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_07,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_08,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_09,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_10,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_11,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_12,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_13,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_14,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_15,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }, {
       src: window.IMGS.islamic_16,
-      caption: "",
-      size: "half"
+      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      size: "full"
     }]
   },
   "shaped": {
     title: "Shaped to Resist",
     label: "Dokumentarserie",
-    intro: "",
+    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
     images: [{
       src: window.IMGS.shaped_01,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half",
       position: "center 25%"
     }, {
       src: window.IMGS.shaped_02,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_03,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_04,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_05,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_06,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_07,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_08,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_09,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_10,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_11,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_12,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_13,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_14,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_15,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_16,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_17,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_18,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }, {
       src: window.IMGS.shaped_19,
-      caption: "",
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }]
   }
@@ -886,7 +906,11 @@ function WorkDetail(_ref3) {
     setPage = _ref3.setPage;
   var work = WORKS[workKey];
   if (!work) return null;
-  return /*#__PURE__*/React.createElement("div", {
+  var _useStateLb = useState(null);
+  var lb = _useStateLb[0];
+  var setLb = _useStateLb[1];
+  var lbItems = work.images.map(function (im, i) { return { id: i, img: im.src, title: work.title, desc: im.caption || "" }; });
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     style: {
       paddingTop: "90px",
       minHeight: "100vh"
@@ -907,12 +931,14 @@ function WorkDetail(_ref3) {
   }), work.images[0] && /*#__PURE__*/React.createElement("img", {
     src: work.images[0].src,
     alt: work.title,
+    onClick: function () { setLb(lbItems[0]); },
     style: {
       width: "100%",
       height: "100%",
       objectFit: "cover",
       objectPosition: work.images[0].position || "center center",
-      filter: "grayscale(15%)"
+      filter: "grayscale(15%)",
+      cursor: "pointer"
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -959,6 +985,7 @@ function WorkDetail(_ref3) {
       gap: "8px"
     }
   }, "← Zurück")), /*#__PURE__*/React.createElement("section", {
+    className: "work-intro",
     style: {
       padding: "80px 5%"
     }
@@ -980,6 +1007,7 @@ function WorkDetail(_ref3) {
       padding: "0 5% 120px"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    className: "work-grid",
     style: {
       maxWidth: "1300px",
       margin: "0 auto",
@@ -989,33 +1017,45 @@ function WorkDetail(_ref3) {
       gap: "32px 18px"
     }
   }, work.images.slice(1).map(function (im, i) {
+    var side = work.captionLayout === "side";
     return /*#__PURE__*/React.createElement("figure", {
       key: i,
+      className: "work-figure",
       style: {
         gridColumn: "span " + spanOf(im.size || "half"),
-        margin: 0
+        margin: 0,
+        display: side ? "grid" : "block",
+        gridTemplateColumns: side ? "minmax(0,1.7fr) minmax(220px,1fr)" : "none",
+        gap: side ? "36px" : "0",
+        alignItems: side ? "center" : "stretch"
       }
     }, /*#__PURE__*/React.createElement("img", {
       src: im.src,
       alt: im.caption || "",
+      onClick: function () { setLb(lbItems[i + 1]); },
       style: {
-        width: "100%",
+        maxWidth: "100%",
+        maxHeight: "85vh",
+        width: "auto",
         height: "auto",
         display: "block",
-        filter: "grayscale(8%)"
+        margin: "0 auto",
+        filter: "grayscale(8%)",
+        cursor: "pointer"
       }
     }), im.caption && /*#__PURE__*/React.createElement("figcaption", {
       style: {
-        fontSize: "11px",
-        color: "#666",
-        letterSpacing: "0.5px",
-        marginTop: "10px",
+        fontSize: side ? "13px" : "11px",
+        color: side ? "#888" : "#666",
+        letterSpacing: "0.3px",
+        marginTop: side ? "0" : "10px",
         fontFamily: "'Jost',sans-serif",
         fontWeight: 300,
-        lineHeight: 1.5
+        lineHeight: side ? 1.75 : 1.5,
+        maxWidth: side ? "32ch" : "none"
       }
     }, im.caption));
-  }))));
+  })))), lb && /*#__PURE__*/React.createElement(Lightbox, { item: lb, items: lbItems, onClose: function () { setLb(null); } }));
 }
 var WORK_KEYS = {
   "Dilevery Service": "delivery",
@@ -1041,7 +1081,10 @@ function JournalismusItem(_ref4) {
         : photo.align === "center"
         ? ((6 - spanOf(effectiveSize(photo.size, isPortrait))) / 2 + 1) + " / span " + spanOf(effectiveSize(photo.size, isPortrait))
         : "span " + spanOf(effectiveSize(photo.size, isPortrait)),
-      gridRow: photo.tall ? "span 2" : undefined,
+      gridRow: photo.tall ? "span 2" : undefined
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
       overflow: "hidden",
       cursor: "pointer",
       position: "relative",
@@ -1071,16 +1114,28 @@ function JournalismusItem(_ref4) {
       transition: "filter 0.4s, transform 0.6s",
       objectFit: "contain"
     }
-  }));
+  })), photo.caption && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "11px",
+      color: "#666",
+      letterSpacing: "0.5px",
+      marginTop: "10px",
+      fontFamily: "'Jost',sans-serif",
+      fontWeight: 300,
+      lineHeight: 1.5
+    }
+  }, photo.caption));
 }
 function JournalismusLayout(_ref5) {
   var items = _ref5.items,
     onOpen = _ref5.onOpen;
   return /*#__PURE__*/React.createElement("div", {
+    className: "port-scroll",
     style: {
       overflowX: "auto"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    className: "port-grid",
     style: {
       display: "grid",
       gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
@@ -1360,10 +1415,12 @@ function Home(_ref7) {
         fontFamily: "'Jost',sans-serif"
       }
     }, group.client), /*#__PURE__*/React.createElement("div", {
+      className: "port-scroll",
       style: {
         overflowX: "auto"
       }
     }, /*#__PURE__*/React.createElement("div", {
+      className: "port-grid",
       style: {
         display: "grid",
         gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
@@ -1388,11 +1445,12 @@ function Home(_ref7) {
       });
     }))));
   })) : /*#__PURE__*/React.createElement("div", {
+    className: "port-scroll",
     style: {
       overflowX: "auto"
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "g3",
+    className: "g3 port-grid",
     style: {
       display: "grid",
       gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
