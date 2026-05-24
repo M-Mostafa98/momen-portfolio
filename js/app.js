@@ -16,7 +16,7 @@ var _React = React,
   useState = _React.useState,
   useEffect = _React.useEffect,
   useRef = _React.useRef;
-var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; height: auto !important; }\n  .hero-section { justify-content: center !important; padding-top: 90px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n}\n";
+var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; height: auto !important; }\n  .hero-section { justify-content: center !important; padding-top: 60px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n  nav { position: absolute !important; }\n}\n";
 var SIZE_SPAN = {
   "full":       6,  // groß (Querformat, ganze Breite)
   "two-thirds": 4,  // mittel-querformat (2/3)
@@ -438,21 +438,36 @@ function Lightbox(_ref) {
     };
   }, []);
   var touchStartX = useRef(0);
-  var onTouchStart = function (e) {
-    touchStartX.current = e.touches[0].clientX;
-  };
-  var onTouchEnd = function (e) {
-    var dx = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(dx) > 50) {
-      if (dx < 0) setCur(function (c) { return Math.min(c + 1, items.length - 1); });
-      else setCur(function (c) { return Math.max(c - 1, 0); });
-    }
-  };
+  var touchStartY = useRef(0);
+  var touchActive = useRef(false);
+  useEffect(function () {
+    var onStart = function (e) {
+      var t = e.touches[0];
+      touchStartX.current = t.clientX;
+      touchStartY.current = t.clientY;
+      touchActive.current = true;
+    };
+    var onEnd = function (e) {
+      if (!touchActive.current) return;
+      touchActive.current = false;
+      var t = e.changedTouches[0];
+      var dx = t.clientX - touchStartX.current;
+      var dy = t.clientY - touchStartY.current;
+      if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) setCur(function (c) { return Math.min(c + 1, items.length - 1); });
+        else setCur(function (c) { return Math.max(c - 1, 0); });
+      }
+    };
+    window.addEventListener("touchstart", onStart, { passive: true });
+    window.addEventListener("touchend", onEnd, { passive: true });
+    return function () {
+      window.removeEventListener("touchstart", onStart);
+      window.removeEventListener("touchend", onEnd);
+    };
+  }, []);
   var it = items[cur];
   return /*#__PURE__*/React.createElement("div", {
     onClick: onClose,
-    onTouchStart: onTouchStart,
-    onTouchEnd: onTouchEnd,
     style: {
       position: "fixed",
       inset: 0,
@@ -671,7 +686,7 @@ function Nav(_ref2) {
           background: "none", border: "none", cursor: "pointer",
           padding: "10px 4px", display: "flex", flexDirection: "column",
           gap: "5px", alignItems: "flex-end",
-          position: "absolute", top: "78px", right: "5%"
+          position: "absolute", top: "48px", right: "5%"
         }
       },
         /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } }),
