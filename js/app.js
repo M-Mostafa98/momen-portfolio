@@ -672,56 +672,56 @@ var WORKS = {
     label: "Fotostrecke",
     intro: "",
     images: [{
-      src: window.IMGS.healing_01,
+      src: "uploads/01-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half",
       position: "center 35%"
     }, {
-      src: window.IMGS.healing_02,
+      src: "uploads/02-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_03,
+      src: "uploads/03-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_04,
+      src: "uploads/04-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_05,
+      src: "uploads/05-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_06,
+      src: "uploads/06-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_07,
+      src: "uploads/07-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_08,
+      src: "uploads/08-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_09,
+      src: "uploads/09-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_10,
+      src: "uploads/10-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_11,
+      src: "uploads/11-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_12,
+      src: "uploads/12-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }, {
-      src: window.IMGS.healing_13,
+      src: "uploads/13-fotograf-momen-mostafa-deutschland-hannover-healing-diary-bangladesch-dahaka.jpg",
       caption: "",
       size: "half"
     }]
