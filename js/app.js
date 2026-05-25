@@ -16,7 +16,7 @@ var _React = React,
   useState = _React.useState,
   useEffect = _React.useEffect,
   useRef = _React.useRef;
-var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Italiana&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#111;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#777;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#e8e2d9;}.nav-a.on{color:#e8e2d9;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;color:#555;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #252525;color:#e8e2d9;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; }\n  .g3 img { height: 56vh !important; object-fit: cover !important; }\n  .hero-section { justify-content: center !important; padding-top: 60px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n  nav { position: absolute !important; }\n}\n";
+var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Italiana&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#d6cebd;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#666053;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#1a160e;}.nav-a.on{color:#1a160e;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{color:#857e6c;background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;transition:all 0.3s;}\n  .cat-btn:hover{color:#1a160e;}.cat-btn.on{color:#1a160e;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #1e1e1e;color:#d6cebd;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; }\n  .g3 img { height: 56vh !important; object-fit: cover !important; }\n  .hero-section { justify-content: center !important; padding-top: 60px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n  nav { position: absolute !important; }\n}\n";
 var SIZE_SPAN = {
   "full":       6,  // groß (Querformat, ganze Breite)
   "two-thirds": 4,  // mittel-querformat (2/3)
@@ -45,10 +45,6 @@ var ASSIGNMENTS = [{
     id: 3,
     size: "full",
     img: window.IMGS.IMG_0002,
-    size: "third"
-  }, {
-    id: 4,
-    img: window.IMGS.IMG_0003,
     size: "third"
   }, {
     id: 5,
@@ -487,7 +483,7 @@ function Lightbox(_ref) {
       right: 30,
       background: "none",
       border: "none",
-      color: "#666",
+      color: "#a89e8a",
       fontSize: "30px",
       cursor: "pointer",
       lineHeight: 1
@@ -504,7 +500,7 @@ function Lightbox(_ref) {
       left: 20,
       background: "none",
       border: "none",
-      color: "#777",
+      color: "#a89e8a",
       fontSize: "32px",
       cursor: "pointer"
     }
@@ -520,7 +516,7 @@ function Lightbox(_ref) {
       right: 20,
       background: "none",
       border: "none",
-      color: "#777",
+      color: "#a89e8a",
       fontSize: "32px",
       cursor: "pointer"
     }
@@ -565,7 +561,7 @@ function Lightbox(_ref) {
   }, it.desc)), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: "12px",
-      color: "#3a3a3a"
+      color: "#888"
     }
   }, cur + 1, " / ", items.length))));
 }
@@ -689,9 +685,9 @@ function Nav(_ref2) {
           position: "absolute", top: "48px", right: "5%"
         }
       },
-        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } }),
-        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } }),
-        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#e8e2d9", display: "block" } })
+        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#252118", display: "block" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#252118", display: "block" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#252118", display: "block" } })
       )
     ),
     mobile && /*#__PURE__*/React.createElement("div", {
@@ -725,7 +721,7 @@ function Nav(_ref2) {
         onClick: function (e) { e.stopPropagation(); setOpen(false); },
         style: {
           position: "absolute", top: "16px", right: "20px",
-          background: "none", border: "none", color: "#e8e2d9",
+          background: "none", border: "none", color: "#252118",
           fontSize: "30px", cursor: "pointer", lineHeight: 1, padding: "6px"
         }
       }, "\xD7"),
@@ -735,7 +731,7 @@ function Nav(_ref2) {
           onClick: function (e) { e.stopPropagation(); b.fn(); },
           style: {
             background: "none", border: "none", cursor: "pointer",
-            color: b.active ? "#e8e2d9" : "#888",
+            color: b.active ? "#1a160e" : "#666053",
             fontFamily: "'Cormorant Garamond',serif",
             fontWeight: 300,
             fontSize: "22px",
@@ -743,7 +739,7 @@ function Nav(_ref2) {
             padding: "12px 0",
             textAlign: "left",
             width: "100%",
-            borderBottom: "1px solid #1c1c1c"
+            borderBottom: "1px solid #181818"
           }
         }, b.label);
       })
@@ -962,10 +958,14 @@ var WORKS = {
     label: "Dokumentarserie",
     intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
     images: [{
-      src: window.IMGS.shaped_01,
+      src: window.IMGS.shaped_19,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half",
-      position: "center 25%"
+      position: "center 55%"
+    }, {
+      src: window.IMGS.shaped_01,
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      size: "half"
     }, {
       src: window.IMGS.shaped_02,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
@@ -1032,10 +1032,6 @@ var WORKS = {
       size: "half"
     }, {
       src: window.IMGS.shaped_18,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
-    }, {
-      src: window.IMGS.shaped_19,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half"
     }]
@@ -1115,7 +1111,7 @@ function WorkDetail(_ref3) {
       zIndex: 2,
       background: "none",
       border: "none",
-      color: "#888",
+      color: "#a89e8a",
       fontFamily: "'Jost',sans-serif",
       fontSize: "11px",
       letterSpacing: "2px",
@@ -1139,7 +1135,7 @@ function WorkDetail(_ref3) {
     style: {
       fontSize: "16px",
       lineHeight: 2,
-      color: "#888",
+      color: "#a89e8a",
       fontWeight: 300,
       fontFamily: "'Jost',sans-serif"
     }
@@ -1260,7 +1256,7 @@ function JournalismusItem(_ref4) {
     text: photo.caption,
     baseStyle: {
       fontSize: "11px",
-      color: "#666",
+      color: "#a89e8a",
       letterSpacing: "0.5px",
       marginTop: "10px",
       fontFamily: "'Jost',sans-serif",
@@ -1449,7 +1445,7 @@ function Home(_ref7) {
       fontSize: "clamp(14px,2.5vw,22px)",
       letterSpacing: "12px",
       textTransform: "uppercase",
-      color: "#888",
+      color: "#a89e8a",
       display: "block"
     }
   }, "Momen"), /*#__PURE__*/React.createElement("div", {
@@ -1504,7 +1500,7 @@ function Home(_ref7) {
       zIndex: 100,
       background: "#222222",
       padding: "6px 0",
-      borderBottom: "1px solid #1e1e1e",
+      borderBottom: "1px solid #181818",
       paddingTop: navHidden ? "6px" : "48px",
       transition: "padding-top 0.4s"
     }
@@ -1555,9 +1551,9 @@ function Home(_ref7) {
         fontSize: "22px",
         letterSpacing: "2px",
         textTransform: "uppercase",
-        color: "#444",
+        color: "#a59b87",
         marginBottom: "28px",
-        borderBottom: "1px solid #1a1a1a",
+        borderBottom: "1px solid #181818",
         paddingBottom: "14px",
         fontFamily: "'Jost',sans-serif"
       }
@@ -1726,7 +1722,7 @@ function Videos() {
       fontSize: "clamp(12px,2vw,18px)",
       letterSpacing: "10px",
       textTransform: "uppercase",
-      color: "#888",
+      color: "#a89e8a",
       display: "block"
     }
   }, "Momen"), /*#__PURE__*/React.createElement("div", {
@@ -1830,7 +1826,7 @@ function Videos() {
       style: {
         fontFamily: "'Cormorant Garamond',serif",
         fontSize: "19px",
-        color: "#e8e2d9",
+        color: "#d6cebd",
         marginBottom: "5px"
       }
     }, titles[v.id] || v.title), /*#__PURE__*/React.createElement("div", {
@@ -1865,7 +1861,7 @@ function Videos() {
       right: 30,
       background: "none",
       border: "none",
-      color: "#666",
+      color: "#a89e8a",
       fontSize: "30px",
       cursor: "pointer",
       lineHeight: 1
@@ -1987,7 +1983,7 @@ function About() {
       fontSize: "clamp(14px,2vw,20px)",
       letterSpacing: "10px",
       textTransform: "uppercase",
-      color: "#888",
+      color: "#a89e8a",
       display: "block"
     }
   }, "Momen"), /*#__PURE__*/React.createElement("div", {
@@ -2011,7 +2007,7 @@ function About() {
     style: {
       fontSize: "15px",
       lineHeight: 1.9,
-      color: "#888",
+      color: "#a89e8a",
       marginBottom: "22px",
       fontWeight: 300
     }
@@ -2019,7 +2015,7 @@ function About() {
     style: {
       fontSize: "15px",
       lineHeight: 1.9,
-      color: "#888",
+      color: "#a89e8a",
       fontWeight: 300
     }
   }, "Moamen Mostafa fotografierte als Amateur den Arabischen Fr\xFChling in Kairo. Nach seinem Abitur in Khartum 2016 bereitete er sich in Istanbul und Ankara sprachlich auf das Studium Fotojournalismus und Dokumentarfotografie in Hannover vor, wohin er Ende 2017 zog. Seit Ende 2024 lebt er nahe Hannover und sucht mit seiner Fotografie nach Verst\xE4ndnisbr\xFCcken zwischen Religion und S\xE4kularit\xE4t."), /*#__PURE__*/React.createElement("div", {
@@ -2033,7 +2029,7 @@ function About() {
       fontSize: "10px",
       letterSpacing: "4px",
       textTransform: "uppercase",
-      color: "#444",
+      color: "#a59b87",
       marginBottom: "26px"
     }
   }, "Stationen"), [["1998", "Geboren in Kairo"], ["2018–24", "Fotojournalismus & Dokumentarfotografie · Hannover"], ["2022", "Internationales Programm · Pathshala School · Dhaka"], ["2024–heute", "Freier Fotograf"]].map(function (_ref8) {
@@ -2059,7 +2055,7 @@ function About() {
     }, y), /*#__PURE__*/React.createElement("span", {
       style: {
         fontSize: "14px",
-        color: "#777",
+        color: "#a89e8a",
         fontWeight: 300
       }
     }, ev));
@@ -2093,7 +2089,7 @@ function Contact() {
       fontSize: "clamp(14px,2vw,20px)",
       letterSpacing: "10px",
       textTransform: "uppercase",
-      color: "#888",
+      color: "#a89e8a",
       display: "block"
     }
   }, "Momen"), /*#__PURE__*/React.createElement("div", {
@@ -2172,7 +2168,7 @@ function Contact() {
         fontSize: "10px",
         letterSpacing: "2px",
         textTransform: "uppercase",
-        color: "#3a3a3a",
+        color: "#888",
         marginBottom: "3px"
       }
     }, c.label), /*#__PURE__*/React.createElement("div", {
@@ -2219,7 +2215,7 @@ function Impressum(_ref10) {
       fontSize: "18px",
       letterSpacing: "10px",
       textTransform: "uppercase",
-      color: "#888",
+      color: "#a89e8a",
       display: "block"
     }
   }, "Impressum"), /*#__PURE__*/React.createElement("div", {
@@ -2254,7 +2250,7 @@ function Impressum(_ref10) {
         style: {
           fontSize: "15px",
           lineHeight: 1.8,
-          color: "#888",
+          color: "#a89e8a",
           fontWeight: 300
         }
       }, line);
@@ -2299,7 +2295,7 @@ function Footer(_ref13) {
       fontSize: "9px",
       letterSpacing: "8px",
       textTransform: "uppercase",
-      color: "#888",
+      color: "#a89e8a",
       display: "block"
     }
   }, "Momen"), /*#__PURE__*/React.createElement("div", {
@@ -2316,7 +2312,7 @@ function Footer(_ref13) {
       fontSize: "9px",
       letterSpacing: "8px",
       textTransform: "uppercase",
-      color: "#e8e2d9",
+      color: "#d6cebd",
       display: "block"
     }
   }, "Mostafa")), /*#__PURE__*/React.createElement("span", {
@@ -2511,6 +2507,9 @@ function App() {
     setPage: setPage
   }), page === "work-islamic" && /*#__PURE__*/React.createElement(WorkDetail, {
     workKey: "islamic",
+    setPage: setPage
+  }), page === "work-shaped" && /*#__PURE__*/React.createElement(WorkDetail, {
+    workKey: "shaped",
     setPage: setPage
   }), page === "impressum" && /*#__PURE__*/React.createElement(Impressum, {
     setPage: setPage
