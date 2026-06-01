@@ -213,6 +213,7 @@ var ITEMS = {
     title: "Dilevery Service",
     desc: "Fotoreportage",
     img: window.IMGS.IMG_0035,
+    imgPosition: "78% center",
     size: "half"
   }, {
     id: 2,
@@ -755,7 +756,8 @@ var WORKS = {
       src: window.IMGS.delivery_01,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
       size: "half",
-      position: "center 80%"
+      position: "center 80%",
+      mobilePosition: "58% 68%"
     }, {
       src: window.IMGS.delivery_02,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
@@ -1042,6 +1044,7 @@ function WorkDetail(_ref3) {
     setPage = _ref3.setPage;
   var work = WORKS[workKey];
   if (!work) return null;
+  var mobile = useIsMobile();
   var _useStateLb = useState(null);
   var lb = _useStateLb[0];
   var setLb = _useStateLb[1];
@@ -1072,7 +1075,7 @@ function WorkDetail(_ref3) {
       width: "100%",
       height: "100%",
       objectFit: "cover",
-      objectPosition: work.images[0].position || "center center",
+      objectPosition: (mobile && work.images[0].mobilePosition) || work.images[0].position || "center center",
       filter: "grayscale(15%)",
       cursor: "pointer"
     }
@@ -1337,7 +1340,7 @@ function PortfolioItem(_ref6) {
       height: naturalRatio ? "auto" : (fixedHeight || "auto"),
       display: "block",
       objectFit: naturalRatio ? undefined : "cover",
-      objectPosition: "center 30%",
+      objectPosition: item.imgPosition || "center 30%",
       filter: "grayscale(8%)",
       transition: "filter 0.4s"
     }
