@@ -439,8 +439,11 @@ function Lightbox(_ref) {
   var touchStartY = useRef(0);
   var lockDir = useRef(null);
   var dragXRef = useRef(0);
+  var dragYRef = useRef(0);
   var _drag = useState(0);
   var dragX = _drag[0], setDragX = _drag[1];
+  var _dragV = useState(0);
+  var dragY = _dragV[0], setDragY = _dragV[1];
   var _dragging = useState(false);
   var dragging = _dragging[0], setDragging = _dragging[1];
   var onTouchStart = function (e) {
@@ -449,6 +452,7 @@ function Lightbox(_ref) {
     touchStartY.current = t.clientY;
     lockDir.current = null;
     dragXRef.current = 0;
+    dragYRef.current = 0;
     setDragging(true);
   };
   var onTouchMove = function (e) {
@@ -464,17 +468,27 @@ function Lightbox(_ref) {
       if (atStart || atEnd) dx = dx * 0.32;
       dragXRef.current = dx;
       setDragX(dx);
+    } else if (lockDir.current === "v") {
+      dragYRef.current = dy;
+      setDragY(dy);
     }
   };
   var onTouchEnd = function () {
     var dx = dragXRef.current;
+    var dy = dragYRef.current;
     setDragging(false);
+    if (lockDir.current === "v" && Math.abs(dy) > 90) {
+      onClose();
+      return;
+    }
     if (lockDir.current === "h" && Math.abs(dx) > 55) {
       if (dx < 0 && cur < items.length - 1) setCur(cur + 1);
       else if (dx > 0 && cur > 0) setCur(cur - 1);
     }
     dragXRef.current = 0;
+    dragYRef.current = 0;
     setDragX(0);
+    setDragY(0);
     lockDir.current = null;
   };
   // Preload neighbours for smoother swaps
@@ -523,11 +537,12 @@ function Lightbox(_ref) {
     style: {
       position: "fixed",
       inset: 0,
-      background: "rgba(0,0,0,0.93)",
+      background: "rgba(0,0,0," + (0.8 - Math.min(Math.abs(dragY) / 400, 0.55)) + ")",
       zIndex: 500,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      padding: "62px 0 24px",
       animation: "fadeIn 0.25s ease",
       cursor: "zoom-out",
       touchAction: "none",
@@ -537,8 +552,9 @@ function Lightbox(_ref) {
     onClick: onClose,
     style: {
       position: "absolute",
-      top: 22,
-      right: 30,
+      top: 16,
+      right: 24,
+      zIndex: 10,
       background: "none",
       border: "none",
       color: "#a89e8a",
@@ -579,30 +595,33 @@ function Lightbox(_ref) {
       cursor: "pointer"
     }
   }, "\u203A"), /*#__PURE__*/React.createElement("div", {
-    onClick: function onClick(e) {
-      return e.stopPropagation();
-    },
     style: {
       maxWidth: "800px",
       width: "88%",
       cursor: "default",
-      transform: "translateX(" + dragX + "px)",
-      transition: dragging ? "none" : "transform 0.32s cubic-bezier(.22,.61,.36,1)",
+      transform: "translate(" + dragX + "px," + dragY + "px)",
+      opacity: 1 - Math.min(Math.abs(dragY) / 600, 0.5),
+      transition: dragging ? "none" : "transform 0.32s cubic-bezier(.22,.61,.36,1), opacity 0.32s ease",
       willChange: "transform"
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: it.img,
     alt: it.title,
     draggable: false,
+    onClick: function onClick(e) {
+      return e.stopPropagation();
+    },
     style: {
       width: "100%",
-      maxHeight: "78vh",
+      maxHeight: "72vh",
       objectFit: "contain",
       display: "block",
-      pointerEvents: "none",
       userSelect: "none"
     }
   }), /*#__PURE__*/React.createElement("div", {
+    onClick: function onClick(e) {
+      return e.stopPropagation();
+    },
     style: {
       marginTop: "18px",
       display: "flex",
