@@ -962,59 +962,59 @@ var WORKS = {
   "healing": {
     title: "Healing Diary",
     label: "Fotostrecke",
-    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
+    intro: "During my stay in Dhaka between Juli and November 2022,\nI got infected with the virus „pink eyes“ and the deadly „dengue fever“.",
     images: [{
       src: window.IMGS.healing_01,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half",
       position: "center 35%"
     }, {
       src: window.IMGS.healing_02,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_03,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_04,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_05,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_06,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_07,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_08,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_09,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_10,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_11,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_12,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.healing_13,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }]
   },
@@ -1022,7 +1022,7 @@ var WORKS = {
     title: "Islamic Feminism",
     label: "Porträtserie",
     captionLayout: "side",
-    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
+    intro: "Islam in Europe is been seeing by critics as an misogynistic religion. Nevertheless woman are finding their way to Islam.\n\nThe following narratives tell stories of women who identify with Islam as a religion and see themselves as emancipated. Muslim women activists, academics, businesswomen, housewives, professors and students from across Europe talk about different political and social issues related to their different identities. They say that their different parts of identity play different roles in different situations.",
     images: [{
       src: window.IMGS.islamic_01,
       caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
@@ -1093,7 +1093,7 @@ var WORKS = {
   "shaped": {
     title: "Shaped to Resist",
     label: "Dokumentarserie",
-    intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
+    intro: "In this work, people who lost their relatives during the 2022 flood in Sunamganj in north Bangladesh talk about how losing their family members had effects on them and how their lives are still being shaped by this experience until its end.\n\nIt is neither the floods nor the resulted material damage and disruption to public life in the affected areas that stands at the center of interest. Instead, the focus lies on individuals who reflect on their visions of the future in relation to past experiences of personal loss.\n\nThe visual approach seeks to express the assertion that a fundamental change in perspective remains unattainable, with only the attempt being possible.",
     images: [{
       src: window.IMGS.shaped_19,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
@@ -1266,7 +1266,7 @@ function WorkDetail(_ref3) {
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: "720px",
+      maxWidth: "1300px",
       margin: "0 auto"
     }
   }, /*#__PURE__*/React.createElement("p", {
@@ -1275,7 +1275,10 @@ function WorkDetail(_ref3) {
       lineHeight: 2,
       color: "#a89e8a",
       fontWeight: 300,
-      fontFamily: "'Jost',sans-serif"
+      fontFamily: "'Jost',sans-serif",
+      whiteSpace: "pre-line",
+      maxWidth: "920px",
+      margin: 0
     }
   }, work.intro))), /*#__PURE__*/React.createElement("section", {
     style: {
