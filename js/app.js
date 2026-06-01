@@ -437,35 +437,61 @@ function Lightbox(_ref) {
   }, []);
   var touchStartX = useRef(0);
   var touchStartY = useRef(0);
-  var touchActive = useRef(false);
+  var lockDir = useRef(null);
+  var dragXRef = useRef(0);
+  var _drag = useState(0);
+  var dragX = _drag[0], setDragX = _drag[1];
+  var _dragging = useState(false);
+  var dragging = _dragging[0], setDragging = _dragging[1];
+  var onTouchStart = function (e) {
+    var t = e.touches[0];
+    touchStartX.current = t.clientX;
+    touchStartY.current = t.clientY;
+    lockDir.current = null;
+    dragXRef.current = 0;
+    setDragging(true);
+  };
+  var onTouchMove = function (e) {
+    var t = e.touches[0];
+    var dx = t.clientX - touchStartX.current;
+    var dy = t.clientY - touchStartY.current;
+    if (lockDir.current === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
+      lockDir.current = Math.abs(dx) > Math.abs(dy) ? "h" : "v";
+    }
+    if (lockDir.current === "h") {
+      var atStart = cur === 0 && dx > 0;
+      var atEnd = cur === items.length - 1 && dx < 0;
+      if (atStart || atEnd) dx = dx * 0.32;
+      dragXRef.current = dx;
+      setDragX(dx);
+    }
+  };
+  var onTouchEnd = function () {
+    var dx = dragXRef.current;
+    setDragging(false);
+    if (lockDir.current === "h" && Math.abs(dx) > 55) {
+      if (dx < 0 && cur < items.length - 1) setCur(cur + 1);
+      else if (dx > 0 && cur > 0) setCur(cur - 1);
+    }
+    dragXRef.current = 0;
+    setDragX(0);
+    lockDir.current = null;
+  };
+  // Preload neighbours for smoother swaps
   useEffect(function () {
-    var onStart = function (e) {
-      var t = e.touches[0];
-      touchStartX.current = t.clientX;
-      touchStartY.current = t.clientY;
-      touchActive.current = true;
-    };
-    var onEnd = function (e) {
-      if (!touchActive.current) return;
-      touchActive.current = false;
-      var t = e.changedTouches[0];
-      var dx = t.clientX - touchStartX.current;
-      var dy = t.clientY - touchStartY.current;
-      if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
-        if (dx < 0) setCur(function (c) { return Math.min(c + 1, items.length - 1); });
-        else setCur(function (c) { return Math.max(c - 1, 0); });
+    [cur - 1, cur + 1].forEach(function (i) {
+      if (i >= 0 && i < items.length) {
+        var im = new Image();
+        im.src = items[i].img;
       }
-    };
-    window.addEventListener("touchstart", onStart, { passive: true });
-    window.addEventListener("touchend", onEnd, { passive: true });
-    return function () {
-      window.removeEventListener("touchstart", onStart);
-      window.removeEventListener("touchend", onEnd);
-    };
-  }, []);
+    });
+  }, [cur]);
   var it = items[cur];
   return /*#__PURE__*/React.createElement("div", {
     onClick: onClose,
+    onTouchStart: onTouchStart,
+    onTouchMove: onTouchMove,
+    onTouchEnd: onTouchEnd,
     style: {
       position: "fixed",
       inset: 0,
@@ -529,16 +555,22 @@ function Lightbox(_ref) {
     style: {
       maxWidth: "800px",
       width: "88%",
-      cursor: "default"
+      cursor: "default",
+      transform: "translateX(" + dragX + "px)",
+      transition: dragging ? "none" : "transform 0.32s cubic-bezier(.22,.61,.36,1)",
+      willChange: "transform"
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: it.img,
     alt: it.title,
+    draggable: false,
     style: {
       width: "100%",
       maxHeight: "78vh",
       objectFit: "contain",
-      display: "block"
+      display: "block",
+      pointerEvents: "none",
+      userSelect: "none"
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
