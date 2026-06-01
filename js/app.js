@@ -501,6 +501,8 @@ function Lightbox(_ref) {
     });
   }, [cur]);
   // Lock background scroll while lightbox is open
+  var curRef = useRef(cur);
+  curRef.current = cur;
   useEffect(function () {
     var scrollY = window.scrollY;
     var body = document.body;
@@ -519,14 +521,47 @@ function Lightbox(_ref) {
     body.style.width = "100%";
     body.style.overflow = "hidden";
     return function () {
+      // Determine where to land: the grid image matching the last-viewed photo.
+      var target = scrollY;
+      try {
+        var im = items[curRef.current];
+        if (im && im.img) {
+          var match = null;
+          var imgs = document.querySelectorAll("img");
+          for (var k = 0; k < imgs.length; k++) {
+            if (imgs[k].src === im.img) { match = imgs[k]; break; }
+          }
+          if (match) {
+            var rect = match.getBoundingClientRect();
+            var absY = rect.top + scrollY;
+            target = absY - window.innerHeight / 2 + rect.height / 2;
+          }
+        }
+      } catch (e) {}
       body.style.position = prev.position;
       body.style.top = prev.top;
       body.style.left = prev.left;
       body.style.right = prev.right;
       body.style.width = prev.width;
       body.style.overflow = prev.overflow;
-      window.scrollTo(0, scrollY);
+      var maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      var docEl = document.documentElement;
+      var prevBehavior = docEl.style.scrollBehavior;
+      docEl.style.scrollBehavior = "auto";
+      window.scrollTo(0, Math.max(0, Math.min(target, maxY)));
+      docEl.style.scrollBehavior = prevBehavior;
     };
+  }, []);
+  var viewportRef = useRef(null);
+  var _vw = useState(0);
+  var vw = _vw[0], setVw = _vw[1];
+  useEffect(function () {
+    var measure = function () {
+      if (viewportRef.current) setVw(viewportRef.current.clientWidth);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return function () { window.removeEventListener("resize", measure); };
   }, []);
   var it = items[cur];
   return /*#__PURE__*/React.createElement("div", {
@@ -598,27 +633,51 @@ function Lightbox(_ref) {
     style: {
       maxWidth: "800px",
       width: "88%",
-      cursor: "default",
-      transform: "translate(" + dragX + "px," + dragY + "px)",
+      transform: "translateY(" + dragY + "px)",
       opacity: 1 - Math.min(Math.abs(dragY) / 600, 0.5),
       transition: dragging ? "none" : "transform 0.32s cubic-bezier(.22,.61,.36,1), opacity 0.32s ease",
       willChange: "transform"
     }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: it.img,
-    alt: it.title,
-    draggable: false,
-    onClick: function onClick(e) {
-      return e.stopPropagation();
-    },
+  }, /*#__PURE__*/React.createElement("div", {
+    ref: viewportRef,
     style: {
       width: "100%",
-      maxHeight: "72vh",
-      objectFit: "contain",
-      display: "block",
-      userSelect: "none"
+      overflow: "hidden"
     }
-  }), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      transform: "translateX(" + (vw ? -cur * vw + dragX : 0) + "px)",
+      transition: dragging ? "none" : "transform 0.32s cubic-bezier(.22,.61,.36,1)",
+      willChange: "transform"
+    }
+  }, items.map(function (slide, si) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: si,
+      style: {
+        flex: "0 0 100%",
+        width: vw ? vw + "px" : "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, /*#__PURE__*/React.createElement("img", {
+      src: slide.img,
+      alt: slide.title,
+      draggable: false,
+      onClick: function onClick(e) {
+        return e.stopPropagation();
+      },
+      style: {
+        maxWidth: "100%",
+        maxHeight: "72vh",
+        objectFit: "contain",
+        display: "block",
+        userSelect: "none"
+      }
+    }));
+  }))), /*#__PURE__*/React.createElement("div", {
     onClick: function onClick(e) {
       return e.stopPropagation();
     },
