@@ -962,7 +962,7 @@ var WORKS = {
   "healing": {
     title: "Healing Diary",
     label: "Fotostrecke",
-    intro: "During my stay in Dhaka between Juli and November 2022,\nI got infected with the virus „pink eyes“ and the deadly „dengue fever“.",
+    intro: "During my stay in Dhaka between Juli and November 2022, I got infected with the virus „pink eyes“ and the deadly „dengue fever“.",
     images: [{
       src: window.IMGS.healing_01,
       caption: "",
