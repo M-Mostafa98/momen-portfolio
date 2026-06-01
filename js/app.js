@@ -282,7 +282,7 @@ var ITEMS = {
     id: 201,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Osan Yaran im Theater Am Aegi in Hannover, 2026.",
     img: window.IMGS.osanYaran,
     size: "two-thirds",
     align: "right"
@@ -290,35 +290,28 @@ var ITEMS = {
     id: 202,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Eliot im Kunsthaus, 2026",
     img: window.IMGS.eliotKunsthaus,
     size: "half"
   }, {
     id: 203,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "CDU-Regionsparteitag in Burgdorf, 2026.",
     img: window.IMGS.cduParteitag,
     size: "half"
   }, {
     id: 45,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Valeriia Sydorova, eine ehemalige von Russland verschleppte Gefangene, spricht im niedersächsischen Landtag, 2026.",
     img: window.IMGS.IMG_0046,
     size: "half"
-  }, {
-    id: 39,
-    title: "",
-    desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-    img: window.IMGS.IMG_0048,
-    size: "third"
   }, {
     id: 47,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Belit Onay, Oberbürgermeister der Landeshauptstadt Hannover im Sprengel Museum, 2026.",
     img: window.IMGS.sprengelMuseum,
     size: "half"
   }, {
