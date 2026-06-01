@@ -648,7 +648,8 @@ function Lightbox(_ref) {
     style: {
       display: "flex",
       alignItems: "center",
-      transform: "translateX(" + (vw ? -cur * vw + dragX : 0) + "px)",
+      gap: "18px",
+      transform: "translateX(" + (vw ? -cur * (vw + 18) + dragX : 0) + "px)",
       transition: dragging ? "none" : "transform 0.32s cubic-bezier(.22,.61,.36,1)",
       willChange: "transform"
     }
@@ -656,7 +657,7 @@ function Lightbox(_ref) {
     return /*#__PURE__*/React.createElement("div", {
       key: si,
       style: {
-        flex: "0 0 100%",
+        flex: vw ? "0 0 " + vw + "px" : "0 0 100%",
         width: vw ? vw + "px" : "100%",
         display: "flex",
         alignItems: "center",
