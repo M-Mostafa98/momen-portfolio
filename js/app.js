@@ -33,6 +33,7 @@ function effectiveSize(size, isPortrait) {
 }
 var ASSIGNMENTS = [{
   client: "Katholische Akademie",
+  hidden: true,
   images: [{
     id: 2,
     img: window.IMGS.IMG_0000,
@@ -1682,7 +1683,9 @@ function Home(_ref7) {
     onOpen: function onOpen(it) {
       return openLb(it, ITEMS.journalismus);
     }
-  }) : cat === "portraets" ? /*#__PURE__*/React.createElement("div", null, ASSIGNMENTS.map(function (group, gi) {
+  }) : cat === "portraets" ? /*#__PURE__*/React.createElement("div", null, ASSIGNMENTS.filter(function (group) {
+    return !group.hidden;
+  }).map(function (group, gi) {
     return /*#__PURE__*/React.createElement("div", {
       key: gi,
       style: {
