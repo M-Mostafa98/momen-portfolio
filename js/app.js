@@ -104,6 +104,7 @@ var ASSIGNMENTS = [{
   }]
 },, {
   client: "Niedersächsisches Landesmuseum & Modedesign-Studiengang der Hochschule Hannover",
+  hidden: true,
   images: [{
     id: 21,
     img: window.IMGS.landesmuseum,
@@ -166,6 +167,7 @@ var ASSIGNMENTS = [{
   }]
 }, {
   client: "Kunstverein Hannover",
+  hidden: true,
   images: [{
     id: 38,
     size: "full",
@@ -288,20 +290,6 @@ var ITEMS = {
     size: "two-thirds",
     align: "right"
   }, {
-    id: 202,
-    title: "",
-    desc: "",
-    caption: "Eliot im Kunsthaus, 2026",
-    img: window.IMGS.eliotKunsthaus,
-    size: "half"
-  }, {
-    id: 203,
-    title: "",
-    desc: "",
-    caption: "CDU-Regionsparteitag in Burgdorf, 2026.",
-    img: window.IMGS.cduParteitag,
-    size: "half"
-  }, {
     id: 45,
     title: "",
     desc: "",
@@ -314,6 +302,20 @@ var ITEMS = {
     desc: "",
     caption: "Belit Onay, Oberbürgermeister der Landeshauptstadt Hannover im Sprengel Museum, 2026.",
     img: window.IMGS.sprengelMuseum,
+    size: "half"
+  }, {
+    id: 202,
+    title: "",
+    desc: "",
+    caption: "Eliot im Kunsthaus, 2026",
+    img: window.IMGS.eliotKunsthaus,
+    size: "half"
+  }, {
+    id: 203,
+    title: "",
+    desc: "",
+    caption: "CDU-Regionsparteitag in Burgdorf, 2026.",
+    img: window.IMGS.cduParteitag,
     size: "half"
   }, {
     id: 48,
@@ -1517,13 +1519,7 @@ function PortfolioItem(_ref6) {
 function Home(_ref7) {
   var setPage = _ref7.setPage,
     navHidden = _ref7.navHidden;
-  var _useState9 = useState(function () {
-      try {
-        var s = localStorage.getItem("mm.cat");
-        if (s === "portraets" || s === "serien" || s === "journalismus") return s;
-      } catch (e) {}
-      return "portraets";
-    }),
+  var _useState9 = useState("journalismus"),
     _useState0 = _slicedToArray(_useState9, 2),
     cat = _useState0[0],
     setCat = _useState0[1];
@@ -1684,6 +1680,33 @@ function Home(_ref7) {
       return openLb(it, ITEMS.journalismus);
     }
   }) : cat === "portraets" ? /*#__PURE__*/React.createElement("div", null, ASSIGNMENTS.filter(function (group) {
+    return !group.hidden;
+  }).length === 0 ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      minHeight: "40vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      padding: "60px 5%"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "30px",
+      height: "1px",
+      background: "#c9a96e",
+      marginBottom: "22px"
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontWeight: 300,
+      fontSize: "clamp(28px,4vw,44px)",
+      color: "#f0ece6",
+      letterSpacing: "1px"
+    }
+  }, "Coming soon")) : ASSIGNMENTS.filter(function (group) {
     return !group.hidden;
   }).map(function (group, gi) {
     return /*#__PURE__*/React.createElement("div", {
