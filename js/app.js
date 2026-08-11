@@ -33,171 +33,230 @@ function effectiveSize(size, isPortrait) {
 }
 var ASSIGNMENTS = [{
   client: "Katholische Akademie",
-  hidden: true,
   images: [{
     id: 2,
     img: window.IMGS.IMG_0000,
-    size: "third"
+    size: "half"
   }, {
     id: 1,
     img: window.IMGS.IMG_0001,
-    size: "third"
+    size: "half"
   }, {
     id: 3,
-    size: "full",
     img: window.IMGS.IMG_0002,
-    size: "third"
+    size: "half"
   }, {
     id: 5,
     img: window.IMGS.IMG_0004,
-    size: "third"
+    size: "half"
   }, {
     id: 6,
     img: window.IMGS.IMG_0005,
-    size: "third"
+    size: "half"
   }, {
     id: 7,
     img: window.IMGS.IMG_0006,
-    size: "third"
+    size: "half"
   }, {
     id: 8,
     img: window.IMGS.IMG_0007,
-    size: "third"
+    size: "half"
   }, {
     id: 9,
     img: window.IMGS.IMG_0008,
-    size: "third"
+    size: "half"
   }, {
     id: 10,
-    size: "full",
     img: window.IMGS.IMG_0009,
-    size: "third"
+    size: "half"
   }, {
     id: 11,
     img: window.IMGS.IMG_0010,
-    size: "third"
+    size: "half"
   }, {
     id: 17,
     img: window.IMGS.IMG_0011,
-    size: "third"
+    size: "half"
   }, {
     id: 12,
     img: window.IMGS.IMG_0012,
-    size: "third"
+    size: "half"
   }, {
     id: 16,
     img: window.IMGS.IMG_0013,
-    size: "third"
+    size: "half"
   }, {
     id: 15,
     img: window.IMGS.IMG_0014,
-    size: "third"
+    size: "half"
   }, {
     id: 20,
     img: window.IMGS.IMG_0015,
-    size: "third"
+    size: "half"
   }, {
     id: 19,
-    size: "full",
     img: window.IMGS.IMG_0016,
-    size: "third"
+    size: "half",
+    breakAfter: true
+  }, {
+    id: 601,
+    img: window.IMGS.akademie_01,
+    size: "half"
+  }, {
+    id: 602,
+    img: window.IMGS.akademie_02,
+    size: "half"
+  }, {
+    id: 603,
+    img: window.IMGS.akademie_03,
+    size: "half"
+  }, {
+    id: 604,
+    img: window.IMGS.akademie_04,
+    size: "half"
+  }, {
+    id: 605,
+    img: window.IMGS.akademie_05,
+    size: "half"
+  }, {
+    id: 606,
+    img: window.IMGS.akademie_06,
+    size: "half"
+  }, {
+    id: 607,
+    img: window.IMGS.akademie_07,
+    size: "half",
+    breakAfter: true
+  }, {
+    id: 701,
+    img: window.IMGS.pfingst_01,
+    size: "half"
+  }, {
+    id: 703,
+    img: window.IMGS.pfingst_03,
+    size: "half"
+  }, {
+    id: 704,
+    img: window.IMGS.pfingst_04,
+    size: "half"
+  }, {
+    id: 706,
+    img: window.IMGS.pfingst_06,
+    size: "half"
+  }, {
+    id: 707,
+    img: window.IMGS.pfingst_07,
+    size: "half"
+  }, {
+    id: 708,
+    img: window.IMGS.pfingst_08,
+    size: "half"
+  }, {
+    id: 709,
+    img: window.IMGS.pfingst_09,
+    size: "half"
+  }, {
+    id: 710,
+    img: window.IMGS.pfingst_10,
+    size: "half"
   }]
-},, {
-  client: "Niedersächsisches Landesmuseum & Modedesign-Studiengang der Hochschule Hannover",
-  hidden: true,
+}, {
+  client: "Madsack Verlags- und Redaktionsgesellschaft",
   images: [{
-    id: 21,
-    img: window.IMGS.landesmuseum,
-    size: "full"
+    id: 501,
+    img: window.IMGS.madsack_01,
+    size: "half"
   }, {
-    id: 22,
-    size: "two-thirds",
-    img: window.IMGS.IMG_0018,
-    size: "third"
+    id: 502,
+    img: window.IMGS.madsack_02,
+    size: "half"
   }, {
-    id: 23,
-    size: "third",
-    img: window.IMGS.IMG_0019,
-    size: "third"
+    id: 503,
+    img: window.IMGS.madsack_03,
+    size: "half"
   }, {
-    id: 24,
-    size: "third",
-    img: window.IMGS.IMG_0020,
-    size: "third"
+    id: 504,
+    img: window.IMGS.madsack_04,
+    size: "half"
   }, {
-    id: 25,
-    size: "third",
-    img: window.IMGS.IMG_0021,
-    size: "third"
+    id: 505,
+    img: window.IMGS.madsack_05,
+    size: "half"
   }, {
-    id: 26,
-    size: "third",
-    img: window.IMGS.IMG_0022,
-    size: "third"
+    id: 506,
+    img: window.IMGS.madsack_06,
+    size: "half"
   }, {
-    id: 27,
-    size: "third",
-    img: window.IMGS.IMG_0023,
-    size: "third"
+    id: 507,
+    img: window.IMGS.madsack_07,
+    size: "half"
   }, {
-    id: 28,
-    size: "third",
-    img: window.IMGS.IMG_0024,
-    size: "third"
+    id: 508,
+    img: window.IMGS.madsack_08,
+    size: "half"
   }, {
-    id: 29,
-    size: "third",
-    img: window.IMGS.IMG_0025,
-    size: "third"
-  }, {
-    id: 30,
-    size: "third",
-    img: window.IMGS.IMG_0026,
-    size: "third"
-  }, {
-    id: 31,
-    size: "third",
-    img: window.IMGS.IMG_0027,
-    size: "third"
-  }, {
-    id: 32,
-    size: "full",
-    img: window.IMGS.IMG_0028,
-    size: "third"
+    id: 509,
+    img: window.IMGS.madsack_09,
+    size: "half"
   }]
 }, {
   client: "Kunstverein Hannover",
-  hidden: true,
   images: [{
     id: 38,
-    size: "full",
     img: window.IMGS.IMG_0029,
-    size: "third"
-  }, {
-    id: 33,
     size: "full",
-    img: window.IMGS.IMG_0030,
-    size: "third"
+    breakAfter: true
   }, {
     id: 34,
     size: "full",
-    img: window.IMGS.IMG_0031,
-    size: "third"
+    img: window.IMGS.IMG_0033,
+    size: "half"
   }, {
     id: 35,
     size: "full",
     img: window.IMGS.IMG_0032,
-    size: "third"
+    size: "half"
   }, {
     id: 36,
     size: "full",
-    img: window.IMGS.IMG_0033,
-    size: "third"
+    img: window.IMGS.IMG_0031,
+    size: "half"
   }, {
     id: 37,
     size: "full",
     img: window.IMGS.IMG_0034,
-    size: "third"
+    size: "half"
+  }]
+}, {
+  client: "Farouk",
+  images: [{
+    id: 801,
+    img: window.IMGS.farouk_01,
+    size: "full"
+  }, {
+    id: 802,
+    img: window.IMGS.farouk_02,
+    size: "full"
+  }, {
+    id: 803,
+    img: window.IMGS.farouk_03,
+    size: "full"
+  }, {
+    id: 804,
+    img: window.IMGS.farouk_04,
+    size: "full"
+  }, {
+    id: 805,
+    img: window.IMGS.farouk_05,
+    size: "full"
+  }, {
+    id: 806,
+    img: window.IMGS.farouk_06,
+    size: "full"
+  }, {
+    id: 807,
+    img: window.IMGS.farouk_07,
+    size: "full"
   }]
 }];
 var CATS = [{
@@ -1099,8 +1158,8 @@ var WORKS = {
     intro: "In this work, people who lost their relatives during the 2022 flood in Sunamganj in north Bangladesh talk about how losing their family members had effects on them and how their lives are still being shaped by this experience until its end.\n\nIt is neither the floods nor the resulted material damage and disruption to public life in the affected areas that stands at the center of interest. Instead, the focus lies on individuals who reflect on their visions of the future in relation to past experiences of personal loss.\n\nThe visual approach seeks to express the assertion that a fundamental change in perspective remains unattainable, with only the attempt being possible.",
     images: [{
       src: window.IMGS.shaped_19,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half",
+      caption: "Nahim Diplob Mia, Tanias Brother & Sell man, Chhatak, Sunamganj.",
+      size: "full",
       position: "center 55%"
     }, {
       src: window.IMGS.shaped_01,
@@ -1519,7 +1578,7 @@ function PortfolioItem(_ref6) {
 function Home(_ref7) {
   var setPage = _ref7.setPage,
     navHidden = _ref7.navHidden;
-  var _useState9 = useState("journalismus"),
+  var _useState9 = useState("portraets"),
     _useState0 = _slicedToArray(_useState9, 2),
     cat = _useState0[0],
     setCat = _useState0[1];
@@ -1735,13 +1794,13 @@ function Home(_ref7) {
       style: {
         display: "grid",
         gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
-        gridAutoFlow: "row dense",
+        gridAutoFlow: "row",
         gap: "28px",
         alignItems: "start",
         minWidth: "900px"
       }
     }, group.images.map(function (item) {
-      return /*#__PURE__*/React.createElement(PortfolioItem, {
+      return [/*#__PURE__*/React.createElement(PortfolioItem, {
         key: item.id,
         item: _objectSpread(_objectSpread({}, item), {}, {
           title: "",
@@ -1753,7 +1812,15 @@ function Home(_ref7) {
         hideTitle: true,
         naturalRatio: true,
         fixedHeight: "480px"
-      });
+      }), item.breakAfter ? /*#__PURE__*/React.createElement("div", {
+        key: "brk-" + item.id,
+        style: {
+          gridColumn: "1 / -1",
+          height: "1px",
+          background: "#1e1e1e",
+          margin: "18px 0 26px"
+        }
+      }) : null];
     }))));
   })) : /*#__PURE__*/React.createElement("div", {
     className: "port-scroll",
