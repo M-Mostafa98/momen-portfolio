@@ -341,13 +341,20 @@ var ITEMS = {
     size: "third"
   }],
   journalismus: [{
+    id: 250,
+    title: "",
+    desc: "",
+    caption: "Sandra Quadflieg, Maschseefest in Hannover, 2026.",
+    img: window.IMGS.entenrennen_01,
+    size: "two-thirds"
+  }, {
     id: 201,
     title: "",
     desc: "",
     caption: "Osan Yaran im Theater Am Aegi in Hannover, 2026.",
     img: window.IMGS.osanYaran,
     size: "two-thirds",
-    align: "right"
+    align: "center"
   }, {
     id: 45,
     title: "",
@@ -779,7 +786,7 @@ function Caption(_refC) {
   var _e = useState(false);
   var exp = _e[0], setExp = _e[1];
   if (!mobile) {
-    return /*#__PURE__*/React.createElement("div", { style: baseStyle }, text);
+    return /*#__PURE__*/React.createElement("div", { style: baseStyle, "data-mmtext": "1" }, text);
   }
   var btnStyle = {
     background: "none", border: "none", color: "#c9a96e",
@@ -1158,53 +1165,69 @@ var WORKS = {
     intro: "In this work, people who lost their relatives during the 2022 flood in Sunamganj in north Bangladesh talk about how losing their family members had effects on them and how their lives are still being shaped by this experience until its end.\n\nIt is neither the floods nor the resulted material damage and disruption to public life in the affected areas that stands at the center of interest. Instead, the focus lies on individuals who reflect on their visions of the future in relation to past experiences of personal loss.\n\nThe visual approach seeks to express the assertion that a fundamental change in perspective remains unattainable, with only the attempt being possible.",
     images: [{
       src: window.IMGS.shaped_19,
-      caption: "Nahim Diplob Mia, Tanias Brother & Sell man, Chhatak, Sunamganj.",
+      caption: "",
       size: "full",
       position: "center 55%"
     }, {
       src: window.IMGS.shaped_01,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      caption: "Nahim Diplob Mia, Tanias Brother & Sell man, Chhatak, Sunamganj.",
+      size: "full",
+      align: "center"
     }, {
       src: window.IMGS.shaped_02,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      caption: "",
+      sideText: "At this point in the valley on the border with India, the rain pours into the border strip in Bangladesh and then into the surrounding villages. Authorities say the rain washes chemicals from mines on the Indian side and pollutes fertile agricultural land in the border strip. In this border area, people live in huts and keep moving to the higher areas of the South West Khasi Hills closer to the border with India to escape the increasing amount of water that collects in the border strip during the flood season.",
+      nudge: { x: 106, y: -11 },
+      textNudge: { x: -30, y: 91 },
+      size: "full",
+      align: "left"
     }, {
       src: window.IMGS.shaped_03,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      caption: "Musamurubna Begum, Diplob Mia‘s wife and mother of Tania and 3 more children, Tahirpur, Sunamganj.",
+      nudge: { x: 106, y: 18 },
+      size: "half",
+      align: "left"
     }, {
       src: window.IMGS.shaped_04,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      caption: "The playground where Tania‘s father was hit by relief goods.",
+      sideText: "flooding at that time. When it was flooding, I was at my grandfather's home. When the accident happened, it was time of Asr. I did not hear then. There was no electricity at that time. It was night when I heard the news. At that time, my elder brother called my uncle. When relief goods fell on my father, he became unconscious then no one picked him up. Then one of the uncles of my home along with some other people took my Dad to the hospital. After keeping him at the hospital the whole night he died about 5 minutes after taking him to Sylhet Usmani the next morning. This is the situation of surviving in the flood. No one has asked about how we are surviving since my father died\".\nTania",
+      nudge: { x: 106, y: 0 },
+      size: "full",
+      align: "left"
     }, {
       src: window.IMGS.shaped_05,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      caption: "Tanja Diplob Mia, pupil at Tahirpur Girls‘ School.",
+      sideText: "„Me when my father died, there have been some problems in my legs. Then I could not go to school and my hope was to be a teacher. My brother hopes to get a job in the air force. The helicopter that brought relief goods my father lost his life that’s why he said that it would be good if he could get a job in the air force“.\nTania",
+      nudge: { x: -20, y: 5 },
+      size: "full"
     }, {
       src: window.IMGS.shaped_06,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      nudge: { x: -18, y: 5 },
       size: "half"
     }, {
       src: window.IMGS.shaped_07,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      nudge: { x: -20, y: 0 },
       size: "half"
     }, {
       src: window.IMGS.shaped_08,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      nudge: { x: -9, y: 429 },
+      size: "full"
     }, {
       src: window.IMGS.shaped_09,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
-    }, {
-      src: window.IMGS.shaped_10,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      size: "full"
     }, {
       src: window.IMGS.shaped_11,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      size: "half"
+      size: "full"
+    }, {
+      src: window.IMGS.shaped_10,
+      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      nudge: { x: -217, y: 1 },
+      size: "full"
     }, {
       src: window.IMGS.shaped_12,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
@@ -1321,7 +1344,25 @@ function WorkDetail(_ref3) {
       alignItems: "center",
       gap: "8px"
     }
-  }, "← Zurück")), /*#__PURE__*/React.createElement("section", {
+  }, "← Zurück")), work.images[0] && work.images[0].caption && /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: "14px 5% 0",
+      maxWidth: "1300px",
+      margin: "0 auto",
+      width: "100%",
+      boxSizing: "border-box"
+    }
+  }, /*#__PURE__*/React.createElement(Caption, {
+    text: work.images[0].caption,
+    baseStyle: {
+      fontSize: "11px",
+      color: "#666",
+      letterSpacing: "0.3px",
+      fontFamily: "'Jost',sans-serif",
+      fontWeight: 300,
+      lineHeight: 1.5
+    }
+  })), /*#__PURE__*/React.createElement("section", {
     className: "work-intro",
     style: {
       padding: "80px 5%"
@@ -1357,17 +1398,28 @@ function WorkDetail(_ref3) {
       gap: "32px 18px"
     }
   }, work.images.slice(1).map(function (im, i) {
-    var side = work.captionLayout === "side";
+    var side = work.captionLayout === "side" || !!im.sideText;
     return /*#__PURE__*/React.createElement("figure", {
       key: i,
       className: "work-figure",
       style: {
-        gridColumn: "span " + spanOf(im.size || "half"),
+        gridColumn: im.offset ? (im.offset + 1) + " / span " + spanOf(im.size || "half") : "span " + spanOf(im.size || "half"),
         margin: 0,
         display: side ? "grid" : "block",
         gridTemplateColumns: side ? "minmax(0,1.7fr) minmax(220px,1fr)" : "none",
-        gap: side ? "36px" : "0",
+        gap: side ? (im.sideText ? "20px" : "36px") : "0",
         alignItems: side ? "center" : "stretch"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      "data-mmwrap": "1",
+      style: {
+        display: side ? "block" : "table",
+        maxWidth: "100%",
+        marginLeft: side ? "0" : im.align === "left" ? "0" : "auto",
+        marginRight: side ? "0" : "auto",
+        textAlign: "left",
+        width: side ? "auto" : "auto",
+        transform: im.nudge ? "translate(" + im.nudge.x + "px," + im.nudge.y + "px)" : im.shift ? "translateX(" + im.shift + ")" : "none"
       }
     }, /*#__PURE__*/React.createElement("img", {
       src: im.src,
@@ -1379,21 +1431,32 @@ function WorkDetail(_ref3) {
         width: "auto",
         height: "auto",
         display: "block",
-        margin: "0 auto",
         filter: "grayscale(8%)",
         cursor: "pointer"
       }
     }), im.caption && /*#__PURE__*/React.createElement(Caption, {
       text: im.caption,
       baseStyle: {
-        fontSize: side ? "13px" : "11px",
-        color: side ? "#888" : "#666",
+        fontSize: "11px",
+        color: "#666",
         letterSpacing: "0.3px",
-        marginTop: side ? "0" : "10px",
+        marginTop: "10px",
         fontFamily: "'Jost',sans-serif",
         fontWeight: 300,
-        lineHeight: side ? 1.75 : 1.5,
-        maxWidth: side ? "32ch" : "none"
+        lineHeight: 1.5
+      }
+    })), side && im.sideText && /*#__PURE__*/React.createElement(Caption, {
+      text: im.sideText,
+      baseStyle: {
+        fontSize: "13px",
+        color: "#888",
+        letterSpacing: "0.3px",
+        marginTop: "0",
+        fontFamily: "'Jost',sans-serif",
+        fontWeight: 300,
+        lineHeight: 1.75,
+        maxWidth: im.sideText ? "48ch" : "32ch",
+        transform: im.textNudge ? "translate(" + im.textNudge.x + "px," + im.textNudge.y + "px)" : "none"
       }
     }));
   })))), lb && /*#__PURE__*/React.createElement(Lightbox, { item: lb, items: lbItems, onClose: function () { setLb(null); } }));
@@ -2594,7 +2657,8 @@ var PAGE_TO_PATH = {
   impressum: "/impressum",
   "work-delivery": "/arbeit/delivery",
   "work-healing": "/arbeit/healing",
-  "work-islamic": "/arbeit/islamic"
+  "work-islamic": "/arbeit/islamic",
+  "work-shaped": "/arbeit/shaped"
 };
 var PATH_TO_PAGE = {
   "/": "home",
@@ -2604,7 +2668,8 @@ var PATH_TO_PAGE = {
   "/impressum": "impressum",
   "/arbeit/delivery": "work-delivery",
   "/arbeit/healing": "work-healing",
-  "/arbeit/islamic": "work-islamic"
+  "/arbeit/islamic": "work-islamic",
+  "/arbeit/shaped": "work-shaped"
 };
 function pageFromPath() {
   var p = (window.location.pathname || "/").replace(/\/+$/, "") || "/";
@@ -2626,9 +2691,190 @@ function App() {
   var lastScrollY = useRef(0);
   var didMount = useRef(false);
   useEffect(function () {
+    var isDev = !/momen-most\.com$/i.test(window.location.hostname);
+    if (!isDev) return;
+    var PREFIX = {
+      home: "H",
+      about: "UM",
+      videos: "V",
+      contact: "K",
+      impressum: "IMP",
+      "work-delivery": "DEL",
+      "work-healing": "HEAL",
+      "work-islamic": "ISL",
+      "work-shaped": "STR"
+    };
+    var pre = PREFIX[page] || "X";
+    var DK = "mm-drag";
+    var readOff = function readOff() {
+      try { return JSON.parse(localStorage.getItem(DK) || "{}"); } catch (e) { return {}; }
+    };
+    var writeOff = function writeOff(o) {
+      try { localStorage.setItem(DK, JSON.stringify(o)); } catch (e) {}
+    };
+    var dragOn = false;
+    var bar = document.createElement("div");
+    bar.id = "mm-bar";
+    bar.style.cssText = "position:fixed;bottom:16px;right:16px;z-index:9999;display:flex;gap:8px;font:600 12px/1 'Jost',sans-serif";
+    var btn = document.createElement("button");
+    var btn2 = document.createElement("button");
+    var bs = "color:#fff;border:none;padding:9px 13px;border-radius:4px;cursor:pointer;font:inherit;letter-spacing:.5px";
+    btn.style.cssText = bs + ";background:#c0392b";
+    btn2.style.cssText = bs + ";background:#444";
+    btn.textContent = "Verschieben: AUS";
+    btn2.textContent = "Zurücksetzen";
+    bar.appendChild(btn); bar.appendChild(btn2);
+    document.body.appendChild(bar);
+    var applyOff = function applyOff() {
+      var off = readOff();
+      document.querySelectorAll("[data-mmkey]").forEach(function (im) {
+        var o = off[im.getAttribute("data-mmkey")];
+        var t = (im.closest && im.closest("[data-mmwrap]")) || im;
+        t.style.transform = o ? "translate(" + o.x + "px," + o.y + "px)" : "";
+      });
+    };
+    btn.onclick = function () {
+      dragOn = !dragOn;
+      btn.textContent = "Verschieben: " + (dragOn ? "AN" : "AUS");
+      btn.style.background = dragOn ? "#27ae60" : "#c0392b";
+      document.querySelectorAll("img[data-mmkey]").forEach(function (im) {
+        im.style.cursor = dragOn ? "move" : "";
+        im.style.outline = dragOn ? "2px dashed rgba(192,57,43,.6)" : "";
+      });
+      document.querySelectorAll("[data-mmtext]").forEach(function (t) {
+        t.style.cursor = dragOn ? "move" : "";
+        t.style.outline = dragOn ? "2px dashed rgba(41,128,185,.7)" : "";
+      });
+    };
+    btn2.onclick = function () {
+      var off = readOff();
+      Object.keys(off).forEach(function (k) { if (k.indexOf(pre + "-") === 0) delete off[k]; });
+      writeOff(off); applyOff();
+    };
+    var startDrag = function startDrag(e) {
+      if (!dragOn) return;
+      var im = e.currentTarget;
+      var tgt = (im.closest && im.closest("[data-mmwrap]")) || im;
+      e.preventDefault();
+      var key = im.getAttribute("data-mmkey");
+      var off = readOff();
+      var base = off[key] || { x: 0, y: 0 };
+      var sx = e.clientX, sy = e.clientY;
+      var others = Array.prototype.filter.call(document.querySelectorAll("[data-mmkey]"), function (n) { return n !== im && !tgt.contains(n); });
+      var container = document.querySelector(".work-grid") || document.getElementById("gallery") || document.body;
+      var cr = container.getBoundingClientRect();
+      var vGuides = [], hGuides = [];
+      for (var g = 0; g <= 6; g++) vGuides.push(cr.left + cr.width * g / 6);
+      others.forEach(function (n) {
+        var r = n.getBoundingClientRect();
+        vGuides.push(r.left, r.left + r.width / 2, r.right);
+        hGuides.push(r.top, r.top + r.height / 2, r.bottom);
+      });
+      var gl = document.createElement("div");
+      gl.className = "mm-guide";
+      gl.style.cssText = "position:fixed;inset:0;z-index:9998;pointer-events:none";
+      document.body.appendChild(gl);
+      var move = function move(ev) {
+        var nx = base.x + (ev.clientX - sx), ny = base.y + (ev.clientY - sy);
+        tgt.style.transform = "translate(" + nx + "px," + ny + "px)";
+        var r = tgt.getBoundingClientRect();
+        var TOL = 7, lines = "";
+        var snapAxis = function snapAxis(pts, guides, isV) {
+          var best = null;
+          pts.forEach(function (p) {
+            guides.forEach(function (gv) {
+              var d = gv - p;
+              if (Math.abs(d) <= TOL && (!best || Math.abs(d) < Math.abs(best.d))) best = { d: d, at: gv };
+            });
+          });
+          if (best) {
+            lines += isV
+              ? '<div style="position:absolute;left:' + best.at + 'px;top:0;bottom:0;width:1px;background:#27ae60"></div>'
+              : '<div style="position:absolute;top:' + best.at + 'px;left:0;right:0;height:1px;background:#27ae60"></div>';
+            return best.d;
+          }
+          return 0;
+        };
+        var dx = snapAxis([r.left, r.left + r.width / 2, r.right], vGuides, true);
+        var dy = snapAxis([r.top, r.top + r.height / 2, r.bottom], hGuides, false);
+        nx += dx; ny += dy;
+        tgt.style.transform = "translate(" + nx + "px," + ny + "px)";
+        gl.innerHTML = lines;
+        off[key] = { x: Math.round(nx), y: Math.round(ny) };
+      };
+      var up = function up() {
+        document.removeEventListener("mousemove", move);
+        document.removeEventListener("mouseup", up);
+        if (gl.parentNode) gl.parentNode.removeChild(gl);
+        writeOff(off);
+      };
+      document.addEventListener("mousemove", move);
+      document.addEventListener("mouseup", up);
+    };
+    var tag = function tag() {
+      document.querySelectorAll(".mm-imgno").forEach(function (n) { n.remove(); });
+      var imgs = Array.prototype.filter.call(document.querySelectorAll("img"), function (im) {
+        var r = im.getBoundingClientRect();
+        return r.width > 60 && r.height > 40;
+      });
+      imgs.forEach(function (im, i) {
+        var p = im.parentElement;
+        if (!p) return;
+        var key = pre + "-" + (i + 1);
+        im.setAttribute("data-mmkey", key);
+        im.onmousedown = startDrag;
+        if (dragOn) { im.style.cursor = "move"; im.style.outline = "2px dashed rgba(192,57,43,.6)"; }
+        if (getComputedStyle(p).position === "static") p.style.position = "relative";
+        var b = document.createElement("div");
+        b.className = "mm-imgno";
+        b.textContent = key;
+        b.style.cssText = "position:absolute;top:6px;left:6px;z-index:60;background:#c0392b;color:#fff;font:700 13px/1 'Jost',sans-serif;padding:5px 8px;border-radius:3px;pointer-events:none;letter-spacing:.5px;box-shadow:0 1px 6px rgba(0,0,0,.4)";
+        p.appendChild(b);
+      });
+      var txts = document.querySelectorAll("[data-mmtext]");
+      Array.prototype.forEach.call(txts, function (t, i) {
+        var key = pre + "-T" + (i + 1);
+        t.setAttribute("data-mmkey", key);
+        t.onmousedown = startDrag;
+        if (dragOn) { t.style.cursor = "move"; t.style.outline = "2px dashed rgba(41,128,185,.7)"; }
+        if (getComputedStyle(t).position === "static") t.style.position = "relative";
+        var b = document.createElement("div");
+        b.className = "mm-imgno";
+        b.textContent = key;
+        b.style.cssText = "position:absolute;top:-9px;left:-4px;z-index:60;background:#2980b9;color:#fff;font:700 11px/1 'Jost',sans-serif;padding:4px 6px;border-radius:3px;pointer-events:none;letter-spacing:.5px";
+        t.appendChild(b);
+      });
+      applyOff();
+    };
+    var t1 = setTimeout(tag, 400);
+    var t2 = setTimeout(tag, 1400);
+    window.addEventListener("resize", tag);
+    return function () {
+      clearTimeout(t1); clearTimeout(t2);
+      window.removeEventListener("resize", tag);
+      document.querySelectorAll(".mm-imgno").forEach(function (n) { n.remove(); });
+      if (bar.parentNode) bar.parentNode.removeChild(bar);
+    };
+  }, [page]);
+  useEffect(function () {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
+    try {
+      var saved = sessionStorage.getItem("mm-scroll-" + window.location.pathname);
+      if (saved) window.scrollTo(0, parseInt(saved, 10) || 0);
+    } catch (e) {}
+    var save = function save() {
+      try {
+        sessionStorage.setItem("mm-scroll-" + window.location.pathname, String(window.scrollY));
+      } catch (e) {}
+    };
+    window.addEventListener("beforeunload", save);
+    var iv = setInterval(save, 800);
+    return function () {
+      window.removeEventListener("beforeunload", save);
+      clearInterval(iv);
+    };
   }, []);
   useEffect(function () {
     var el = document.createElement("style");
