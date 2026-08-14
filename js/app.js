@@ -1226,7 +1226,6 @@ var WORKS = {
     }, {
       src: window.IMGS.shaped_10,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      nudge: { x: -217, y: 1 },
       size: "full"
     }, {
       src: window.IMGS.shaped_12,
@@ -1419,7 +1418,8 @@ function WorkDetail(_ref3) {
         marginRight: side ? "0" : "auto",
         textAlign: "left",
         width: side ? "auto" : "auto",
-        transform: im.nudge ? "translate(" + im.nudge.x + "px," + im.nudge.y + "px)" : im.shift ? "translateX(" + im.shift + ")" : "none"
+        marginTop: im.nudge && im.nudge.y > 0 ? im.nudge.y + "px" : undefined,
+        transform: im.nudge ? "translate(" + im.nudge.x + "px," + (im.nudge.y > 0 ? 0 : im.nudge.y) + "px)" : im.shift ? "translateX(" + im.shift + ")" : "none"
       }
     }, /*#__PURE__*/React.createElement("img", {
       src: im.src,
