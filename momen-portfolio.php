@@ -19,6 +19,7 @@ function mm_portfolio_paths() {
         '/arbeit/delivery',
         '/arbeit/healing',
         '/arbeit/islamic',
+        '/arbeit/shaped',
     ];
 }
 

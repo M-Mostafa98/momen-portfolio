@@ -2730,7 +2730,7 @@ function App() {
       document.querySelectorAll("[data-mmkey]").forEach(function (im) {
         var o = off[im.getAttribute("data-mmkey")];
         var t = (im.closest && im.closest("[data-mmwrap]")) || im;
-        t.style.transform = o ? "translate(" + o.x + "px," + o.y + "px)" : "";
+        if (o) t.style.transform = "translate(" + o.x + "px," + o.y + "px)";
       });
     };
     btn.onclick = function () {
