@@ -16,7 +16,7 @@ var _React = React,
   useState = _React.useState,
   useEffect = _React.useEffect,
   useRef = _React.useRef;
-var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Italiana&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#d6cebd;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#666053;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#1a160e;}.nav-a.on{color:#1a160e;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{color:#857e6c;background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;transition:all 0.3s;}\n  .cat-btn:hover{color:#1a160e;}.cat-btn.on{color:#1a160e;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #1e1e1e;color:#d6cebd;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\nmain > div { min-height: auto !important; }\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; }\n  .g3 img { height: 56vh !important; object-fit: cover !important; }\n  .hero-section { justify-content: center !important; padding-top: 60px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n  nav { position: absolute !important; }\n}\n";
+var STYLES = "\n  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Italiana&family=Jost:wght@300;400;500&family=Raleway:wght@100;600&display=swap');\n  *{margin:0;padding:0;box-sizing:border-box;}\n  html{scroll-behavior:smooth;}\n  body{background:#2a2a2a;color:#e8e2d9;font-family:'Jost',sans-serif;overflow-x:hidden;}\n  ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#d6cebd;}::-webkit-scrollbar-thumb{background:#444;}\n  @keyframes fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}\n  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n  .fu{animation:fadeUp 0.85s ease both;}\n  .fu2{animation:fadeUp 0.85s 0.18s ease both;}\n  .fu3{animation:fadeUp 0.85s 0.36s ease both;}\n  .nav-a{color:#666053;text-decoration:none;font-size:11px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;background:none;border:none;font-family:'Jost',sans-serif;}\n  .nav-a:hover{color:#1a160e;}.nav-a.on{color:#1a160e;}\n  .img-wrap{overflow:hidden;position:relative;cursor:pointer;}\n  .img-wrap img{transition:transform 0.7s ease,filter 0.4s ease;display:block;width:100%;height:100%;object-fit:cover;}\n  .img-wrap:hover img{transform:scale(1.05);filter:brightness(0.65);}\n  .img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:20px;}\n  .img-wrap:hover .static-title{opacity:1;}\n  .static-title{transition:opacity 0.4s;}\n  .cat-btn{color:#857e6c;background:none;border:none;border-bottom:1px solid transparent;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;padding:8px 0;transition:all 0.3s;}\n  .cat-btn:hover{color:#e8e2d9;}.cat-btn.on{color:#e8e2d9;border-bottom-color:#c9a96e;}\n  input,textarea{background:transparent;border:none;border-bottom:1px solid #1e1e1e;color:#d6cebd;font-family:'Jost',sans-serif;font-size:14px;padding:12px 0;width:100%;outline:none;transition:border-color 0.3s;font-weight:300;}\n  input::placeholder,textarea::placeholder{color:#3a3a3a;}\n  input:focus,textarea:focus{border-bottom-color:#c9a96e;}\n  .btn-gold{background:none;border:1px solid #c9a96e;color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:14px 38px;cursor:pointer;transition:all 0.3s;}\n  .btn-gold:hover{background:#c9a96e;color:#0c0c0c;}\n  .btn-ghost{background:none;border:1px solid #272727;color:#777;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:all 0.3s;}\n  .btn-ghost:hover{border-color:#c9a96e;color:#c9a96e;}\n  @media(max-width:768px){\n    .g3{grid-template-columns:1fr 1fr!important;}\n    .g2{grid-template-columns:1fr!important;}\n    .hero-h{font-size:clamp(56px,13vw,110px)!important;}\n    .cats{flex-wrap:wrap;gap:14px!important;}\n    .abt{grid-template-columns:1fr!important;}\n  }\n\nmain > div { min-height: auto !important; }\n@media (max-width: 768px) {\n  nav { padding: 8px 4% !important; }\n  .nav-links { gap: 16px !important; }\n  .nav-a { font-size: 10px !important; letter-spacing: 1.2px !important; }\n  .cats { gap: 14px !important; flex-wrap: wrap !important; }\n  .cat-btn { font-size: 10px !important; letter-spacing: 1.5px !important; }\n  .port-scroll { overflow-x: visible !important; }\n  .port-grid { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 16px !important; }\n  .port-grid > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .g3 { grid-template-columns: minmax(0, 1fr) !important; min-width: 0 !important; gap: 18px !important; }\n  .g3 > * { grid-column: span 1 !important; grid-row: auto !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-intro { padding: 40px 5% !important; }\n  .work-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }\n  .work-figure { display: block !important; grid-column: span 1 !important; grid-template-columns: none !important; min-width: 0 !important; max-width: 100% !important; }\n  .work-figure img { max-height: 70vh !important; max-width: 100% !important; }\n  .work-figure figcaption { margin-top: 12px !important; max-width: none !important; font-size: 12px !important; line-height: 1.5 !important; }\n  .abt { grid-template-columns: 1fr !important; gap: 28px !important; }\n  .abt > div:first-child { max-width: 220px !important; }\n  .port-grid img, .g3 img { max-width: 100% !important; }\n  .g3 img { height: 56vh !important; object-fit: cover !important; }\n  .hero-section { justify-content: center !important; padding-top: 60px !important; }\n  .hero-text { text-align: center !important; }\n  .hero-text .fu > div { margin-left: auto !important; margin-right: auto !important; }\n  nav { position: absolute !important; }\n}\n";
 var SIZE_SPAN = {
   "full":       6,  // groß (Querformat, ganze Breite)
   "two-thirds": 4,  // mittel-querformat (2/3)
@@ -1736,7 +1736,7 @@ function Home(_ref7) {
       marginTop: "22px",
       marginBottom: "0"
     }
-  }, "Fotograf"))), /*#__PURE__*/React.createElement("section", {
+  }, "Fotograf · Hannover"))), /*#__PURE__*/React.createElement("section", {
     id: "gallery",
     style: {
       padding: "100px 5%",
@@ -1915,7 +1915,65 @@ function Home(_ref7) {
       naturalRatio: false,
       fixedHeight: "320px"
     });
-  }))))), lb && /*#__PURE__*/React.createElement(Lightbox, {
+  }))))), /*#__PURE__*/React.createElement("section", {
+    style: {
+      maxWidth: "1300px",
+      margin: "0 auto",
+      padding: "110px 5% 30px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "30px",
+      height: "1px",
+      background: "#c9a96e",
+      marginBottom: "26px"
+    }
+  }), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: "'Cormorant Garamond',serif",
+      fontWeight: 300,
+      fontSize: "clamp(24px,2.6vw,34px)",
+      letterSpacing: "0.5px",
+      color: "#e8e2d9",
+      marginBottom: "26px"
+    }
+  }, "Fotograf in Hannover"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+      gap: "26px 50px",
+      maxWidth: "1000px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontFamily: "'Jost',sans-serif",
+      fontWeight: 300,
+      fontSize: "14px",
+      lineHeight: 1.85,
+      color: "#a59b87",
+      textWrap: "pretty"
+    }
+  }, "Ich fotografiere Veranstaltungen und Events, Kongresse und Messen \u2013 in Hannover, in Niedersachsen und deutschlandweit. Aus dem Fotojournalismus kommend, arbeite ich beobachtend statt inszenierend: Bilder, die den Abend erz\u00e4hlen, statt gestellter Gruppenaufnahmen."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontFamily: "'Jost',sans-serif",
+      fontWeight: 300,
+      fontSize: "14px",
+      lineHeight: 1.85,
+      color: "#a59b87",
+      textWrap: "pretty"
+    }
+  }, "Dazu Portr\u00e4ts f\u00fcr Presse, Unternehmen und Bewerbung, Reportagen aus Betrieben sowie Immobilien- und Architekturfotografie. Anfragen gern \u00fcber die Kontaktseite \u2013 ich melde mich in der Regel am selben Tag zur\u00fcck.")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontFamily: "'Jost',sans-serif",
+      fontWeight: 300,
+      fontSize: "12px",
+      letterSpacing: "0.4px",
+      lineHeight: 1.9,
+      color: "#857e6c",
+      marginTop: "34px",
+      maxWidth: "1000px"
+    }
+  }, "Eventfotografie \u00b7 Veranstaltungsfotografie \u00b7 Portr\u00e4tfotografie \u00b7 Business- und Bewerbungsfotos \u00b7 Messefotografie \u00b7 Kongresse und Konferenzen \u00b7 Immobilienfotografie \u00b7 Architekturfotografie \u00b7 Unternehmensfotografie \u00b7 Presse- und Reportagefotografie \u00b7 Konzert- und Theaterfotografie \u00b7 Video")), lb && /*#__PURE__*/React.createElement(Lightbox, {
     item: lb,
     items: lbItems,
     onClose: function onClose() {
@@ -2316,7 +2374,7 @@ function About() {
       color: "#a89e8a",
       fontWeight: 300
     }
-  }, "Moamen Mostafa fotografierte als Amateur den Arabischen Fr\xFChling in Kairo. Nach seinem Abitur in Khartum 2016 bereitete er sich in Istanbul und Ankara sprachlich auf das Studium Fotojournalismus und Dokumentarfotografie in Hannover vor, wohin er Ende 2017 zog. Seit Ende 2024 lebt er nahe Hannover und sucht mit seiner Fotografie nach Verst\xE4ndnisbr\xFCcken zwischen Religion und S\xE4kularit\xE4t."), /*#__PURE__*/React.createElement("div", {
+  }, "Momen Mostafa fotografierte erst als Amateur den Arabischen Fr\xFChling in Kairo. Nach seinem Abitur in Khartum 2016 lebte er zwischen Istanbul und Ankara bevor er Fotojournalismus und Dokumentarfotografie in Hannover studierte, wo er Ende 2017 hinzog. Seit Ende 2024 lebt er in Hannover und sucht mit seiner Fotografie nach Verst\xE4ndnisbr\xFCcken zwischen Religion und S\xE4kularit\xE4t."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: "50px",
       borderTop: "1px solid #1e1e1e",
