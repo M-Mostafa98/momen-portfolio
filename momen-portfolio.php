@@ -2,7 +2,7 @@
 /*
 Plugin Name: Momen Mostafa Portfolio
 Description: Portfolio Website von Momen Mostafa
-Version: 1.7
+Version: 1.8
 Author: Momen Mostafa
 */
 
@@ -25,6 +25,17 @@ function mm_portfolio_paths() {
 
 // Wenn eine unserer SPA-URLs angefragt wird, übernimm und liefere die Shell aus
 // — auch wenn WordPress sonst 404 setzen würde.
+// Google Search Console Verifizierung
+add_action('template_redirect', function () {
+    $req = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($req !== '/googleb12121c926f61f4d.html') return;
+    status_header(200);
+    nocache_headers();
+    header('Content-Type: text/html; charset=UTF-8');
+    echo 'google-site-verification: googleb12121c926f61f4d.html';
+    exit;
+}, 1);
+
 // Eigene Sitemap für die SPA-Pfade: /mm-sitemap.xml
 add_action('init', function () {
     add_rewrite_rule('^mm-sitemap\.xml$', 'index.php?mm_sitemap=1', 'top');
