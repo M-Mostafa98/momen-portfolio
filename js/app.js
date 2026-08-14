@@ -1203,7 +1203,7 @@ var WORKS = {
     }, {
       src: window.IMGS.shaped_06,
       caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
-      nudge: { x: -18, y: 5 },
+      nudge: { x: -9, y: 0 },
       size: "half"
     }, {
       src: window.IMGS.shaped_07,
@@ -2788,7 +2788,7 @@ function App() {
       document.querySelectorAll("[data-mmkey]").forEach(function (im) {
         var o = off[im.getAttribute("data-mmkey")];
         var t = (im.closest && im.closest("[data-mmwrap]")) || im;
-        if (o) t.style.transform = "translate(" + o.x + "px," + o.y + "px)";
+        if (o) { t.style.marginTop = o.y > 0 ? o.y + "px" : ""; t.style.transform = "translate(" + o.x + "px," + (o.y > 0 ? 0 : o.y) + "px)"; }
       });
     };
     btn.onclick = function () {
