@@ -1386,6 +1386,7 @@ function WorkDetail(_ref3) {
     }
   }, work.title)), /*#__PURE__*/React.createElement("button", {
     onClick: function onClick() {
+      if (window.history.length > 1) return window.history.back();
       return setPage("home");
     },
     style: {
@@ -1709,10 +1710,15 @@ function PortfolioItem(_ref6) {
 function Home(_ref7) {
   var setPage = _ref7.setPage,
     navHidden = _ref7.navHidden;
-  var _useState9 = useState("portraets"),
+  var _useState9 = useState(function () {
+      try { return sessionStorage.getItem("mm-cat") || "portraets"; } catch (e) { return "portraets"; }
+    }),
     _useState0 = _slicedToArray(_useState9, 2),
     cat = _useState0[0],
     setCat = _useState0[1];
+  useEffect(function () {
+    try { sessionStorage.setItem("mm-cat", cat); } catch (e) {}
+  }, [cat]);
   var _useState1 = useState(null),
     _useState10 = _slicedToArray(_useState1, 2),
     lb = _useState10[0],
@@ -3095,6 +3101,17 @@ function App() {
       setPage(function (cur) {
         return cur === next ? cur : next;
       });
+      try {
+        var saved = sessionStorage.getItem("mm-scroll-" + window.location.pathname);
+        if (saved) {
+          var y = parseInt(saved, 10) || 0;
+          requestAnimationFrame(function () {
+            window.scrollTo(0, y);
+            setTimeout(function () { window.scrollTo(0, y); }, 120);
+            setTimeout(function () { window.scrollTo(0, y); }, 400);
+          });
+        }
+      } catch (e) {}
     };
     window.addEventListener("popstate", onPop);
     return function () {
