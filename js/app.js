@@ -232,23 +232,18 @@ var ASSIGNMENTS = [{
   images: [{
     id: 801,
     img: window.IMGS.farouk_01,
-    size: "full"
-  }, {
-    id: 802,
-    img: window.IMGS.farouk_02,
-    size: "full"
-  }, {
-    id: 803,
-    img: window.IMGS.farouk_03,
-    size: "full"
+    size: "two-thirds",
+    align: "center"
   }, {
     id: 804,
     img: window.IMGS.farouk_04,
-    size: "full"
+    size: "third",
+    align: "left"
   }, {
     id: 805,
     img: window.IMGS.farouk_05,
-    size: "full"
+    size: "third",
+    align: "right"
   }, {
     id: 806,
     img: window.IMGS.farouk_06,
@@ -1574,7 +1569,11 @@ function PortfolioItem(_ref6) {
     setIsPortrait = _useState8[1];
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      gridColumn: "span " + spanOf(effectiveSize(item.size, isPortrait))
+      gridColumn: item.align === "center"
+        ? ((6 - spanOf(effectiveSize(item.size, isPortrait))) / 2 + 1) + " / span " + spanOf(effectiveSize(item.size, isPortrait))
+        : item.align === "right"
+        ? "span " + spanOf(effectiveSize(item.size, isPortrait)) + " / -1"
+        : "span " + spanOf(effectiveSize(item.size, isPortrait))
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: naturalRatio ? "" : "img-wrap",
