@@ -435,14 +435,14 @@ var ITEMS = {
     id: 48,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Bremen, 2021.",
     img: window.IMGS.IMG_0049,
     size: "two-thirds"
   }, {
     id: 100,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Bremen, 2022.",
     img: window.IMGS.biogas,
     size: "two-thirds",
     align: "right"
@@ -450,28 +450,28 @@ var ITEMS = {
     id: 204,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Hannover, 2026.",
     img: window.IMGS.feuerwehr,
     size: "two-thirds"
   }, {
     id: 205,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Hannover, 2025.",
     img: window.IMGS.nachtengel,
     size: "full"
   }, {
     id: 43,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Hannover, 2026.",
     img: window.IMGS.IMG_0051,
     size: "full"
   }, {
     id: 206,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Hannover, 2026.",
     img: window.IMGS.kranfuehrer,
     size: "two-thirds",
     align: "center"
@@ -479,35 +479,35 @@ var ITEMS = {
     id: 44,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Bremen, 2021.",
     img: window.IMGS.IMG_0052,
     size: "full"
   }, {
     id: 46,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Hannover, 2026.",
     img: window.IMGS.IMG_0053,
     size: "full"
   }, {
     id: 280,
     title: "",
     desc: "",
-    caption: "Tischlerei Schenke, 2026.",
+    caption: "Tischlerei Schenke in Hannover, 2026.",
     img: window.IMGS.tischlerei_01,
     size: "half"
   }, {
     id: 281,
     title: "",
     desc: "",
-    caption: "Tischlerei Schenke, 2026.",
+    caption: "Tischlerei Schenke in Hannover, 2026.",
     img: window.IMGS.tischlerei_02,
     size: "half"
   }, {
     id: 42,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Bremen, 2022.",
     img: window.IMGS.IMG_0055,
     size: "half",
     tall: true
@@ -515,21 +515,21 @@ var ITEMS = {
     id: 41,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Bremen, 2022.",
     img: window.IMGS.IMG_0054,
     size: "half"
   }, {
     id: 40,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Hannover, 2022.",
     img: window.IMGS.IMG_0050,
     size: "half"
   }, {
     id: 99,
     title: "",
     desc: "",
-    caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+    caption: "Cuxhaven, 2021.",
     img: window.IMGS.shipBridge,
     size: "full"
   }]
@@ -1020,73 +1020,73 @@ var WORKS = {
     intro: "Platzhalter für den Einleitungstext. Hier kommt der erzählende Einstieg in die Serie: worum geht es, wo wurde fotografiert, was hat das Projekt motiviert. Zwei bis vier Sätze, die einstimmen, bevor die Bilder für sich sprechen.",
     images: [{
       src: window.IMGS.delivery_01,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half",
       position: "center 80%",
       mobilePosition: "58% 68%"
     }, {
       src: window.IMGS.delivery_02,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_03,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_04,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_05,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_06,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_07,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_08,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_09,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_10,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_11,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_12,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_13,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_14,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_15,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_16,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.delivery_17,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }]
   },
@@ -1156,68 +1156,68 @@ var WORKS = {
     intro: "Islam in Europe is been seeing by critics as an misogynistic religion. Nevertheless woman are finding their way to Islam.\n\nThe following narratives tell stories of women who identify with Islam as a religion and see themselves as emancipated. Muslim women activists, academics, businesswomen, housewives, professors and students from across Europe talk about different political and social issues related to their different identities. They say that their different parts of identity play different roles in different situations.",
     images: [{
       src: window.IMGS.islamic_01,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full",
       position: "center 25%"
     }, {
       src: window.IMGS.islamic_02,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_03,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_04,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_05,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_06,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_07,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_08,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_09,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_10,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_11,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_12,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_13,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_14,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_15,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.islamic_16,
-      caption: "Platzhalter für die Bildunterschrift. An dieser Stelle stehen Hintergrundinformationen zum Porträt: Name, Alter, Stadt, persönlicher Bezug zur Religion. Zwei bis drei kurze Absätze, die das Bild kontextualisieren ohne es zu erklären. Hier ist Platz für ein Zitat, eine Beobachtung oder einen biografischen Hinweis aus dem Gespräch.",
+      caption: "",
       size: "full"
     }]
   },
@@ -1264,58 +1264,58 @@ var WORKS = {
       size: "full"
     }, {
       src: window.IMGS.shaped_06,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       nudge: { x: -9, y: 0 },
       size: "half"
     }, {
       src: window.IMGS.shaped_07,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       nudge: { x: -20, y: 0 },
       size: "half"
     }, {
       src: window.IMGS.shaped_08,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       nudge: { x: -9, y: 429 },
       size: "full"
     }, {
       src: window.IMGS.shaped_09,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.shaped_11,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.shaped_10,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "full"
     }, {
       src: window.IMGS.shaped_12,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.shaped_13,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.shaped_14,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.shaped_15,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.shaped_16,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.shaped_17,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }, {
       src: window.IMGS.shaped_18,
-      caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
+      caption: "",
       size: "half"
     }]
   }
