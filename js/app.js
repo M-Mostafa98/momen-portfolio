@@ -948,13 +948,13 @@ function Nav(_ref2) {
         style: {
           background: "none", border: "none", cursor: "pointer",
           padding: "10px 4px", display: "flex", flexDirection: "column",
-          gap: "5px", alignItems: "flex-end",
+          gap: "6px", alignItems: "flex-end",
           position: "absolute", top: "48px", right: "5%"
         }
       },
-        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#252118", display: "block" } }),
-        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#252118", display: "block" } }),
-        /*#__PURE__*/React.createElement("span", { style: { width: "28px", height: "2px", background: "#252118", display: "block" } })
+        /*#__PURE__*/React.createElement("span", { style: { width: "30px", height: "3px", background: "#0d0b08", display: "block" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "30px", height: "3px", background: "#0d0b08", display: "block" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "30px", height: "3px", background: "#0d0b08", display: "block" } })
       )
     ),
     mobile && /*#__PURE__*/React.createElement("div", {
@@ -1454,17 +1454,17 @@ function WorkDetail(_ref3) {
       maxWidth: "1300px",
       margin: "0 auto",
       display: "grid",
-      gridTemplateColumns: "repeat(6,minmax(140px,1fr))",
+      gridTemplateColumns: mobile ? "1fr" : "repeat(6,minmax(140px,1fr))",
       gridAutoFlow: "row",
-      gap: "32px 18px"
+      gap: mobile ? "34px 0" : "32px 18px"
     }
   }, work.images.slice(1).map(function (im, i) {
-    var side = work.captionLayout === "side" || !!im.sideText;
+    var side = !mobile && (work.captionLayout === "side" || !!im.sideText);
     return /*#__PURE__*/React.createElement("figure", {
       key: i,
       className: "work-figure",
       style: {
-        gridColumn: im.offset ? (im.offset + 1) + " / span " + spanOf(im.size || "half") : "span " + spanOf(im.size || "half"),
+        gridColumn: mobile ? "1 / -1" : im.offset ? (im.offset + 1) + " / span " + spanOf(im.size || "half") : "span " + spanOf(im.size || "half"),
         margin: 0,
         display: side ? "grid" : "block",
         gridTemplateColumns: side ? "minmax(0,1.7fr) minmax(220px,1fr)" : "none",
@@ -1476,12 +1476,12 @@ function WorkDetail(_ref3) {
       style: {
         display: side ? "block" : "table",
         maxWidth: "100%",
-        marginLeft: side ? "0" : im.align === "left" ? "0" : "auto",
-        marginRight: side ? "0" : "auto",
+        marginLeft: mobile ? "0" : side ? "0" : im.align === "left" ? "0" : "auto",
+        marginRight: mobile ? "0" : side ? "0" : "auto",
         textAlign: "left",
-        width: side ? "auto" : "auto",
-        marginTop: im.nudge && im.nudge.y > 0 ? im.nudge.y + "px" : undefined,
-        transform: im.nudge ? "translate(" + im.nudge.x + "px," + (im.nudge.y > 0 ? 0 : im.nudge.y) + "px)" : im.shift ? "translateX(" + im.shift + ")" : "none"
+        width: mobile ? "100%" : "auto",
+        marginTop: !mobile && im.nudge && im.nudge.y > 0 ? im.nudge.y + "px" : undefined,
+        transform: mobile ? "none" : im.nudge ? "translate(" + im.nudge.x + "px," + (im.nudge.y > 0 ? 0 : im.nudge.y) + "px)" : im.shift ? "translateX(" + im.shift + ")" : "none"
       }
     }, /*#__PURE__*/React.createElement("img", {
       src: im.src,
@@ -1507,18 +1507,18 @@ function WorkDetail(_ref3) {
         fontWeight: 300,
         lineHeight: 1.5
       }
-    })), side && im.sideText && /*#__PURE__*/React.createElement(Caption, {
+    })), (mobile ? !!im.sideText : side && im.sideText) && /*#__PURE__*/React.createElement(Caption, {
       text: im.sideText,
       baseStyle: {
         fontSize: "13px",
         color: "#888",
         letterSpacing: "0.3px",
-        marginTop: "0",
+        marginTop: mobile ? "14px" : "0",
         fontFamily: "'Jost',sans-serif",
         fontWeight: 300,
         lineHeight: 1.75,
-        maxWidth: im.sideText ? "48ch" : "32ch",
-        transform: im.textNudge ? "translate(" + im.textNudge.x + "px," + im.textNudge.y + "px)" : "none"
+        maxWidth: mobile ? "100%" : im.sideText ? "48ch" : "32ch",
+        transform: !mobile && im.textNudge ? "translate(" + im.textNudge.x + "px," + im.textNudge.y + "px)" : "none"
       }
     }));
   })))), lb && /*#__PURE__*/React.createElement(Lightbox, { item: lb, items: lbItems, onClose: function () { setLb(null); } }));
