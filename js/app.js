@@ -336,6 +336,59 @@ var ITEMS = {
     size: "third"
   }],
   journalismus: [{
+    id: 260,
+    title: "",
+    desc: "",
+    caption: "Tag der offenen Tür im Schützenverein Gleidingen, 2026.",
+    img: window.IMGS.schuetzen_02,
+    size: "full"
+  }, {
+    id: 261,
+    title: "",
+    desc: "",
+    caption: "Tag der offenen Tür im Schützenverein Gleidingen, 2026.",
+    img: window.IMGS.schuetzen_01,
+    size: "half",
+    gapAfter: true
+  }, {
+    id: 262,
+    title: "",
+    desc: "",
+    caption: "Tag der offenen Tür im Schützenverein Gleidingen, 2026.",
+    img: window.IMGS.schuetzen_03,
+    size: "half",
+    gapAfter: true
+  }, {
+    id: 270,
+    title: "",
+    desc: "",
+    caption: "Eröffnung des Überschlag-Festivals, 2026.",
+    img: window.IMGS.ueber_01,
+    size: "full"
+  }, {
+    id: 273,
+    title: "",
+    desc: "",
+    caption: "Eröffnung des Überschlag-Festivals, 2026.",
+    img: window.IMGS.ueber_04,
+    size: "two-thirds",
+    align: "center"
+  }, {
+    id: 271,
+    title: "",
+    desc: "",
+    caption: "Eröffnung des Überschlag-Festivals, 2026.",
+    img: window.IMGS.ueber_02,
+    size: "half"
+  }, {
+    id: 272,
+    title: "",
+    desc: "",
+    caption: "Eröffnung des Überschlag-Festivals, 2026.",
+    img: window.IMGS.ueber_03,
+    size: "half",
+    gapAfter: true
+  }, {
     id: 250,
     title: "",
     desc: "",
@@ -436,6 +489,20 @@ var ITEMS = {
     caption: "Platzhalter für die Bildunterschrift. Kurze Beschreibung von Ort, Person oder Moment.",
     img: window.IMGS.IMG_0053,
     size: "full"
+  }, {
+    id: 280,
+    title: "",
+    desc: "",
+    caption: "Tischlerei Schenke, 2026.",
+    img: window.IMGS.tischlerei_01,
+    size: "half"
+  }, {
+    id: 281,
+    title: "",
+    desc: "",
+    caption: "Tischlerei Schenke, 2026.",
+    img: window.IMGS.tischlerei_02,
+    size: "half"
   }, {
     id: 42,
     title: "",
@@ -1480,7 +1547,8 @@ function JournalismusItem(_ref4) {
         : photo.align === "center"
         ? ((6 - spanOf(effectiveSize(photo.size, isPortrait))) / 2 + 1) + " / span " + spanOf(effectiveSize(photo.size, isPortrait))
         : "span " + spanOf(effectiveSize(photo.size, isPortrait)),
-      gridRow: photo.tall ? "span 2" : undefined
+      gridRow: photo.tall ? "span 2" : undefined,
+      marginBottom: photo.gapAfter ? "60px" : undefined
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1573,7 +1641,8 @@ function PortfolioItem(_ref6) {
         ? ((6 - spanOf(effectiveSize(item.size, isPortrait))) / 2 + 1) + " / span " + spanOf(effectiveSize(item.size, isPortrait))
         : item.align === "right"
         ? "span " + spanOf(effectiveSize(item.size, isPortrait)) + " / -1"
-        : "span " + spanOf(effectiveSize(item.size, isPortrait))
+        : "span " + spanOf(effectiveSize(item.size, isPortrait)),
+      marginBottom: item.gapAfter ? "60px" : undefined
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: naturalRatio ? "" : "img-wrap",
@@ -2905,9 +2974,17 @@ function App() {
     };
     var t1 = setTimeout(tag, 400);
     var t2 = setTimeout(tag, 1400);
+    var lastCount = -1;
+    var poll = setInterval(function () {
+      var n = Array.prototype.filter.call(document.querySelectorAll("img"), function (im) {
+        var r = im.getBoundingClientRect();
+        return r.width > 60 && r.height > 40;
+      }).length;
+      if (n !== lastCount) { lastCount = n; tag(); }
+    }, 700);
     window.addEventListener("resize", tag);
     return function () {
-      clearTimeout(t1); clearTimeout(t2);
+      clearTimeout(t1); clearTimeout(t2); clearInterval(poll);
       window.removeEventListener("resize", tag);
       document.querySelectorAll(".mm-imgno").forEach(function (n) { n.remove(); });
       if (bar.parentNode) bar.parentNode.removeChild(bar);
