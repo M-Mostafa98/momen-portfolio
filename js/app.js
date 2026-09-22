@@ -2511,16 +2511,28 @@ function About() {
       lineHeight: 1.9,
       color: "#a89e8a",
       marginBottom: "22px",
-      fontWeight: 300
+      fontWeight: 300,
+      textWrap: "pretty"
     }
-  }, "Moamen Mostafa lebt seit 2017 in Deutschland. Seit 2020 ist er als Dokumentarfotograf t\xE4tig. Aktuell untersucht er mittels Portr\xE4t- und Dokumentarfotografie die Gewichtung, die Religion im Leben von in Europa lebenden Muslim:innen in sozialer, famili\xE4rer und religi\xF6ser Hinsicht einnimmt."), /*#__PURE__*/React.createElement("p", {
+  }, "Aus dem Fotojournalismus kommend, arbeite ich mal beobachtend, mal inszenierend, Hauptsache l\u00f6sungsorientiert \u2013 ob auf Veranstaltungen und Messen, im Portr\u00e4t, in der Reportage aus einem Betrieb oder dort, wo Architektur und R\u00e4ume im Mittelpunkt stehen. Als Auftraggeber vertrauen mir unter anderem die NBank, die Madsack Mediengruppe und die Katholische Akademie."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: "15px",
       lineHeight: 1.9,
       color: "#a89e8a",
-      fontWeight: 300
+      marginBottom: "22px",
+      fontWeight: 300,
+      textWrap: "pretty"
     }
-  }, "Momen Mostafa fotografierte erst als Amateur den Arabischen Fr\xFChling in Kairo. Nach seinem Abitur in Khartum 2016 lebte er zwischen Istanbul und Ankara bevor er Fotojournalismus und Dokumentarfotografie in Hannover studierte, wo er Ende 2017 hinzog. Seit Ende 2024 lebt er in Hannover und sucht mit seiner Fotografie nach Verst\xE4ndnisbr\xFCcken zwischen Religion und S\xE4kularit\xE4t."), /*#__PURE__*/React.createElement("div", {
+  }, "Fotografiert habe ich zuerst als Amateur, w\u00e4hrend des Arabischen Fr\u00fchlings in Kairo. Nach meinem Abitur in Khartum 2016 lebte ich zwischen Istanbul und Ankara, bevor mich der Studiengang Fotojournalismus und Dokumentarfotografie 2017 nach Hannover f\u00fchrte, wo ich seither meinen Sitz habe."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "15px",
+      lineHeight: 1.9,
+      color: "#a89e8a",
+      marginBottom: "0",
+      fontWeight: 300,
+      textWrap: "pretty"
+    }
+  }, "In seinen freien Projekten sucht er nach Verst\u00e4ndnisbr\u00fccken zwischen Religion und S\u00e4kularit\u00e4t. Aktuell untersucht er mit Portr\u00e4t- und Dokumentarfotografie, welche Rolle Religion im sozialen, famili\u00e4ren und religi\u00f6sen Leben von Muslim:innen in Europa spielt. 2025 wurde er f\u00fcr den TruePicture Award nominiert, ein F\u00f6rder- und Mentoringprogramm f\u00fcr junge Fotojournalist:innen aus Deutschland, \u00d6sterreich und der Schweiz."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: "50px",
       borderTop: "1px solid #1e1e1e",
@@ -2727,7 +2739,7 @@ function Impressum(_ref10) {
       background: "#c9a96e",
       margin: "8px 0"
     }
-  })), [["Angaben gemäß § 5 TMG", ["Moamen Mostafa", "Himmelsthürerstr. 4", "31147 Hildesheim", "Deutschland"]], ["Kontakt", ["Telefon: +49 1520 5197646", "E-Mail: me@momen-most.com"]], ["Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV", ["Moamen Mostafa", "Himmelsthürerstr. 4, 31147 Hildesheim"]], ["Haftung für Inhalte", ["Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden."]], ["Haftung für Links", ["Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."]], ["Urheberrecht", ["Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Sämtliche Fotos und Texte sind urheberrechtlich geschützt. © Moamen Mostafa"]]].map(function (_ref11) {
+  })), [["Angaben gemäß § 5 TMG", ["Momen Mostafa", "Himmelsthürerstr. 4", "31147 Hildesheim", "Deutschland"]], ["Kontakt", ["Telefon: +49 1520 5197646", "E-Mail: me@momen-most.com"]], ["Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV", ["Momen Mostafa", "Himmelsthürerstr. 4, 31147 Hildesheim"]], ["Haftung für Inhalte", ["Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden."]], ["Haftung für Links", ["Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."]], ["Urheberrecht", ["Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Sämtliche Fotos und Texte sind urheberrechtlich geschützt. © Momen Mostafa"]]].map(function (_ref11) {
     var _ref12 = _slicedToArray(_ref11, 2),
       title = _ref12[0],
       lines = _ref12[1];
