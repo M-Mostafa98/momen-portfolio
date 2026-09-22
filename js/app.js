@@ -38,33 +38,41 @@ var ASSIGNMENTS = [{
     img: window.IMGS.nbank_01,
     size: "full"
   }, {
-    id: 908,
-    img: window.IMGS.nbank_08,
+    id: 910,
+    img: window.IMGS.nbank_10,
+    size: "two-thirds",
+    align: "center"
+  }, {
+    id: 911,
+    img: window.IMGS.nbank_11,
     size: "half"
   }, {
     id: 906,
     img: window.IMGS.nbank_06,
     size: "half"
   }, {
-    id: 910,
-    img: window.IMGS.nbank_10,
+    id: 908,
+    img: window.IMGS.nbank_08,
     size: "half"
   }, {
-    id: 911,
-    img: window.IMGS.nbank_11,
+    id: 909,
+    img: window.IMGS.nbank_09,
     size: "half"
   }, {
     id: 905,
     img: window.IMGS.nbank_05,
     size: "full"
   }, {
-    id: 902,
-    img: window.IMGS.nbank_02,
-    size: "half"
-  }, {
-    id: 903,
-    img: window.IMGS.nbank_03,
-    size: "half"
+    id: 9203,
+    pair: [{
+      id: 902,
+      img: window.IMGS.nbank_02,
+      ratio: 1.504
+    }, {
+      id: 903,
+      img: window.IMGS.nbank_03,
+      ratio: 0.666
+    }]
   }, {
     id: 904,
     img: window.IMGS.nbank_04,
@@ -73,16 +81,12 @@ var ASSIGNMENTS = [{
     id: 907,
     img: window.IMGS.nbank_07,
     size: "half"
-  }, {
-    id: 909,
-    img: window.IMGS.nbank_09,
-    size: "half"
   }]
 }, {
   client: "Katholische Akademie",
   images: [{
-    id: 2,
-    img: window.IMGS.IMG_0000,
+    id: 5,
+    img: window.IMGS.IMG_0004,
     size: "half"
   }, {
     id: 1,
@@ -91,26 +95,23 @@ var ASSIGNMENTS = [{
   }, {
     id: 3,
     img: window.IMGS.IMG_0002,
-    size: "half"
-  }, {
-    id: 5,
-    img: window.IMGS.IMG_0004,
-    size: "half"
+    size: "two-thirds",
+    align: "center"
   }, {
     id: 6,
     img: window.IMGS.IMG_0005,
     size: "half"
   }, {
-    id: 7,
-    img: window.IMGS.IMG_0006,
+    id: 9,
+    img: window.IMGS.IMG_0008,
     size: "half"
   }, {
     id: 8,
     img: window.IMGS.IMG_0007,
     size: "half"
   }, {
-    id: 9,
-    img: window.IMGS.IMG_0008,
+    id: 7,
+    img: window.IMGS.IMG_0006,
     size: "half"
   }, {
     id: 10,
@@ -119,22 +120,23 @@ var ASSIGNMENTS = [{
   }, {
     id: 11,
     img: window.IMGS.IMG_0010,
+    size: "half",
+    hidden: true
+  }, {
+    id: 15,
+    img: window.IMGS.IMG_0014,
     size: "half"
   }, {
     id: 17,
     img: window.IMGS.IMG_0011,
     size: "half"
   }, {
-    id: 12,
-    img: window.IMGS.IMG_0012,
-    size: "half"
-  }, {
     id: 16,
     img: window.IMGS.IMG_0013,
     size: "half"
   }, {
-    id: 15,
-    img: window.IMGS.IMG_0014,
+    id: 12,
+    img: window.IMGS.IMG_0012,
     size: "half"
   }, {
     id: 20,
@@ -146,45 +148,43 @@ var ASSIGNMENTS = [{
     size: "half",
     breakAfter: true
   }, {
-    id: 601,
-    img: window.IMGS.akademie_01,
-    size: "half"
-  }, {
     id: 602,
     img: window.IMGS.akademie_02,
     size: "half"
   }, {
-    id: 603,
-    img: window.IMGS.akademie_03,
+    id: 601,
+    img: window.IMGS.akademie_01,
     size: "half"
   }, {
-    id: 604,
-    img: window.IMGS.akademie_04,
-    size: "half"
+    id: 603,
+    img: window.IMGS.akademie_03,
+    size: "half",
+    hidden: true
   }, {
     id: 605,
     img: window.IMGS.akademie_05,
-    size: "half"
+    size: "full"
   }, {
     id: 606,
     img: window.IMGS.akademie_06,
-    size: "half"
+    size: "full"
   }, {
     id: 607,
     img: window.IMGS.akademie_07,
     size: "half",
     breakAfter: true
   }, {
-    id: 701,
-    img: window.IMGS.pfingst_01,
-    size: "half"
-  }, {
-    id: 703,
-    img: window.IMGS.pfingst_03,
-    size: "half"
+    id: 604,
+    img: window.IMGS.akademie_04,
+    size: "half",
+    hidden: true
   }, {
     id: 704,
     img: window.IMGS.pfingst_04,
+    size: "half"
+  }, {
+    id: 701,
+    img: window.IMGS.pfingst_01,
     size: "half"
   }, {
     id: 706,
@@ -193,6 +193,10 @@ var ASSIGNMENTS = [{
   }, {
     id: 707,
     img: window.IMGS.pfingst_07,
+    size: "half"
+  }, {
+    id: 703,
+    img: window.IMGS.pfingst_03,
     size: "half"
   }, {
     id: 708,
@@ -1983,7 +1987,28 @@ function Home(_ref7) {
         alignItems: "start",
         minWidth: "900px"
       }
-    }, group.images.map(function (item) {
+    }, group.images.filter(function (im) {
+      return !im.hidden;
+    }).map(function (item) {
+      var flatList = [];
+      group.images.forEach(function (im) { if (im.hidden) return; if (im.pair) { im.pair.forEach(function (p) { flatList.push(p); }); } else { flatList.push(im); } });
+      if (item.pair) {
+        return /*#__PURE__*/React.createElement("div", {
+          key: item.id,
+          style: { gridColumn: "1 / -1", display: "flex", gap: "28px", alignItems: "flex-start" }
+        }, item.pair.map(function (p) {
+          return /*#__PURE__*/React.createElement("div", {
+            key: p.id,
+            style: { flex: p.ratio + " 1 0", minWidth: 0 }
+          }, /*#__PURE__*/React.createElement(PortfolioItem, {
+            item: _objectSpread(_objectSpread({}, p), {}, { title: "", desc: "" }),
+            onOpen: function onOpen(it) { return openLb(it, flatList); },
+            hideTitle: true,
+            naturalRatio: true,
+            fixedHeight: "480px"
+          }));
+        }));
+      }
       return [/*#__PURE__*/React.createElement(PortfolioItem, {
         key: item.id,
         item: _objectSpread(_objectSpread({}, item), {}, {
@@ -1991,7 +2016,7 @@ function Home(_ref7) {
           desc: ""
         }),
         onOpen: function onOpen(it) {
-          return openLb(it, group.images);
+          return openLb(it, flatList);
         },
         hideTitle: true,
         naturalRatio: true,
