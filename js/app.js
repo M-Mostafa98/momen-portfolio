@@ -85,6 +85,11 @@ var ASSIGNMENTS = [{
 }, {
   client: "Katholische Akademie",
   images: [{
+    id: 6,
+    img: window.IMGS.IMG_0005,
+    size: "two-thirds",
+    align: "center"
+  }, {
     id: 5,
     img: window.IMGS.IMG_0004,
     size: "half"
@@ -98,14 +103,6 @@ var ASSIGNMENTS = [{
     size: "two-thirds",
     align: "center"
   }, {
-    id: 6,
-    img: window.IMGS.IMG_0005,
-    size: "half"
-  }, {
-    id: 9,
-    img: window.IMGS.IMG_0008,
-    size: "half"
-  }, {
     id: 8,
     img: window.IMGS.IMG_0007,
     size: "half"
@@ -113,6 +110,11 @@ var ASSIGNMENTS = [{
     id: 7,
     img: window.IMGS.IMG_0006,
     size: "half"
+  }, {
+    id: 9,
+    img: window.IMGS.IMG_0008,
+    size: "two-thirds",
+    align: "center"
   }, {
     id: 10,
     img: window.IMGS.IMG_0009,
