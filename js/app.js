@@ -38,6 +38,26 @@ var ASSIGNMENTS = [{
     img: window.IMGS.nbank_01,
     size: "full"
   }, {
+    id: 908,
+    img: window.IMGS.nbank_08,
+    size: "half"
+  }, {
+    id: 906,
+    img: window.IMGS.nbank_06,
+    size: "half"
+  }, {
+    id: 910,
+    img: window.IMGS.nbank_10,
+    size: "half"
+  }, {
+    id: 911,
+    img: window.IMGS.nbank_11,
+    size: "half"
+  }, {
+    id: 905,
+    img: window.IMGS.nbank_05,
+    size: "full"
+  }, {
     id: 902,
     img: window.IMGS.nbank_02,
     size: "half"
@@ -50,32 +70,12 @@ var ASSIGNMENTS = [{
     img: window.IMGS.nbank_04,
     size: "half"
   }, {
-    id: 905,
-    img: window.IMGS.nbank_05,
-    size: "half"
-  }, {
-    id: 906,
-    img: window.IMGS.nbank_06,
-    size: "half"
-  }, {
     id: 907,
     img: window.IMGS.nbank_07,
     size: "half"
   }, {
-    id: 908,
-    img: window.IMGS.nbank_08,
-    size: "half"
-  }, {
     id: 909,
     img: window.IMGS.nbank_09,
-    size: "half"
-  }, {
-    id: 910,
-    img: window.IMGS.nbank_10,
-    size: "half"
-  }, {
-    id: 911,
-    img: window.IMGS.nbank_11,
     size: "half"
   }]
 }, {
