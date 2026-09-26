@@ -485,34 +485,12 @@ var ITEMS = {
     img: window.IMGS.cduParteitag,
     size: "half"
   }, {
-    id: 48,
-    title: "",
-    desc: "",
-    caption: "Bremen, 2021.",
-    img: window.IMGS.IMG_0049,
-    size: "two-thirds"
-  }, {
-    id: 100,
-    title: "",
-    desc: "",
-    caption: "Bremen, 2022.",
-    img: window.IMGS.biogas,
-    size: "two-thirds",
-    align: "right"
-  }, {
     id: 204,
     title: "",
     desc: "",
     caption: "Hannover, 2026.",
     img: window.IMGS.feuerwehr,
     size: "two-thirds"
-  }, {
-    id: 205,
-    title: "",
-    desc: "",
-    caption: "Hannover, 2025.",
-    img: window.IMGS.nachtengel,
-    size: "full"
   }, {
     id: 43,
     title: "",
@@ -528,13 +506,6 @@ var ITEMS = {
     img: window.IMGS.kranfuehrer,
     size: "two-thirds",
     align: "center"
-  }, {
-    id: 44,
-    title: "",
-    desc: "",
-    caption: "Bremen, 2021.",
-    img: window.IMGS.IMG_0052,
-    size: "full"
   }, {
     id: 46,
     title: "",
@@ -557,6 +528,21 @@ var ITEMS = {
     img: window.IMGS.tischlerei_02,
     size: "half"
   }, {
+    id: 205,
+    title: "",
+    desc: "",
+    caption: "Hannover, 2025.",
+    img: window.IMGS.nachtengel,
+    size: "full"
+  }, {
+    id: 100,
+    title: "",
+    desc: "",
+    caption: "Bremen, 2022.",
+    img: window.IMGS.biogas,
+    size: "two-thirds",
+    align: "right"
+  }, {
     id: 42,
     title: "",
     desc: "",
@@ -578,6 +564,20 @@ var ITEMS = {
     caption: "Hannover, 2022.",
     img: window.IMGS.IMG_0050,
     size: "half"
+  }, {
+    id: 48,
+    title: "",
+    desc: "",
+    caption: "Bremen, 2021.",
+    img: window.IMGS.IMG_0049,
+    size: "two-thirds"
+  }, {
+    id: 44,
+    title: "",
+    desc: "",
+    caption: "Bremen, 2021.",
+    img: window.IMGS.IMG_0052,
+    size: "full"
   }, {
     id: 99,
     title: "",
