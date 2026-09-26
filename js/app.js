@@ -306,6 +306,18 @@ var ASSIGNMENTS = [{
     img: window.IMGS.farouk_07,
     size: "full"
   }]
+}, {
+  client: "Bolliman \u2013 Friseur",
+  images: [{
+    id: 1121,
+    img: window.IMGS.bolliman_21,
+    size: "full"
+  }, {
+    id: 1105,
+    img: window.IMGS.bolliman_05,
+    size: "two-thirds",
+    align: "center"
+  }]
 }];
 var CATS = [{
   key: "portraets",
@@ -569,6 +581,13 @@ var ITEMS = {
     caption: "Paul Drux, ehemaliger Handballspieler der Nationalmannschaft \u2013 Im Schmerz gefangen. Fotoreportage f\u00fcr die Frankfurter Allgemeine Sonntagszeitung, 2024.",
     img: window.IMGS.drux_18,
     size: "third"
+  }, {
+    id: 1201,
+    title: "",
+    desc: "",
+    caption: "Jazzahead \u2013 Malstrom in Bremen, 2023.",
+    img: window.IMGS.jazzahead_01,
+    size: "full"
   }, {
     id: 100,
     title: "",
