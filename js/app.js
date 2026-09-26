@@ -1000,23 +1000,30 @@ function HeroSlides() {
         /*#__PURE__*/React.createElement("span", { style: { width: "2px", height: "9px", background: "rgba(232,226,217,0.7)" } }),
         /*#__PURE__*/React.createElement("span", { style: { width: "2px", height: "9px", background: "rgba(232,226,217,0.7)" } }))
   ), /*#__PURE__*/React.createElement("div", {
-    style: { display: "flex", gap: "8px", alignItems: "center" }
+    style: { display: "flex", gap: "0", alignItems: "center" }
   }, slides.map(function (s, i) {
     return /*#__PURE__*/React.createElement("button", {
       key: s.key,
       onClick: function () { setIdx(i); },
       "aria-label": "Bild " + (i + 1),
       style: {
+        border: "none",
+        background: "transparent",
+        padding: "12px 5px",
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        display: "block",
         width: i === idx ? "18px" : "6px",
         height: "6px",
         borderRadius: "3px",
-        border: "none",
-        padding: 0,
-        cursor: "pointer",
         background: i === idx ? "rgba(232,226,217,0.75)" : "rgba(232,226,217,0.28)",
         transition: "width .4s ease, background .4s ease"
       }
-    });
+    }));
   })));
   return /*#__PURE__*/React.createElement(React.Fragment, null, imgs, controls);
 }
