@@ -936,9 +936,10 @@ function HeroSlides() {
   var _s = useState(0), idx = _s[0], setIdx = _s[1];
   var _p = useState(false), paused = _p[0], setPaused = _p[1];
   var _h = useState(false), ctrlHover = _h[0], setCtrlHover = _h[1];
+  var _j = useState(false), jump = _j[0], setJump = _j[1];
   useEffect(function () {
     if (slides.length < 2 || paused) return;
-    var t = setInterval(function () { setIdx(function (i) { return (i + 1) % slides.length; }); }, 4000);
+    var t = setInterval(function () { setJump(false); setIdx(function (i) { return (i + 1) % slides.length; }); }, 4000);
     return function () { clearInterval(t); };
   }, [slides.length, paused, idx]);
   var imgs = slides.map(function (s, i) {
@@ -956,7 +957,7 @@ function HeroSlides() {
         objectPosition: s.pos || undefined,
         filter: "grayscale(20%)",
         opacity: i === idx ? 1 : 0,
-        transition: "opacity 2.2s ease-in-out"
+        transition: jump ? "opacity .9s ease" : "opacity 2.2s ease-in-out"
       }
     });
   });
@@ -1004,7 +1005,7 @@ function HeroSlides() {
   }, slides.map(function (s, i) {
     return /*#__PURE__*/React.createElement("button", {
       key: s.key,
-      onClick: function () { setIdx(i); },
+      onClick: function () { setJump(true); setIdx(i); },
       "aria-label": "Bild " + (i + 1),
       style: {
         border: "none",
