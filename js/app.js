@@ -928,17 +928,20 @@ var HERO_SLIDES = [
   { key: "drux_06" },
   { key: "nbank_01" },
   { key: "nbank_05" },
+  { key: "IMG_0005" },
   { key: "IMG_0029" }
 ];
 function HeroSlides() {
   var slides = HERO_SLIDES.filter(function (s) { return window.IMGS && window.IMGS[s.key]; });
   var _s = useState(0), idx = _s[0], setIdx = _s[1];
+  var _p = useState(false), paused = _p[0], setPaused = _p[1];
+  var _h = useState(false), ctrlHover = _h[0], setCtrlHover = _h[1];
   useEffect(function () {
-    if (slides.length < 2) return;
+    if (slides.length < 2 || paused) return;
     var t = setInterval(function () { setIdx(function (i) { return (i + 1) % slides.length; }); }, 4000);
     return function () { clearInterval(t); };
-  }, [slides.length]);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, slides.map(function (s, i) {
+  }, [slides.length, paused, idx]);
+  var imgs = slides.map(function (s, i) {
     return /*#__PURE__*/React.createElement("img", {
       key: s.key,
       src: window.IMGS[s.key],
@@ -953,10 +956,69 @@ function HeroSlides() {
         objectPosition: s.pos || undefined,
         filter: "grayscale(20%)",
         opacity: i === idx ? 1 : 0,
-        transition: "opacity 1.8s ease-in-out"
+        transition: "opacity 2.8s ease-in-out"
       }
     });
-  }));
+  });
+  if (slides.length < 2) return /*#__PURE__*/React.createElement(React.Fragment, null, imgs);
+  var controls = /*#__PURE__*/React.createElement("div", {
+    key: "hero-ctrl",
+    style: {
+      position: "absolute",
+      left: "50%",
+      transform: "translateX(-50%)",
+      bottom: "10px",
+      zIndex: 3,
+      display: "flex",
+      alignItems: "center",
+      gap: "14px",
+      opacity: ctrlHover ? 1 : 0.4,
+      transition: "opacity .35s ease"
+    },
+    onMouseEnter: function () { setCtrlHover(true); },
+    onMouseLeave: function () { setCtrlHover(false); }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function () { setPaused(function (p) { return !p; }); },
+    "aria-label": paused ? "Bilder abspielen" : "Bilder anhalten",
+    title: paused ? "Abspielen" : "Anhalten",
+    style: {
+      width: "26px",
+      height: "26px",
+      borderRadius: "50%",
+      border: "1px solid rgba(232,226,217,0.3)",
+      background: "transparent",
+      color: "#e8e2d9",
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: 0
+    }
+  }, paused
+    ? /*#__PURE__*/React.createElement("span", { style: { width: 0, height: 0, borderTop: "5px solid transparent", borderBottom: "5px solid transparent", borderLeft: "8px solid rgba(232,226,217,0.7)", marginLeft: "2px" } })
+    : /*#__PURE__*/React.createElement("span", { style: { display: "flex", gap: "3px" } },
+        /*#__PURE__*/React.createElement("span", { style: { width: "2px", height: "9px", background: "rgba(232,226,217,0.7)" } }),
+        /*#__PURE__*/React.createElement("span", { style: { width: "2px", height: "9px", background: "rgba(232,226,217,0.7)" } }))
+  ), /*#__PURE__*/React.createElement("div", {
+    style: { display: "flex", gap: "8px", alignItems: "center" }
+  }, slides.map(function (s, i) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: s.key,
+      onClick: function () { setIdx(i); },
+      "aria-label": "Bild " + (i + 1),
+      style: {
+        width: i === idx ? "18px" : "6px",
+        height: "6px",
+        borderRadius: "3px",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
+        background: i === idx ? "rgba(232,226,217,0.75)" : "rgba(232,226,217,0.28)",
+        transition: "width .4s ease, background .4s ease"
+      }
+    });
+  })));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, imgs, controls);
 }
 
 function useIsMobile() {
