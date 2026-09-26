@@ -920,6 +920,46 @@ function Lightbox(_ref) {
     }
   }, cur + 1, " / ", items.length))));
 }
+var HERO_SLIDES = [
+  { key: "IMG_0072" },
+  { key: "schuetzen_02" },
+  { key: "ueber_01" },
+  { key: "osanYaran" },
+  { key: "drux_06" },
+  { key: "nbank_01" },
+  { key: "nbank_05" },
+  { key: "IMG_0006", pos: "center 30%" },
+  { key: "IMG_0029" }
+];
+function HeroSlides() {
+  var slides = HERO_SLIDES.filter(function (s) { return window.IMGS && window.IMGS[s.key]; });
+  var _s = useState(0), idx = _s[0], setIdx = _s[1];
+  useEffect(function () {
+    if (slides.length < 2) return;
+    var t = setInterval(function () { setIdx(function (i) { return (i + 1) % slides.length; }); }, 4000);
+    return function () { clearInterval(t); };
+  }, [slides.length]);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, slides.map(function (s, i) {
+    return /*#__PURE__*/React.createElement("img", {
+      key: s.key,
+      src: window.IMGS[s.key],
+      alt: "",
+      "aria-hidden": i === idx ? undefined : "true",
+      style: {
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        objectPosition: s.pos || undefined,
+        filter: "grayscale(20%)",
+        opacity: i === idx ? 1 : 0,
+        transition: "opacity 1.8s ease-in-out"
+      }
+    });
+  }));
+}
+
 function useIsMobile() {
   var _s = useState(typeof window !== "undefined" && window.innerWidth < 768);
   var m = _s[0], setM = _s[1];
@@ -1839,18 +1879,7 @@ function Home(_ref7) {
       background: "linear-gradient(to top,rgba(12,12,12,0.9) 0%,rgba(12,12,12,0.1) 50%,rgba(12,12,12,0.45) 100%)",
       zIndex: 1
     }
-  }), /*#__PURE__*/React.createElement("img", {
-    src: window.IMGS.IMG_0072,
-    alt: "",
-    style: {
-      position: "absolute",
-      inset: 0,
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      filter: "grayscale(20%)"
-    }
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement(HeroSlides, null), /*#__PURE__*/React.createElement("div", {
     className: "hero-text",
     style: {
       position: "relative",
