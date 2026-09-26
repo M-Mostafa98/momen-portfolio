@@ -956,7 +956,7 @@ function HeroSlides() {
         objectPosition: s.pos || undefined,
         filter: "grayscale(20%)",
         opacity: i === idx ? 1 : 0,
-        transition: "opacity 2.8s ease-in-out"
+        transition: "opacity 2.2s ease-in-out"
       }
     });
   });
