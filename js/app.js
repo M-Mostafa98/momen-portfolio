@@ -535,6 +535,41 @@ var ITEMS = {
     img: window.IMGS.nachtengel,
     size: "full"
   }, {
+    id: 1001,
+    title: "",
+    desc: "",
+    caption: "Paul Drux, ehemaliger Handballspieler der Nationalmannschaft \u2013 Im Schmerz gefangen. Fotoreportage f\u00fcr die Frankfurter Allgemeine Sonntagszeitung, 2024.",
+    img: window.IMGS.drux_06,
+    size: "full"
+  }, {
+    id: 1015,
+    title: "",
+    desc: "",
+    caption: "Paul Drux, ehemaliger Handballspieler der Nationalmannschaft \u2013 Im Schmerz gefangen. Fotoreportage f\u00fcr die Frankfurter Allgemeine Sonntagszeitung, 2024.",
+    img: window.IMGS.drux_15,
+    size: "half"
+  }, {
+    id: 1016,
+    title: "",
+    desc: "",
+    caption: "Paul Drux, ehemaliger Handballspieler der Nationalmannschaft \u2013 Im Schmerz gefangen. Fotoreportage f\u00fcr die Frankfurter Allgemeine Sonntagszeitung, 2024.",
+    img: window.IMGS.drux_16,
+    size: "half"
+  }, {
+    id: 1007,
+    title: "",
+    desc: "",
+    caption: "Paul Drux, ehemaliger Handballspieler der Nationalmannschaft \u2013 Im Schmerz gefangen. Fotoreportage f\u00fcr die Frankfurter Allgemeine Sonntagszeitung, 2024.",
+    img: window.IMGS.drux_07,
+    size: "two-thirds"
+  }, {
+    id: 1018,
+    title: "",
+    desc: "",
+    caption: "Paul Drux, ehemaliger Handballspieler der Nationalmannschaft \u2013 Im Schmerz gefangen. Fotoreportage f\u00fcr die Frankfurter Allgemeine Sonntagszeitung, 2024.",
+    img: window.IMGS.drux_18,
+    size: "third"
+  }, {
     id: 100,
     title: "",
     desc: "",
@@ -1974,7 +2009,16 @@ function Home(_ref7) {
         paddingBottom: "14px",
         fontFamily: "'Jost',sans-serif"
       }
-    }, group.client), /*#__PURE__*/React.createElement("div", {
+    }, group.client), group.subtitle ? /*#__PURE__*/React.createElement("p", {
+      style: {
+        fontSize: "14px",
+        color: "#a89e8a",
+        fontWeight: 300,
+        lineHeight: 1.7,
+        margin: "-14px 0 28px",
+        fontFamily: "'Jost',sans-serif"
+      }
+    }, group.subtitle) : null, /*#__PURE__*/React.createElement("div", {
       className: "port-scroll",
       style: {
         overflowX: "auto"
