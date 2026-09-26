@@ -928,7 +928,6 @@ var HERO_SLIDES = [
   { key: "drux_06" },
   { key: "nbank_01" },
   { key: "nbank_05" },
-  { key: "IMG_0006", pos: "center 30%" },
   { key: "IMG_0029" }
 ];
 function HeroSlides() {
