@@ -38,10 +38,6 @@ var ASSIGNMENTS = [{
     img: window.IMGS.chinaday_01,
     size: "full"
   }, {
-    id: 1202,
-    img: window.IMGS.chinaday_02,
-    size: "full"
-  }, {
     id: 12034,
     pair: [{
       id: 1203,
@@ -52,6 +48,10 @@ var ASSIGNMENTS = [{
       img: window.IMGS.chinaday_05,
       ratio: 1.504
     }]
+  }, {
+    id: 1202,
+    img: window.IMGS.chinaday_02,
+    size: "full"
   }, {
     id: 1205,
     img: window.IMGS.chinaday_04,
@@ -985,6 +985,7 @@ function Lightbox(_ref) {
   }, cur + 1, " / ", items.length))));
 }
 var HERO_SLIDES = [
+  { key: "chinaday_09" },
   { key: "IMG_0072" },
   { key: "schuetzen_02" },
   { key: "ueber_01" },
@@ -993,7 +994,8 @@ var HERO_SLIDES = [
   { key: "nbank_01" },
   { key: "nbank_05" },
   { key: "IMG_0005" },
-  { key: "IMG_0029" }
+  { key: "IMG_0029" },
+  { key: "chinaday_01" }
 ];
 function HeroSlides() {
   var slides = HERO_SLIDES.filter(function (s) { return window.IMGS && window.IMGS[s.key]; });
@@ -3267,7 +3269,7 @@ function App() {
         if (getComputedStyle(p).position === "static") p.style.position = "relative";
         var b = document.createElement("div");
         b.className = "mm-imgno";
-        b.textContent = key;
+        b.textContent = pre + "-" + (i + 1);
         b.style.cssText = "position:absolute;top:6px;left:6px;z-index:60;background:#c0392b;color:#fff;font:700 13px/1 'Jost',sans-serif;padding:5px 8px;border-radius:3px;pointer-events:none;letter-spacing:.5px;box-shadow:0 1px 6px rgba(0,0,0,.4)";
         p.appendChild(b);
       });
