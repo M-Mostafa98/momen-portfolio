@@ -81,17 +81,19 @@ var ASSIGNMENTS = [{
     img: window.IMGS.nbank_01,
     size: "full"
   }, {
-    id: 910,
-    img: window.IMGS.nbank_10,
-    size: "two-thirds",
-    align: "center"
+    id: 9610,
+    pair: [{
+      id: 906,
+      img: window.IMGS.nbank_06,
+      ratio: 0.666
+    }, {
+      id: 910,
+      img: window.IMGS.nbank_10,
+      ratio: 1.5
+    }]
   }, {
     id: 911,
     img: window.IMGS.nbank_11,
-    size: "half"
-  }, {
-    id: 906,
-    img: window.IMGS.nbank_06,
     size: "half"
   }, {
     id: 908,
@@ -3256,7 +3258,9 @@ function App() {
       imgs.forEach(function (im, i) {
         var p = im.parentElement;
         if (!p) return;
-        var key = pre + "-" + (i + 1);
+        var src = im.currentSrc || im.src || "", hh = 0;
+        for (var q = Math.max(0, src.length - 400); q < src.length; q++) hh = (hh * 31 + src.charCodeAt(q)) | 0;
+        var key = pre + "-i" + (hh >>> 0).toString(36);
         im.setAttribute("data-mmkey", key);
         im.onmousedown = startDrag;
         if (dragOn) { im.style.cursor = "move"; im.style.outline = "2px dashed rgba(192,57,43,.6)"; }
