@@ -1059,7 +1059,9 @@ function HeroSlides() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      padding: 0
+      padding: 0,
+      opacity: ctrlHover || paused ? 1 : 0,
+      transition: "opacity .3s ease"
     }
   }, paused
     ? /*#__PURE__*/React.createElement("span", { style: { width: 0, height: 0, borderTop: "5px solid transparent", borderBottom: "5px solid transparent", borderLeft: "8px solid rgba(232,226,217,0.7)", marginLeft: "2px" } })
