@@ -32,6 +32,49 @@ function effectiveSize(size, isPortrait) {
   return size;
 }
 var ASSIGNMENTS = [{
+  client: "VDA \u2013 IAA Transportation China Day 2026",
+  images: [{
+    id: 1201,
+    img: window.IMGS.chinaday_01,
+    size: "full"
+  }, {
+    id: 1202,
+    img: window.IMGS.chinaday_02,
+    size: "full"
+  }, {
+    id: 12034,
+    pair: [{
+      id: 1203,
+      img: window.IMGS.chinaday_03,
+      ratio: 0.665
+    }, {
+      id: 1204,
+      img: window.IMGS.chinaday_05,
+      ratio: 1.504
+    }]
+  }, {
+    id: 1205,
+    img: window.IMGS.chinaday_04,
+    ratio: 1.504,
+    soloOf: 2.169
+  }, {
+    id: 1206,
+    img: window.IMGS.chinaday_06,
+    size: "full"
+  }, {
+    id: 1207,
+    img: window.IMGS.chinaday_08,
+    size: "half"
+  }, {
+    id: 1208,
+    img: window.IMGS.chinaday_07,
+    size: "half"
+  }, {
+    id: 1209,
+    img: window.IMGS.chinaday_09,
+    size: "full"
+  }]
+}, {
   client: "NBank",
   images: [{
     id: 901,
@@ -66,12 +109,12 @@ var ASSIGNMENTS = [{
     id: 9203,
     pair: [{
       id: 902,
-      img: window.IMGS.nbank_02,
-      ratio: 1.504
-    }, {
-      id: 903,
       img: window.IMGS.nbank_03,
       ratio: 0.666
+    }, {
+      id: 903,
+      img: window.IMGS.nbank_02,
+      ratio: 1.504
     }]
   }, {
     id: 904,
@@ -2155,6 +2198,20 @@ function Home(_ref7) {
     }).map(function (item) {
       var flatList = [];
       group.images.forEach(function (im) { if (im.hidden) return; if (im.pair) { im.pair.forEach(function (p) { flatList.push(p); }); } else { flatList.push(im); } });
+      if (item.soloOf) {
+        return /*#__PURE__*/React.createElement("div", {
+          key: item.id,
+          style: { gridColumn: "1 / -1", display: "flex", justifyContent: "center" }
+        }, /*#__PURE__*/React.createElement("div", {
+          style: { width: "calc((100% - 28px) * " + (item.ratio / item.soloOf) + ")", minWidth: 0 }
+        }, /*#__PURE__*/React.createElement(PortfolioItem, {
+          item: _objectSpread(_objectSpread({}, item), {}, { title: "", desc: "" }),
+          onOpen: function onOpen(it) { return openLb(it, flatList); },
+          hideTitle: true,
+          naturalRatio: true,
+          fixedHeight: "480px"
+        })));
+      }
       if (item.pair) {
         return /*#__PURE__*/React.createElement("div", {
           key: item.id,
