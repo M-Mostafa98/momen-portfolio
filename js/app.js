@@ -1011,6 +1011,7 @@ function HeroSlides() {
   var imgs = slides.map(function (s, i) {
     return /*#__PURE__*/React.createElement("img", {
       key: s.key,
+      className: "hero-img",
       src: window.IMGS[s.key],
       alt: "",
       "aria-hidden": i === idx ? undefined : "true",
@@ -1030,6 +1031,7 @@ function HeroSlides() {
   if (slides.length < 2) return /*#__PURE__*/React.createElement(React.Fragment, null, imgs);
   var controls = /*#__PURE__*/React.createElement("div", {
     key: "hero-ctrl",
+    className: "hero-ctrl",
     style: {
       position: "absolute",
       left: "50%",
@@ -2015,7 +2017,8 @@ function Home(_ref7) {
       inset: 0,
       background: "linear-gradient(to top,rgba(12,12,12,0.9) 0%,rgba(12,12,12,0.1) 50%,rgba(12,12,12,0.45) 100%)",
       zIndex: 1
-    }
+    },
+    className: "hero-grad"
   }), /*#__PURE__*/React.createElement(HeroSlides, null), /*#__PURE__*/React.createElement("div", {
     className: "hero-text",
     style: {
@@ -2064,7 +2067,7 @@ function Home(_ref7) {
       marginTop: "22px",
       marginBottom: "0"
     }
-  }, "Fotograf · Hannover"))), /*#__PURE__*/React.createElement("section", {
+  }, "Fotograf"))), /*#__PURE__*/React.createElement("section", {
     id: "gallery",
     style: {
       padding: "100px 5%",
